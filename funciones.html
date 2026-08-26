@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Funciones — Cine</title>
+
+</head>
+
+<body>
+
+
+  <header>
+    <a href="/index.html">CineApp</a>
+    <nav aria-label="Navegación principal">
+      <ul>
+        <li><a href="/pages/cartelera.html">Cartelera</a></li>
+        <li><a href="/pages/funciones.html">Funciones</a></li>
+        <li><a href="/pages/combos.html">Candy Bar</a></li>
+        <li><a href="/pages/carrito.html">Carrito</a></li>
+        <li><a href="/pages/login.html">Ingresar</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Funciones</h1>
+    <p>Elegí sucursal y día para ver todos los horarios disponibles.</p>
+
+    <section aria-labelledby="seleccion-titulo">
+      <h2 id="seleccion-titulo">Elegir sucursal y día</h2>
+      <form action="/pages/funciones.html" method="get">
+        <fieldset>
+          <legend>Sucursal</legend>
+          <p>
+            <input type="radio" id="suc-centro" name="sucursal" value="centro" checked>
+            <label for="suc-centro">Cine Centro</label>
+          </p>
+          <p>
+            <input type="radio" id="suc-norte" name="sucursal" value="norte">
+            <label for="suc-norte">Cine Shopping Norte</label>
+          </p>
+          <p>
+            <input type="radio" id="suc-yerba" name="sucursal" value="yerba-buena">
+            <label for="suc-yerba">Cine Yerba Buena</label>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Día</legend>
+          <p>
+            <label for="dia">Fecha de la función</label>
+            <input type="date" required>
+          </p>
+        </fieldset>
+
+        <button type="submit">Ver funciones</button>
+      </form>
+    </section>
+
+    <section>
+      <h2 id="grilla-titulo">Funciones del martes 25 de agosto — Cine Centro</h2>
+
+      <article>
+        <h3>Spider Man Brand New Day</h3>
+        <p>Acción · 148 min · ATP con reservas</p>
+        <table>
+          <caption>Horarios de Spider Man Brand New Day</caption>
+          <thead>
+            <tr>
+              <th>Horario</th>
+              <th>Sala</th>
+              <th>Formato</th>
+              <th>Idioma</th>
+              <th>Precio</th>
+              <th>Disponibilidad</th>
+              <th>Acción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th><time>15:30</time></th>
+              <td>Sala 1</td>
+              <td>2D</td>
+              <td>Subtitulada</td>
+              <td>$6.500</td>
+              <td>84 butacas libres</td>
+              <td><a href="/pages/asientos.html">Elegir asientos</a></td>
+            </tr>
+            <tr>
+              <th>18:45</th>
+              <td>Sala 3</td>
+              <td>3D</td>
+              <td>Subtitulada</td>
+              <td>$8.200</td>
+              <td>21 butacas libres</td>
+              <td><a href="/pages/asientos.html">Elegir asientos</a></td>
+            </tr>
+            <tr>
+              <th>22:00</th>
+              <td>Sala 1</td>
+              <td>2D</td>
+              <td>Doblada</td>
+              <td>$6.500</td>
+              <td>Agotada</td>
+              <td>Sin butacas</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+
+      <article>
+        <h3>Noche del Demonio: Estan Entre Nosotros</h3>
+        <p>Terror · 112 min · +18</p>
+        <table>
+          <caption>Horarios de la Noche del Demonio: Estan Entre Nosotros</caption>
+          <thead>
+            <tr>
+              <th>Horario</th>
+              <th>Sala</th>
+              <th>Formato</th>
+              <th>Idioma</th>
+              <th>Precio</th>
+              <th>Disponibilidad</th>
+              <th>Acción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>17:00</th>
+              <td>Sala 2</td>
+              <td>2D</td>
+              <td>Doblada</td>
+              <td>$6.500</td>
+              <td>110 butacas libres</td>
+              <td><a href="/pages/asientos.html">Elegir asientos</a></td>
+            </tr>
+            <tr>
+              <th>20:15</th>
+              <td>Sala 2</td>
+              <td>2D</td>
+              <td>Subtitulada</td>
+              <td>$6.500</td>
+              <td>47 butacas libres</td>
+              <td><a href="/pages/asientos.html">Elegir asientos</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <nav>
+      <ul>
+        <li><a href="/pages/registro.html">Crear cuenta</a></li>
+        <li><a href="/pages/perfil.html">Mi perfil</a></li>
+        <li><a href="/pages/mis-entradas.html">Mis entradas</a></li>
+        <li><a href="/pages/admin/dashboard.html">Panel de administración</a></li>
+      </ul>
+    </nav>
+    <address>
+      Complejo Cine · Av. Roca 3440, San Miguel de Tucumán ·
+      <a href="tel:+543815551234">381 555-1234</a>
+    </address>
+  </footer>
+
+</body>
+
+</html>
