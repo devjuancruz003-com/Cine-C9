@@ -14,42 +14,46 @@
   </head>
 
   <body>
-    <header>
-      <nav aria-label="Navegación principal">
-        <a href="index.html" aria-label="Cine Tucumán - Inicio">
+    <header class="site-header">
+      <nav class="navbar" aria-label="Navegación principal">
+        <div class="navbar__container">
+        <a class="navbar__brand" href="index.html" aria-label="Cine Tucumán - Inicio">
           Cine Tucumán
         </a>
 
-        <ul>
+        <ul class="navbar__menu">
           <li>
-            <a href="index.html"> Inicio </a>
+            <a class="navbar__link" href="index.html"> Inicio </a>
           </li>
 
           <li>
-            <a href="peliculas.html"> Películas </a>
+            <a class="navbar__link" href="peliculas.html"> Películas </a>
           </li>
 
           <li>
-            <a href="sucursales.html"> Cines </a>
+            <a class="navbar__link" href="sucursales.html"> Cines </a>
           </li>
 
           <li>
-            <a href="candybar.html"> Candy Bar </a>
+            <a class="navbar__link" href="candybar.html"> Candy Bar </a>
           </li>
         </ul>
 
-        <a href="peliculas.html"> Comprar entradas </a>
+        <div class="navbar__actions">
+        <a class="navbar__tickets btn btn--primary" href="peliculas.html"> Comprar entradas </a>
 
-        <button type="button" aria-label="Abrir buscador">Buscar</button>
+        <button class="navbar__search" type="button" aria-label="Abrir buscador">Buscar</button>
 
-        <a href="carrito.html" aria-label="Ver carrito de compra"> Carrito </a>
+        <a class="navbar__cart" href="carrito.html" aria-label="Ver carrito de compra"> Carrito </a>
 
-        <a href="login.html"> Iniciar sesión </a>
+        <a class="navbar__auth" href="login.html"> Iniciar sesión </a>
+        </div>
+        </div>
       </nav>
     </header>
 
-    <main>
-      <section aria-labelledby="page-title">
+    <main class="page page--cinemas cinemas">
+      <section class="cinemas__intro" aria-labelledby="page-title">
         <header>
           <h1 id="page-title">Cines en Tucumán</h1>
         </header>
@@ -61,22 +65,22 @@
         </p>
       </section>
 
-      <section aria-labelledby="san-miguel-title">
+      <section class="cinemas__group" aria-labelledby="san-miguel-title">
         <header>
           <h2 id="san-miguel-title">Cines en San Miguel de Tucumán</h2>
         </header>
 
-        <div>
-          <article>
-            <figure>
+        <div class="cinemas__grid">
+          <article class="cinema-card">
+            <figure class="cinema-card__image">
               <img
                 src="../images/cinemas/cine-atlas-monteagudo.jpg"
                 alt="Cine Atlas Monteagudo en San Miguel de Tucumán"
               />
             </figure>
 
-            <header>
-              <h3>Cine Atlas Monteagudo</h3>
+            <header class="cinema-card__content">
+              <h3 class="cinema-card__title">Cine Atlas Monteagudo</h3>
             </header>
 
             <p>San Miguel de Tucumán</p>
@@ -90,16 +94,16 @@
             </p>
           </article>
 
-          <article>
-            <figure>
+          <article class="cinema-card">
+            <figure class="cinema-card__image">
               <img
                 src="../images/cinemas/cine-atlas-via-24.jpg"
                 alt="Cine Atlas Vía 24 en San Miguel de Tucumán"
               />
             </figure>
 
-            <header>
-              <h3>Cine Atlas Vía 24</h3>
+            <header class="cinema-card__content">
+              <h3 class="cinema-card__title">Cine Atlas Vía 24</h3>
             </header>
 
             <p>San Miguel de Tucumán</p>
@@ -113,16 +117,16 @@
             </p>
           </article>
 
-          <article>
-            <figure>
+          <article class="cinema-card">
+            <figure class="cinema-card__image">
               <img
                 src="../images/cinemas/cinemacenter-tucuman.jpg"
                 alt="Cinemacenter Tucumán en San Miguel de Tucumán"
               />
             </figure>
 
-            <header>
-              <h3>Cinemacenter Tucumán</h3>
+            <header class="cinema-card__content">
+              <h3 class="cinema-card__title">Cinemacenter Tucumán</h3>
             </header>
 
             <p>San Miguel de Tucumán</p>
@@ -138,22 +142,22 @@
         </div>
       </section>
 
-      <section aria-labelledby="yerba-buena-title">
+      <section class="cinemas__group" aria-labelledby="yerba-buena-title">
         <header>
           <h2 id="yerba-buena-title">Cines en Yerba Buena</h2>
         </header>
 
-        <div>
-          <article>
-            <figure>
+        <div class="cinemas__grid">
+          <article class="cinema-card">
+            <figure class="cinema-card__image">
               <img
                 src="../images/cinemas/sunstar-cinemas.jpg"
                 alt="Sunstar Cinemas en Yerba Buena"
               />
             </figure>
 
-            <header>
-              <h3>Sunstar Cinemas</h3>
+            <header class="cinema-card__content">
+              <h3 class="cinema-card__title">Sunstar Cinemas</h3>
             </header>
 
             <p>Yerba Buena, Tucumán</p>
@@ -167,16 +171,16 @@
             </p>
           </article>
 
-          <article>
-            <figure>
+          <article class="cinema-card">
+            <figure class="cinema-card__image">
               <img
                 src="../images/cinemas/cines-del-solar.jpg"
                 alt="Cines del Solar en Yerba Buena"
               />
             </figure>
 
-            <header>
-              <h3>Cines del Solar</h3>
+            <header class="cinema-card__content">
+              <h3 class="cinema-card__title">Cines del Solar</h3>
             </header>
 
             <p>Yerba Buena, Tucumán</p>
@@ -192,7 +196,7 @@
         </div>
       </section>
 
-      <section aria-labelledby="map-title">
+      <section class="cinemas__map" aria-labelledby="map-title">
         <header>
           <h2 id="map-title">Mapa de cines</h2>
         </header>
@@ -205,12 +209,12 @@
         </div>
       </section>
 
-      <section aria-labelledby="branch-information-title">
+      <section class="cinemas__details" aria-labelledby="branch-information-title">
         <header>
           <h2 id="branch-information-title">Información de las sucursales</h2>
         </header>
 
-        <article id="cine-atlas-monteagudo">
+        <article id="cine-atlas-monteagudo" class="cinema-card cinema-card--detail">
           <header>
             <h3>Cine Atlas Monteagudo</h3>
           </header>
@@ -249,7 +253,7 @@
           </p>
         </article>
 
-        <article id="cine-atlas-via-24">
+        <article id="cine-atlas-via-24" class="cinema-card cinema-card--detail">
           <header>
             <h3>Cine Atlas Vía 24</h3>
           </header>
@@ -293,7 +297,7 @@
           </p>
         </article>
 
-        <article id="cinemacenter-tucuman">
+        <article id="cinemacenter-tucuman" class="cinema-card cinema-card--detail">
           <header>
             <h3>Cinemacenter Tucumán</h3>
           </header>
@@ -329,7 +333,7 @@
           </p>
         </article>
 
-        <article id="sunstar-cinemas">
+        <article id="sunstar-cinemas" class="cinema-card cinema-card--detail">
           <header>
             <h3>Sunstar Cinemas</h3>
           </header>
@@ -362,7 +366,7 @@
           </p>
         </article>
 
-        <article id="cines-del-solar">
+        <article id="cines-del-solar" class="cinema-card cinema-card--detail">
           <header>
             <h3>Cines del Solar</h3>
           </header>
