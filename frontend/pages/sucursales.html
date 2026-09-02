@@ -1,502 +1,435 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+  <meta charset="UTF-8" />
 
-    <meta
-      name="description"
-      content="Encontrá cines en San Miguel de Tucumán y Yerba Buena, consulta sus direcciones y conocé las funciones disponibles."
-    />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Cines en Tucumán | Sucursales y direcciones</title>
-  </head>
+  <meta name="description"
+    content="Encontrá cines en San Miguel de Tucumán y Yerba Buena, consulta sus direcciones y conocé las funciones disponibles." />
 
-  <body>
-    <header class="site-header">
-      <nav class="navbar" aria-label="Navegación principal">
-        <div class="navbar__container">
-        <a class="navbar__brand" href="index.html" aria-label="Cine Tucumán - Inicio">
-          Cine Tucumán
-        </a>
+  <link rel="stylesheet" href="../css/global.css">
 
-        <ul class="navbar__menu">
-          <li>
-            <a class="navbar__link" href="index.html"> Inicio </a>
-          </li>
+  <title>Cines en Tucumán | Sucursales y direcciones</title>
+</head>
 
-          <li>
-            <a class="navbar__link" href="peliculas.html"> Películas </a>
-          </li>
+<body>
+  <header>
+    <nav aria-label="Navegación principal">
+      <a href="index.html" aria-label="Cine Tucumán - Inicio">
+        Cine Tucumán
+      </a>
 
-          <li>
-            <a class="navbar__link" href="sucursales.html"> Cines </a>
-          </li>
+      <ul>
+        <li>
+          <a href="index.html"> Inicio </a>
+        </li>
 
-          <li>
-            <a class="navbar__link" href="candybar.html"> Candy Bar </a>
-          </li>
-        </ul>
+        <li>
+          <a href="peliculas.html"> Películas </a>
+        </li>
 
-        <div class="navbar__actions">
-        <a class="navbar__tickets btn btn--primary" href="peliculas.html"> Comprar entradas </a>
+        <li>
+          <a href="sucursales.html"> Cines </a>
+        </li>
 
-        <button class="navbar__search" type="button" aria-label="Abrir buscador">Buscar</button>
+        <li>
+          <a href="candybar.html"> Candy Bar </a>
+        </li>
+      </ul>
 
-        <a class="navbar__cart" href="carrito.html" aria-label="Ver carrito de compra"> Carrito </a>
+      <a href="peliculas.html"> Comprar entradas </a>
 
-        <a class="navbar__auth" href="login.html"> Iniciar sesión </a>
-        </div>
-        </div>
-      </nav>
-    </header>
+      <button type="button" aria-label="Abrir buscador">Buscar</button>
 
-    <main class="page page--cinemas cinemas">
-      <section class="cinemas__intro" aria-labelledby="page-title">
-        <header>
-          <h1 id="page-title">Cines en Tucumán</h1>
-        </header>
+      <a href="carrito.html" aria-label="Ver carrito de compra"> Carrito </a>
 
-        <p>
-          Encontrá los principales complejos de cine de San Miguel de Tucumán y
-          Yerba Buena, consultá su ubicación y accedé a sus funciones
-          disponibles.
-        </p>
-      </section>
+      <a href="login.html"> Iniciar sesión </a>
+    </nav>
+  </header>
 
-      <section class="cinemas__group" aria-labelledby="san-miguel-title">
-        <header>
-          <h2 id="san-miguel-title">Cines en San Miguel de Tucumán</h2>
-        </header>
+  <main>
+    <section aria-labelledby="page-title">
+      <header>
+        <h1 id="page-title">Cines en Tucumán</h1>
+      </header>
 
-        <div class="cinemas__grid">
-          <article class="cinema-card">
-            <figure class="cinema-card__image">
-              <img
-                src="../images/cinemas/cine-atlas-monteagudo.jpg"
-                alt="Cine Atlas Monteagudo en San Miguel de Tucumán"
-              />
-            </figure>
+      <p>
+        Encontrá los principales complejos de cine de San Miguel de Tucumán y
+        Yerba Buena, consultá su ubicación y accedé a sus funciones
+        disponibles.
+      </p>
+    </section>
 
-            <header class="cinema-card__content">
-              <h3 class="cinema-card__title">Cine Atlas Monteagudo</h3>
-            </header>
+    <section aria-labelledby="san-miguel-title">
+      <header>
+        <h2 id="san-miguel-title">Cines en San Miguel de Tucumán</h2>
+      </header>
 
-            <p>San Miguel de Tucumán</p>
+      <div>
+        <article>
+          <figure>
+            <img src="../images/cinemas/cine-atlas-monteagudo.jpg"
+              alt="Cine Atlas Monteagudo en San Miguel de Tucumán" />
+          </figure>
 
-            <p>
-              <a href="#cine-atlas-monteagudo"> Ver sucursal </a>
-
-              <a href="funciones.html?sucursal=cine-atlas-monteagudo">
-                Ver funciones
-              </a>
-            </p>
-          </article>
-
-          <article class="cinema-card">
-            <figure class="cinema-card__image">
-              <img
-                src="../images/cinemas/cine-atlas-via-24.jpg"
-                alt="Cine Atlas Vía 24 en San Miguel de Tucumán"
-              />
-            </figure>
-
-            <header class="cinema-card__content">
-              <h3 class="cinema-card__title">Cine Atlas Vía 24</h3>
-            </header>
-
-            <p>San Miguel de Tucumán</p>
-
-            <p>
-              <a href="#cine-atlas-via-24"> Ver sucursal </a>
-
-              <a href="funciones.html?sucursal=cine-atlas-via-24">
-                Ver funciones
-              </a>
-            </p>
-          </article>
-
-          <article class="cinema-card">
-            <figure class="cinema-card__image">
-              <img
-                src="../images/cinemas/cinemacenter-tucuman.jpg"
-                alt="Cinemacenter Tucumán en San Miguel de Tucumán"
-              />
-            </figure>
-
-            <header class="cinema-card__content">
-              <h3 class="cinema-card__title">Cinemacenter Tucumán</h3>
-            </header>
-
-            <p>San Miguel de Tucumán</p>
-
-            <p>
-              <a href="#cinemacenter-tucuman"> Ver sucursal </a>
-
-              <a href="funciones.html?sucursal=cinemacenter-tucuman">
-                Ver funciones
-              </a>
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section class="cinemas__group" aria-labelledby="yerba-buena-title">
-        <header>
-          <h2 id="yerba-buena-title">Cines en Yerba Buena</h2>
-        </header>
-
-        <div class="cinemas__grid">
-          <article class="cinema-card">
-            <figure class="cinema-card__image">
-              <img
-                src="../images/cinemas/sunstar-cinemas.jpg"
-                alt="Sunstar Cinemas en Yerba Buena"
-              />
-            </figure>
-
-            <header class="cinema-card__content">
-              <h3 class="cinema-card__title">Sunstar Cinemas</h3>
-            </header>
-
-            <p>Yerba Buena, Tucumán</p>
-
-            <p>
-              <a href="#sunstar-cinemas"> Ver sucursal </a>
-
-              <a href="funciones.html?sucursal=sunstar-cinemas">
-                Ver funciones
-              </a>
-            </p>
-          </article>
-
-          <article class="cinema-card">
-            <figure class="cinema-card__image">
-              <img
-                src="../images/cinemas/cines-del-solar.jpg"
-                alt="Cines del Solar en Yerba Buena"
-              />
-            </figure>
-
-            <header class="cinema-card__content">
-              <h3 class="cinema-card__title">Cines del Solar</h3>
-            </header>
-
-            <p>Yerba Buena, Tucumán</p>
-
-            <p>
-              <a href="#cines-del-solar"> Ver sucursal </a>
-
-              <a href="funciones.html?sucursal=cines-del-solar">
-                Ver funciones
-              </a>
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section class="cinemas__map" aria-labelledby="map-title">
-        <header>
-          <h2 id="map-title">Mapa de cines</h2>
-        </header>
-
-        <div>
-          <p>
-            Ubicación de los complejos de cine de San Miguel de Tucumán y Yerba
-            Buena.
-          </p>
-        </div>
-      </section>
-
-      <section class="cinemas__details" aria-labelledby="branch-information-title">
-        <header>
-          <h2 id="branch-information-title">Información de las sucursales</h2>
-        </header>
-
-        <article id="cine-atlas-monteagudo" class="cinema-card cinema-card--detail">
           <header>
             <h3>Cine Atlas Monteagudo</h3>
           </header>
 
-          <figure>
-            <img
-              src="../images/cinemas/cine-atlas-monteagudo.jpg"
-              alt="Cine Atlas Monteagudo"
-            />
-          </figure>
-
-          <address>Monteagudo 250, San Miguel de Tucumán, Tucumán</address>
-
-          <p>Complejo Cine Atlas ubicado en San Miguel de Tucumán.</p>
+          <p>San Miguel de Tucumán</p>
 
           <p>
+            <a href="#cine-atlas-monteagudo"> Ver sucursal </a>
+
             <a href="funciones.html?sucursal=cine-atlas-monteagudo">
               Ver funciones
-            </a>
-
-            <a
-              href="https://www.cineatlas.com.ar/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Sitio oficial
-            </a>
-
-            <a
-              href="https://www.instagram.com/cine.atlas/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Instagram
             </a>
           </p>
         </article>
 
-        <article id="cine-atlas-via-24" class="cinema-card cinema-card--detail">
+        <article>
+          <figure>
+            <img src="../images/cinemas/cine-atlas-via-24.jpg" alt="Cine Atlas Vía 24 en San Miguel de Tucumán" />
+          </figure>
+
           <header>
             <h3>Cine Atlas Vía 24</h3>
           </header>
 
-          <figure>
-            <img
-              src="../images/cinemas/cine-atlas-via-24.jpg"
-              alt="Cine Atlas Vía 24"
-            />
-          </figure>
-
-          <address>
-            24 de Septiembre 757, San Miguel de Tucumán, Tucumán
-          </address>
+          <p>San Miguel de Tucumán</p>
 
           <p>
-            Complejo Cine Atlas ubicado en una zona céntrica de San Miguel de
-            Tucumán.
-          </p>
+            <a href="#cine-atlas-via-24"> Ver sucursal </a>
 
-          <p>
             <a href="funciones.html?sucursal=cine-atlas-via-24">
               Ver funciones
-            </a>
-
-            <a
-              href="https://www.cineatlas.com.ar/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Sitio oficial
-            </a>
-
-            <a
-              href="https://www.instagram.com/cine.atlas/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Instagram
             </a>
           </p>
         </article>
 
-        <article id="cinemacenter-tucuman" class="cinema-card cinema-card--detail">
+        <article>
+          <figure>
+            <img src="../images/cinemas/cinemacenter-tucuman.jpg" alt="Cinemacenter Tucumán en San Miguel de Tucumán" />
+          </figure>
+
           <header>
             <h3>Cinemacenter Tucumán</h3>
           </header>
 
-          <figure>
-            <img
-              src="../images/cinemas/cinemacenter-tucuman.jpg"
-              alt="Cinemacenter Tucumán"
-            />
-          </figure>
-
-          <address>Avenida Roca 3450, San Miguel de Tucumán, Tucumán</address>
-
-          <p>Hipermercado Libertad.</p>
+          <p>San Miguel de Tucumán</p>
 
           <p>
-            Complejo Cinemacenter ubicado en la zona de Avenida Roca de San
-            Miguel de Tucumán.
-          </p>
+            <a href="#cinemacenter-tucuman"> Ver sucursal </a>
 
-          <p>
             <a href="funciones.html?sucursal=cinemacenter-tucuman">
               Ver funciones
             </a>
-
-            <a
-              href="https://www.cinemacenter.com.ar/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Sitio oficial
-            </a>
           </p>
         </article>
+      </div>
+    </section>
 
-        <article id="sunstar-cinemas" class="cinema-card cinema-card--detail">
+    <section aria-labelledby="yerba-buena-title">
+      <header>
+        <h2 id="yerba-buena-title">Cines en Yerba Buena</h2>
+      </header>
+
+      <div>
+        <article>
+          <figure>
+            <img src="../images/cinemas/sunstar-cinemas.jpg" alt="Sunstar Cinemas en Yerba Buena" />
+          </figure>
+
           <header>
             <h3>Sunstar Cinemas</h3>
           </header>
 
-          <figure>
-            <img
-              src="../images/cinemas/sunstar-cinemas.jpg"
-              alt="Sunstar Cinemas en Yerba Buena"
-            />
-          </figure>
-
-          <address>Avenida Fermín Cariola 42, Yerba Buena, Tucumán</address>
-
-          <p>Portal de Tucumán Shopping.</p>
-
-          <p>Complejo Sunstar Cinemas ubicado en Yerba Buena.</p>
+          <p>Yerba Buena, Tucumán</p>
 
           <p>
+            <a href="#sunstar-cinemas"> Ver sucursal </a>
+
             <a href="funciones.html?sucursal=sunstar-cinemas">
               Ver funciones
-            </a>
-
-            <a
-              href="https://www.cinesunstar.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Sitio oficial
             </a>
           </p>
         </article>
 
-        <article id="cines-del-solar" class="cinema-card cinema-card--detail">
+        <article>
+          <figure>
+            <img src="../images/cinemas/cines-del-solar.jpg" alt="Cines del Solar en Yerba Buena" />
+          </figure>
+
           <header>
             <h3>Cines del Solar</h3>
           </header>
 
-          <figure>
-            <img
-              src="../images/cinemas/cines-del-solar.jpg"
-              alt="Cines del Solar en Yerba Buena"
-            />
-          </figure>
-
-          <address>Avenida Aconquija 1300, Yerba Buena, Tucumán</address>
-
-          <p>Shopping Solar del Cerro.</p>
-
-          <p>Complejo Cines del Solar ubicado en Yerba Buena.</p>
+          <p>Yerba Buena, Tucumán</p>
 
           <p>
+            <a href="#cines-del-solar"> Ver sucursal </a>
+
             <a href="funciones.html?sucursal=cines-del-solar">
               Ver funciones
             </a>
-
-            <a
-              href="https://yerbabuena.tur.ar/producto/cines-del-solar/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Sitio oficial
-            </a>
-
-            <a
-              href="https://www.instagram.com/cinesdelsolar/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Instagram
-            </a>
-
-            <a
-              href="https://www.facebook.com/cinesdelsolar/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Facebook
-            </a>
           </p>
         </article>
-      </section>
-    </main>
-
-    <footer>
-      <div>
-        <section>
-          <h2>Cine Tucumán</h2>
-        </section>
-
-        <section>
-          <h3>Películas</h3>
-
-          <ul>
-            <li>
-              <a href="peliculas.html"> Cartelera </a>
-            </li>
-
-            <li>
-              <a href="peliculas.html"> Próximos estrenos </a>
-            </li>
-          </ul>
-        </section>
-
-        <section>
-          <h3>Cines</h3>
-
-          <ul>
-            <li>
-              <a href="sucursales.html"> Sucursales </a>
-            </li>
-
-            <li>
-              <a href="funciones.html"> Horarios </a>
-            </li>
-          </ul>
-        </section>
-
-        <section>
-          <h3>Ayuda</h3>
-
-          <ul>
-            <li>
-              <a href="#"> Preguntas frecuentes </a>
-            </li>
-
-            <li>
-              <a href="#"> Contacto </a>
-            </li>
-
-            <li>
-              <a href="#"> Términos y condiciones </a>
-            </li>
-          </ul>
-        </section>
-
-        <section>
-          <h3>Nuestras sucursales</h3>
-
-          <ul>
-            <li>
-              <a href="#cine-atlas-monteagudo"> Cine Atlas Monteagudo </a>
-            </li>
-
-            <li>
-              <a href="#cine-atlas-via-24"> Cine Atlas Vía 24 </a>
-            </li>
-
-            <li>
-              <a href="#cinemacenter-tucuman"> Cinemacenter Tucumán </a>
-            </li>
-
-            <li>
-              <a href="#sunstar-cinemas"> Sunstar Cinemas </a>
-            </li>
-
-            <li>
-              <a href="#cines-del-solar"> Cines del Solar </a>
-            </li>
-          </ul>
-        </section>
       </div>
+    </section>
 
-      <p>&copy; 2026 Cine Tucumán</p>
-    </footer>
-  </body>
+    <section aria-labelledby="map-title">
+      <header>
+        <h2 id="map-title">Mapa de cines</h2>
+      </header>
+
+      <div>
+        <p>
+          Ubicación de los complejos de cine de San Miguel de Tucumán y Yerba
+          Buena.
+        </p>
+      </div>
+    </section>
+
+    <section aria-labelledby="branch-information-title">
+      <header>
+        <h2 id="branch-information-title">Información de las sucursales</h2>
+      </header>
+
+      <article id="cine-atlas-monteagudo">
+        <header>
+          <h3>Cine Atlas Monteagudo</h3>
+        </header>
+
+        <figure>
+          <img src="../images/cinemas/cine-atlas-monteagudo.jpg" alt="Cine Atlas Monteagudo" />
+        </figure>
+
+        <address>Monteagudo 250, San Miguel de Tucumán, Tucumán</address>
+
+        <p>Complejo Cine Atlas ubicado en San Miguel de Tucumán.</p>
+
+        <p>
+          <a href="funciones.html?sucursal=cine-atlas-monteagudo">
+            Ver funciones
+          </a>
+
+          <a href="https://www.cineatlas.com.ar/" target="_blank" rel="noopener noreferrer">
+            Sitio oficial
+          </a>
+
+          <a href="https://www.instagram.com/cine.atlas/" target="_blank" rel="noopener noreferrer">
+            Instagram
+          </a>
+        </p>
+      </article>
+
+      <article id="cine-atlas-via-24">
+        <header>
+          <h3>Cine Atlas Vía 24</h3>
+        </header>
+
+        <figure>
+          <img src="../images/cinemas/cine-atlas-via-24.jpg" alt="Cine Atlas Vía 24" />
+        </figure>
+
+        <address>
+          24 de Septiembre 757, San Miguel de Tucumán, Tucumán
+        </address>
+
+        <p>
+          Complejo Cine Atlas ubicado en una zona céntrica de San Miguel de
+          Tucumán.
+        </p>
+
+        <p>
+          <a href="funciones.html?sucursal=cine-atlas-via-24">
+            Ver funciones
+          </a>
+
+          <a href="https://www.cineatlas.com.ar/" target="_blank" rel="noopener noreferrer">
+            Sitio oficial
+          </a>
+
+          <a href="https://www.instagram.com/cine.atlas/" target="_blank" rel="noopener noreferrer">
+            Instagram
+          </a>
+        </p>
+      </article>
+
+      <article id="cinemacenter-tucuman">
+        <header>
+          <h3>Cinemacenter Tucumán</h3>
+        </header>
+
+        <figure>
+          <img src="../images/cinemas/cinemacenter-tucuman.jpg" alt="Cinemacenter Tucumán" />
+        </figure>
+
+        <address>Avenida Roca 3450, San Miguel de Tucumán, Tucumán</address>
+
+        <p>Hipermercado Libertad.</p>
+
+        <p>
+          Complejo Cinemacenter ubicado en la zona de Avenida Roca de San
+          Miguel de Tucumán.
+        </p>
+
+        <p>
+          <a href="funciones.html?sucursal=cinemacenter-tucuman">
+            Ver funciones
+          </a>
+
+          <a href="https://www.cinemacenter.com.ar/" target="_blank" rel="noopener noreferrer">
+            Sitio oficial
+          </a>
+        </p>
+      </article>
+
+      <article id="sunstar-cinemas">
+        <header>
+          <h3>Sunstar Cinemas</h3>
+        </header>
+
+        <figure>
+          <img src="../images/cinemas/sunstar-cinemas.jpg" alt="Sunstar Cinemas en Yerba Buena" />
+        </figure>
+
+        <address>Avenida Fermín Cariola 42, Yerba Buena, Tucumán</address>
+
+        <p>Portal de Tucumán Shopping.</p>
+
+        <p>Complejo Sunstar Cinemas ubicado en Yerba Buena.</p>
+
+        <p>
+          <a href="funciones.html?sucursal=sunstar-cinemas">
+            Ver funciones
+          </a>
+
+          <a href="https://www.cinesunstar.com/" target="_blank" rel="noopener noreferrer">
+            Sitio oficial
+          </a>
+        </p>
+      </article>
+
+      <article id="cines-del-solar">
+        <header>
+          <h3>Cines del Solar</h3>
+        </header>
+
+        <figure>
+          <img src="../images/cinemas/cines-del-solar.jpg" alt="Cines del Solar en Yerba Buena" />
+        </figure>
+
+        <address>Avenida Aconquija 1300, Yerba Buena, Tucumán</address>
+
+        <p>Shopping Solar del Cerro.</p>
+
+        <p>Complejo Cines del Solar ubicado en Yerba Buena.</p>
+
+        <p>
+          <a href="funciones.html?sucursal=cines-del-solar">
+            Ver funciones
+          </a>
+
+          <a href="https://yerbabuena.tur.ar/producto/cines-del-solar/" target="_blank" rel="noopener noreferrer">
+            Sitio oficial
+          </a>
+
+          <a href="https://www.instagram.com/cinesdelsolar/" target="_blank" rel="noopener noreferrer">
+            Instagram
+          </a>
+
+          <a href="https://www.facebook.com/cinesdelsolar/" target="_blank" rel="noopener noreferrer">
+            Facebook
+          </a>
+        </p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <div>
+      <section>
+        <h2>Cine Tucumán</h2>
+      </section>
+
+      <section>
+        <h3>Películas</h3>
+
+        <ul>
+          <li>
+            <a href="peliculas.html"> Cartelera </a>
+          </li>
+
+          <li>
+            <a href="peliculas.html"> Próximos estrenos </a>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Cines</h3>
+
+        <ul>
+          <li>
+            <a href="sucursales.html"> Sucursales </a>
+          </li>
+
+          <li>
+            <a href="funciones.html"> Horarios </a>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Ayuda</h3>
+
+        <ul>
+          <li>
+            <a href="#"> Preguntas frecuentes </a>
+          </li>
+
+          <li>
+            <a href="#"> Contacto </a>
+          </li>
+
+          <li>
+            <a href="#"> Términos y condiciones </a>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Nuestras sucursales</h3>
+
+        <ul>
+          <li>
+            <a href="#cine-atlas-monteagudo"> Cine Atlas Monteagudo </a>
+          </li>
+
+          <li>
+            <a href="#cine-atlas-via-24"> Cine Atlas Vía 24 </a>
+          </li>
+
+          <li>
+            <a href="#cinemacenter-tucuman"> Cinemacenter Tucumán </a>
+          </li>
+
+          <li>
+            <a href="#sunstar-cinemas"> Sunstar Cinemas </a>
+          </li>
+
+          <li>
+            <a href="#cines-del-solar"> Cines del Solar </a>
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <p>&copy; 2026 Cine Tucumán</p>
+  </footer>
+</body>
+
 </html>
