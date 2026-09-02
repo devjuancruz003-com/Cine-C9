@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Conocé la información, sinopsis, reparto, tráiler y funciones de Spider-Man: Un nuevo día en los cines de Tucumán."
+    />
+    <title>Spider-Man: Un nuevo día | Horarios y entradas en Tucumán</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/navbar.css" />
+    <link rel="stylesheet" href="../css/movie-detail.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <nav class="navbar" aria-label="Navegación principal">
+        <div class="navbar__container">
+          <a class="navbar__brand" href="index.html" aria-label="Cine Tucumán - Inicio">
+            Cine Tucumán
+          </a>
+
+          <ul class="navbar__menu">
+            <li><a class="navbar__link" href="index.html">Inicio</a></li>
+            <li><a class="navbar__link" href="peliculas.html">Películas</a></li>
+            <li><a class="navbar__link" href="sucursales.html">Cines</a></li>
+            <li><a class="navbar__link" href="candybar.html">Candy Bar</a></li>
+          </ul>
+
+          <div class="navbar__actions">
+            <a class="navbar__tickets btn btn--primary" href="peliculas.html">Comprar entradas</a>
+            <button class="navbar__search" type="button" aria-label="Abrir buscador">Buscar</button>
+            <a class="navbar__cart" href="carrito.html" aria-label="Ver carrito de compra">Carrito</a>
+            <a class="navbar__auth" href="login.html">Iniciar sesión</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="page page--movie-detail">
+      <article class="movie-detail">
+        <section class="movie-detail__hero" aria-labelledby="movie-title">
+          <figure class="movie-detail__poster">
+            <img
+              src="../images/movies/spider-man-un-nuevo-dia-poster.jpg"
+              alt="Póster de Spider-Man: Un nuevo día"
+            />
+          </figure>
+
+          <div class="movie-detail__info">
+            <p class="movie-detail__status">En cartelera</p>
+            <h1 id="movie-title">Spider-Man: Un nuevo día</h1>
+            <p class="movie-detail__original-title">Spider-Man: Brand New Day</p>
+            <p class="movie-detail__genres">Acción · Aventura · Ciencia ficción</p>
+            <p class="movie-detail__runtime">2h25min</p>
+            <p class="movie-detail__rating">Supervisión parental sugerida</p>
+            <a class="btn btn--primary" href="funciones.html?pelicula=spider-man-un-nuevo-dia">
+              Ver funciones
+            </a>
+          </div>
+        </section>
+
+        <section class="movie-detail__synopsis" aria-labelledby="synopsis-title">
+          <header>
+            <h2 id="synopsis-title">Sinopsis</h2>
+          </header>
+          <p>
+            Cuatro años después de los acontecimientos de Spider-Man: Sin regreso a casa, Peter Parker vive solo y dedica su vida por completo a combatir el crimen en una Nueva York que ya no recuerda su identidad. Mientras un nuevo patrón de delitos amenaza la ciudad, una transformación inesperada pone en riesgo al propio Spider-Man y lo enfrenta a una de las amenazas más peligrosas de su vida.
+          </p>
+        </section>
+
+        <section class="movie-detail__technical" aria-labelledby="technical-title">
+          <header>
+            <h2 id="technical-title">Ficha técnica</h2>
+          </header>
+          <dl class="movie-detail__technical-list">
+            <div class="movie-detail__technical-item">
+              <dt>Director</dt>
+              <dd>Destin Daniel Cretton</dd>
+            </div>
+            <div class="movie-detail__technical-item">
+              <dt>Año</dt>
+              <dd>2026</dd>
+            </div>
+            <div class="movie-detail__technical-item">
+              <dt>Estreno en Argentina</dt>
+              <dd>30 de julio de 2026</dd>
+            </div>
+            <div class="movie-detail__technical-item">
+              <dt>Origen</dt>
+              <dd>Estados Unidos</dd>
+            </div>
+          </dl>
+        </section>
+
+        <section class="movie-detail__cast" aria-labelledby="cast-title">
+          <header>
+            <h2 id="cast-title">Reparto principal</h2>
+          </header>
+          <ul class="movie-detail__cast-list">
+            <li class="movie-detail__cast-item"><div class="movie-detail__cast-image" aria-hidden="true"></div><p class="movie-detail__cast-name">Tom Holland</p></li>
+            <li class="movie-detail__cast-item"><div class="movie-detail__cast-image" aria-hidden="true"></div><p class="movie-detail__cast-name">Zendaya</p></li>
+            <li class="movie-detail__cast-item"><div class="movie-detail__cast-image" aria-hidden="true"></div><p class="movie-detail__cast-name">Sadie Sink</p></li>
+            <li class="movie-detail__cast-item"><div class="movie-detail__cast-image" aria-hidden="true"></div><p class="movie-detail__cast-name">Jacob Batalon</p></li>
+            <li class="movie-detail__cast-item"><div class="movie-detail__cast-image" aria-hidden="true"></div><p class="movie-detail__cast-name">Jon Bernthal</p></li>
+            <li class="movie-detail__cast-item"><div class="movie-detail__cast-image" aria-hidden="true"></div><p class="movie-detail__cast-name">Mark Ruffalo</p></li>
+          </ul>
+        </section>
+
+        <section class="movie-detail__trailer" aria-labelledby="trailer-title">
+          <header>
+            <h2 id="trailer-title">Tráiler oficial</h2>
+          </header>
+          <div class="movie-detail__trailer-placeholder">
+            <p>Enlace al tráiler oficial pendiente de confirmación.</p>
+          </div>
+        </section>
+
+        <section class="movie-detail__functions" aria-labelledby="functions-title">
+          <header>
+            <h2 id="functions-title">Funciones</h2>
+            <p>Consultá las funciones disponibles por sucursal.</p>
+          </header>
+
+          <article class="movie-detail__branch">
+            <header>
+              <h3>Sunstar Cinemas</h3>
+              <p>01/09/2026</p>
+            </header>
+            <section class="movie-detail__function-group" aria-labelledby="sunstar-2d-title">
+              <h4 id="sunstar-2d-title">2D · Castellano</h4>
+              <ul class="movie-detail__time-list">
+                <li><a href="funciones.html?pelicula=spider-man-un-nuevo-dia&amp;sucursal=sunstar-cinemas">19:20</a></li>
+                <li><a href="funciones.html?pelicula=spider-man-un-nuevo-dia&amp;sucursal=sunstar-cinemas">22:10</a></li>
+              </ul>
+            </section>
+            <section class="movie-detail__function-group" aria-labelledby="sunstar-3d-title">
+              <h4 id="sunstar-3d-title">3D · Castellano</h4>
+              <ul class="movie-detail__time-list">
+                <li><a href="funciones.html?pelicula=spider-man-un-nuevo-dia&amp;sucursal=sunstar-cinemas">16:00</a></li>
+                <li><a href="funciones.html?pelicula=spider-man-un-nuevo-dia&amp;sucursal=sunstar-cinemas">19:00</a></li>
+                <li><a href="funciones.html?pelicula=spider-man-un-nuevo-dia&amp;sucursal=sunstar-cinemas">22:00</a></li>
+              </ul>
+            </section>
+            <p class="movie-detail__reference-price">Precio de referencia del proyecto: $8.500</p>
+          </article>
+
+          <article class="movie-detail__branch">
+            <header><h3>Cine Atlas Monteagudo</h3></header>
+            <p class="movie-detail__pending-functions">Funciones próximas a confirmar.</p>
+          </article>
+          <article class="movie-detail__branch">
+            <header><h3>Cine Atlas Vía 24</h3></header>
+            <p class="movie-detail__pending-functions">Funciones próximas a confirmar.</p>
+          </article>
+          <article class="movie-detail__branch">
+            <header><h3>Cinemacenter Tucumán</h3></header>
+            <p class="movie-detail__pending-functions">Funciones próximas a confirmar.</p>
+          </article>
+          <article class="movie-detail__branch">
+            <header><h3>Cines del Solar</h3></header>
+            <p class="movie-detail__pending-functions">Funciones próximas a confirmar.</p>
+          </article>
+        </section>
+      </article>
+    </main>
+
+    <footer>
+      <div>
+        <section><h2>Cine Tucumán</h2></section>
+        <section>
+          <h3>Películas</h3>
+          <ul><li><a href="peliculas.html">Cartelera</a></li><li><a href="peliculas.html">Próximos estrenos</a></li></ul>
+        </section>
+        <section>
+          <h3>Cines</h3>
+          <ul><li><a href="sucursales.html">Sucursales</a></li><li><a href="funciones.html">Horarios</a></li></ul>
+        </section>
+        <section>
+          <h3>Ayuda</h3>
+          <ul><li><a href="#">FAQs</a></li><li><a href="#">Contacto</a></li><li><a href="#">Términos</a></li></ul>
+        </section>
+        <section>
+          <h3>Nuestras sucursales</h3>
+          <ul>
+            <li><a href="sucursales.html#cine-atlas-monteagudo">Cine Atlas Monteagudo</a></li>
+            <li><a href="sucursales.html#cine-atlas-via-24">Cine Atlas Vía 24</a></li>
+            <li><a href="sucursales.html#cinemacenter-tucuman">Cinemacenter Tucumán</a></li>
+            <li><a href="sucursales.html#sunstar-cinemas">Sunstar Cinemas</a></li>
+            <li><a href="sucursales.html#cines-del-solar">Cines del Solar</a></li>
+          </ul>
+        </section>
+      </div>
+      <p>&copy; 2026 Cine Tucumán</p>
+    </footer>
+  </body>
+</html>
