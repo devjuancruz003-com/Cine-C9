@@ -15,51 +15,55 @@
 
   <body>
 
-    <header>
-      <nav aria-label="Navegación principal">
+    <header class="site-header">
+      <nav class="navbar" aria-label="Navegación principal">
 
-        <a href="index.html" aria-label="Cine Tucumán - Inicio">
+        <div class="navbar__container">
+        <a class="navbar__brand" href="index.html" aria-label="Cine Tucumán - Inicio">
           Cine Tucumán
         </a>
 
 
-        <ul>
+        <ul class="navbar__menu">
           <li>
-            <a href="index.html"> Inicio </a>
+            <a class="navbar__link" href="index.html"> Inicio </a>
           </li>
 
           <li>
-            <a href="peliculas.html"> Películas </a>
+            <a class="navbar__link" href="peliculas.html"> Películas </a>
           </li>
 
           <li>
-            <a href="sucursales.html"> Cines </a>
+            <a class="navbar__link" href="sucursales.html"> Cines </a>
           </li>
 
           <li>
-            <a href="candybar.html"> Candy Bar </a>
+            <a class="navbar__link" href="candybar.html"> Candy Bar </a>
           </li>
         </ul>
 
 
-        <a href="peliculas.html"> Comprar entradas </a>
+        <div class="navbar__actions">
+        <a class="navbar__tickets btn btn--primary" href="peliculas.html"> Comprar entradas </a>
 
 
-        <button type="button" aria-label="Abrir buscador">Buscar</button>
+        <button class="navbar__search" type="button" aria-label="Abrir buscador">Buscar</button>
 
 
-        <a href="carrito.html" aria-label="Ver carrito de compra"> Carrito </a>
+        <a class="navbar__cart" href="carrito.html" aria-label="Ver carrito de compra"> Carrito </a>
 
 
-        <a href="login.html"> Iniciar sesión </a>
+        <a class="navbar__auth" href="login.html"> Iniciar sesión </a>
+        </div>
+        </div>
       </nav>
     </header>
 
 
-    <main>
+    <main class="page page--seats">
 
-      <nav aria-label="Progreso de compra">
-        <ol>
+      <nav class="purchase-stepper" aria-label="Progreso de compra">
+        <ol class="purchase-stepper__list">
           <li>
             <span>✓</span>
             Función
@@ -94,19 +98,19 @@
       </nav>
 
 
-      <section aria-labelledby="function-summary-title">
+      <section class="function-summary" aria-labelledby="function-summary-title">
         <header>
           <h1 id="function-summary-title">Spider-Man: Un nuevo día</h1>
         </header>
 
-        <figure>
+        <figure class="function-summary__poster">
           <img
             src="../images/movies/spider-man-un-nuevo-dia-poster.jpg"
             alt="Poster de Spider-Man: Un nuevo día"
           />
         </figure>
 
-        <dl>
+        <dl class="function-summary__details">
           <div>
             <dt>Sucursal</dt>
 
@@ -152,179 +156,179 @@
       </section>
 
 
-      <section aria-labelledby="seat-map-title">
+      <section class="seat-map" aria-labelledby="seat-map-title">
         <header>
           <h2 id="seat-map-title">Seleccioná tus butacas</h2>
         </header>
 
         <p>Elegí una o más butacas disponibles para continuar con tu compra.</p>
 
-        <div>
+        <div class="seat-map__screen">
           <p>PANTALLA</p>
         </div>
 
 
-        <section aria-label="Fila A">
+        <section class="seat-row" aria-label="Fila A">
           <h3>Fila A</h3>
 
-          <div>
-            <button type="button" aria-label="Butaca A1 - Accesible - Libre">
+          <div class="seat-row__seats">
+            <button class="seat seat--accessible is-available" type="button" aria-label="Butaca A1 - Accesible - Libre">
               A1 ♿
             </button>
 
-            <button type="button" aria-label="Butaca A2 - Libre">A2</button>
+            <button class="seat seat--standard is-available" type="button" aria-label="Butaca A2 - Libre">A2</button>
 
-            <button type="button" aria-label="Butaca A3 - Libre">A3</button>
+            <button class="seat seat--standard is-available" type="button" aria-label="Butaca A3 - Libre">A3</button>
 
-            <button type="button" aria-label="Butaca A4 - Libre">A4</button>
+            <button class="seat seat--standard is-available" type="button" aria-label="Butaca A4 - Libre">A4</button>
 
 
-            <button type="button" aria-label="Butaca A5 - Libre">A5</button>
+            <button class="seat seat--standard is-available" type="button" aria-label="Butaca A5 - Libre">A5</button>
 
-            <button type="button" aria-label="Butaca A6 - Libre">A6</button>
+            <button class="seat seat--standard is-available" type="button" aria-label="Butaca A6 - Libre">A6</button>
 
-            <button type="button" aria-label="Butaca A7 - Libre">A7</button>
+            <button class="seat seat--standard is-available" type="button" aria-label="Butaca A7 - Libre">A7</button>
 
-            <button type="button" aria-label="Butaca A8 - Accesible - Libre">
+            <button class="seat seat--accessible is-available" type="button" aria-label="Butaca A8 - Accesible - Libre">
               A8 ♿
             </button>
           </div>
         </section>
 
 
-        <section aria-label="Fila B">
+        <section class="seat-row" aria-label="Fila B">
           <h3>Fila B</h3>
 
-          <div>
-            <button type="button" aria-label="Butaca B1 - Libre">B1</button>
+          <div class="seat-row__seats">
+            <button class="seat seat--accessible is-available" type="button" aria-label="Butaca B1 - Accesible - Libre">B1</button>
 
-            <button type="button" aria-label="Butaca B2 - Libre">B2</button>
+            <button class="seat seat--standard is-available" type="button" aria-label="Butaca B2 - Libre">B2</button>
 
-            <button type="button" aria-label="Butaca B3 - Ocupada" disabled>
+            <button class="seat seat--standard is-occupied" type="button" aria-label="Butaca B3 - Ocupada" disabled>
               B3
             </button>
 
-            <button type="button" aria-label="Butaca B4 - Libre">B4</button>
+            <button class="seat seat--standard is-available" type="button" aria-label="Butaca B4 - Libre">B4</button>
 
-            <button type="button" aria-label="Butaca B5 - Libre">B5</button>
+            <button class="seat seat--standard is-available" type="button" aria-label="Butaca B5 - Libre">B5</button>
 
-            <button type="button" aria-label="Butaca B6 - Ocupada" disabled>
+            <button class="seat seat--standard is-occupied" type="button" aria-label="Butaca B6 - Ocupada" disabled>
               B6
             </button>
 
-            <button type="button" aria-label="Butaca B7 - Libre">B7</button>
+            <button class="seat seat--standard is-available" type="button" aria-label="Butaca B7 - Libre">B7</button>
 
-            <button type="button" aria-label="Butaca B8 - Libre">B8</button>
+            <button class="seat seat--accessible is-available" type="button" aria-label="Butaca B8 - Accesible - Libre">B8</button>
           </div>
         </section>
 
 
-        <section aria-label="Fila C">
+        <section class="seat-row" aria-label="Fila C">
           <h3>Fila C</h3>
 
-          <div>
-            <button type="button" aria-label="Butaca C1 - Libre">C1</button>
+          <div class="seat-row__seats">
+            <button class="seat seat--standard is-available" type="button" aria-label="Butaca C1 - Libre">C1</button>
 
-            <button type="button" aria-label="Butaca C2 - Ocupada" disabled>
+            <button class="seat seat--standard is-occupied" type="button" aria-label="Butaca C2 - Ocupada" disabled>
               C2
             </button>
 
-            <button type="button" aria-label="Butaca C3 - Libre">C3</button>
+            <button class="seat seat--standard is-available" type="button" aria-label="Butaca C3 - Libre">C3</button>
 
-            <button type="button" aria-label="Butaca C4 - Libre">C4</button>
+            <button class="seat seat--standard is-available" type="button" aria-label="Butaca C4 - Libre">C4</button>
 
-            <button type="button" aria-label="Butaca C5 - Libre">C5</button>
+            <button class="seat seat--standard is-available" type="button" aria-label="Butaca C5 - Libre">C5</button>
 
-            <button type="button" aria-label="Butaca C6 - Libre">C6</button>
+            <button class="seat seat--standard is-available" type="button" aria-label="Butaca C6 - Libre">C6</button>
 
-            <button type="button" aria-label="Butaca C7 - Ocupada" disabled>
+            <button class="seat seat--standard is-occupied" type="button" aria-label="Butaca C7 - Ocupada" disabled>
               C7
             </button>
 
-            <button type="button" aria-label="Butaca C8 - Libre">C8</button>
+            <button class="seat seat--standard is-available" type="button" aria-label="Butaca C8 - Libre">C8</button>
           </div>
         </section>
 
 
-        <section aria-label="Fila D">
+        <section class="seat-row" aria-label="Fila D">
           <h3>Fila D</h3>
 
-          <div>
-            <button type="button" aria-label="Butaca D1 - Libre">D1</button>
+          <div class="seat-row__seats">
+            <button class="seat seat--standard is-available" type="button" aria-label="Butaca D1 - Libre">D1</button>
 
-            <button type="button" aria-label="Butaca D2 - Libre">D2</button>
+            <button class="seat seat--standard is-available" type="button" aria-label="Butaca D2 - Libre">D2</button>
 
-            <button type="button" aria-label="Butaca D3 - Libre">D3</button>
+            <button class="seat seat--standard is-available" type="button" aria-label="Butaca D3 - Libre">D3</button>
 
-            <button type="button" aria-label="Butaca D4 - Ocupada" disabled>
+            <button class="seat seat--standard is-occupied" type="button" aria-label="Butaca D4 - Ocupada" disabled>
               D4
             </button>
 
-            <button type="button" aria-label="Butaca D5 - Libre">D5</button>
+            <button class="seat seat--standard is-available" type="button" aria-label="Butaca D5 - Libre">D5</button>
 
-            <button type="button" aria-label="Butaca D6 - Libre">D6</button>
+            <button class="seat seat--standard is-available" type="button" aria-label="Butaca D6 - Libre">D6</button>
 
-            <button type="button" aria-label="Butaca D7 - Libre">D7</button>
+            <button class="seat seat--standard is-available" type="button" aria-label="Butaca D7 - Libre">D7</button>
 
-            <button type="button" aria-label="Butaca D8 - Libre">D8</button>
+            <button class="seat seat--standard is-available" type="button" aria-label="Butaca D8 - Libre">D8</button>
           </div>
         </section>
 
 
-        <section aria-label="Fila E">
+        <section class="seat-row" aria-label="Fila E">
           <h3>Fila E</h3>
 
-          <div>
-            <button type="button" aria-label="Butaca E1 - Libre">E1</button>
+          <div class="seat-row__seats">
+            <button class="seat seat--standard is-available" type="button" aria-label="Butaca E1 - Libre">E1</button>
 
-            <button type="button" aria-label="Butaca E2 - Libre">E2</button>
+            <button class="seat seat--standard is-available" type="button" aria-label="Butaca E2 - Libre">E2</button>
 
-            <button type="button" aria-label="Butaca E3 - Ocupada" disabled>
+            <button class="seat seat--standard is-occupied" type="button" aria-label="Butaca E3 - Ocupada" disabled>
               E3
             </button>
 
-            <button type="button" aria-label="Butaca E4 - Libre">E4</button>
+            <button class="seat seat--standard is-available" type="button" aria-label="Butaca E4 - Libre">E4</button>
 
-            <button type="button" aria-label="Butaca E5 - Libre">E5</button>
+            <button class="seat seat--standard is-available" type="button" aria-label="Butaca E5 - Libre">E5</button>
 
-            <button type="button" aria-label="Butaca E6 - Libre">E6</button>
+            <button class="seat seat--standard is-available" type="button" aria-label="Butaca E6 - Libre">E6</button>
 
-            <button type="button" aria-label="Butaca E7 - Libre">E7</button>
+            <button class="seat seat--standard is-available" type="button" aria-label="Butaca E7 - Libre">E7</button>
 
-            <button type="button" aria-label="Butaca E8 - Ocupada" disabled>
+            <button class="seat seat--standard is-occupied" type="button" aria-label="Butaca E8 - Ocupada" disabled>
               E8
             </button>
           </div>
         </section>
 
 
-        <section aria-label="Fila F">
+        <section class="seat-row" aria-label="Fila F">
           <h3>Fila F</h3>
 
-          <div>
-            <button type="button" aria-label="Butaca F1 - Libre">F1</button>
+          <div class="seat-row__seats">
+            <button class="seat seat--standard is-available" type="button" aria-label="Butaca F1 - Libre">F1</button>
 
-            <button type="button" aria-label="Butaca F2 - Libre">F2</button>
+            <button class="seat seat--standard is-available" type="button" aria-label="Butaca F2 - Libre">F2</button>
 
-            <button type="button" aria-label="Butaca F3 - Libre">F3</button>
+            <button class="seat seat--standard is-available" type="button" aria-label="Butaca F3 - Libre">F3</button>
 
-            <button type="button" aria-label="Butaca F4 - Libre">F4</button>
+            <button class="seat seat--standard is-available" type="button" aria-label="Butaca F4 - Libre">F4</button>
 
-            <button type="button" aria-label="Butaca F5 - Ocupada" disabled>
+            <button class="seat seat--standard is-occupied" type="button" aria-label="Butaca F5 - Ocupada" disabled>
               F5
             </button>
 
-            <button type="button" aria-label="Butaca F6 - Libre">F6</button>
+            <button class="seat seat--standard is-available" type="button" aria-label="Butaca F6 - Libre">F6</button>
 
-            <button type="button" aria-label="Butaca F7 - Libre">F7</button>
+            <button class="seat seat--standard is-available" type="button" aria-label="Butaca F7 - Libre">F7</button>
 
-            <button type="button" aria-label="Butaca F8 - Libre">F8</button>
+            <button class="seat seat--standard is-available" type="button" aria-label="Butaca F8 - Libre">F8</button>
           </div>
         </section>
       </section>
 
 
-      <section aria-labelledby="legend-title">
+      <section class="seat-legend" aria-labelledby="legend-title">
         <header>
           <h2 id="legend-title">Referencia de butacas</h2>
         </header>
@@ -367,7 +371,7 @@
       </section>
 
 
-      <section aria-labelledby="selected-seats-title">
+      <section class="selected-seats" aria-labelledby="selected-seats-title">
         <header>
           <h2 id="selected-seats-title">Butacas seleccionadas</h2>
         </header>
@@ -375,12 +379,12 @@
         <p>Todavía no seleccionaste ninguna butaca.</p>
 
 
-        <ul>
+        <ul class="selected-seats__list">
         </ul>
       </section>
 
 
-      <aside aria-labelledby="selection-summary-title">
+      <aside class="selection-summary" aria-labelledby="selection-summary-title">
         <header>
           <h2 id="selection-summary-title">Resumen</h2>
         </header>
@@ -400,7 +404,7 @@
         </dl>
 
 
-        <button type="button" disabled>Seleccioná tus butacas</button>
+        <button class="btn btn--primary" type="button" disabled>Seleccioná tus butacas</button>
       </aside>
     </main>
 
