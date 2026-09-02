@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Elegí una sucursal, fecha, formato, idioma y horario para ver tu película en los cines de Tucumán."
+    />
+    <title>Funciones y horarios de cine en Tucumán | Cine Tucumán</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/navbar.css" />
+    <link rel="stylesheet" href="../css/functions.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <nav class="navbar" aria-label="Navegación principal">
+        <div class="navbar__container">
+          <a class="navbar__brand" href="index.html" aria-label="Cine Tucumán - Inicio">Cine Tucumán</a>
+          <ul class="navbar__menu">
+            <li><a class="navbar__link" href="index.html">Inicio</a></li>
+            <li><a class="navbar__link" href="peliculas.html">Películas</a></li>
+            <li><a class="navbar__link" href="sucursales.html">Cines</a></li>
+            <li><a class="navbar__link" href="candybar.html">Candy Bar</a></li>
+          </ul>
+          <div class="navbar__actions">
+            <a class="navbar__tickets btn btn--primary" href="peliculas.html">Comprar entradas</a>
+            <button class="navbar__search" type="button" aria-label="Abrir buscador">Buscar</button>
+            <a class="navbar__cart" href="carrito.html" aria-label="Ver carrito de compra">Carrito</a>
+            <a class="navbar__auth" href="login.html">Iniciar sesión</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="page page--functions">
+      <section class="functions" aria-labelledby="functions-title">
+        <header class="functions__header">
+          <h1 id="functions-title">Elegí tu función</h1>
+        </header>
+
+        <article class="functions__movie-summary" aria-labelledby="movie-summary-title">
+          <figure class="functions__movie-poster">
+            <img
+              src="../images/movies/spider-man-un-nuevo-dia-poster.jpg"
+              alt="Póster de Spider-Man: Un nuevo día"
+            />
+          </figure>
+          <div>
+            <h2 id="movie-summary-title">Spider-Man: Un nuevo día</h2>
+            <p>2h25min · Acción · Aventura · Ciencia ficción</p>
+            <a href="pelicula.html?pelicula=spider-man-un-nuevo-dia">Ver detalle de la película</a>
+          </div>
+        </article>
+
+        <form class="functions__selection">
+          <fieldset class="functions__branches">
+            <legend>1. Elegí una sucursal</legend>
+            <div class="functions__branch-list">
+              <input class="functions__branch-input" id="branch-atlas-monteagudo" name="branch" type="radio" value="cine-atlas-monteagudo" />
+              <label class="functions__branch" for="branch-atlas-monteagudo">Cine Atlas Monteagudo</label>
+              <input class="functions__branch-input" id="branch-atlas-via-24" name="branch" type="radio" value="cine-atlas-via-24" />
+              <label class="functions__branch" for="branch-atlas-via-24">Cine Atlas Vía 24</label>
+              <input class="functions__branch-input" id="branch-cinemacenter" name="branch" type="radio" value="cinemacenter-tucuman" />
+              <label class="functions__branch" for="branch-cinemacenter">Cinemacenter Tucumán</label>
+              <input class="functions__branch-input" id="branch-sunstar" name="branch" type="radio" value="sunstar-cinemas" checked />
+              <label class="functions__branch is-selected" for="branch-sunstar">Sunstar Cinemas</label>
+              <input class="functions__branch-input" id="branch-solar" name="branch" type="radio" value="cines-del-solar" />
+              <label class="functions__branch" for="branch-solar">Cines del Solar</label>
+            </div>
+          </fieldset>
+
+          <fieldset class="functions__dates">
+            <legend>2. Elegí una fecha</legend>
+            <div class="functions__date-list">
+              <input class="functions__date-input" id="date-01" name="date" type="radio" value="2026-09-01" checked />
+              <label class="functions__date is-selected" for="date-01"><span class="functions__date-day">Lun</span><span class="functions__date-number">01</span><span class="functions__date-month">Sep</span></label>
+              <input class="functions__date-input" id="date-02" name="date" type="radio" value="2026-09-02" />
+              <label class="functions__date" for="date-02"><span class="functions__date-day">Mar</span><span class="functions__date-number">02</span><span class="functions__date-month">Sep</span></label>
+              <input class="functions__date-input" id="date-03" name="date" type="radio" value="2026-09-03" />
+              <label class="functions__date" for="date-03"><span class="functions__date-day">Mié</span><span class="functions__date-number">03</span><span class="functions__date-month">Sep</span></label>
+              <input class="functions__date-input" id="date-04" name="date" type="radio" value="2026-09-04" />
+              <label class="functions__date" for="date-04"><span class="functions__date-day">Jue</span><span class="functions__date-number">04</span><span class="functions__date-month">Sep</span></label>
+              <input class="functions__date-input" id="date-05" name="date" type="radio" value="2026-09-05" />
+              <label class="functions__date" for="date-05"><span class="functions__date-day">Vie</span><span class="functions__date-number">05</span><span class="functions__date-month">Sep</span></label>
+              <input class="functions__date-input" id="date-06" name="date" type="radio" value="2026-09-06" />
+              <label class="functions__date" for="date-06"><span class="functions__date-day">Sáb</span><span class="functions__date-number">06</span><span class="functions__date-month">Sep</span></label>
+              <input class="functions__date-input" id="date-07" name="date" type="radio" value="2026-09-07" />
+              <label class="functions__date" for="date-07"><span class="functions__date-day">Dom</span><span class="functions__date-number">07</span><span class="functions__date-month">Sep</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset class="functions__filters">
+            <legend>3. Filtrá por formato e idioma</legend>
+            <div class="functions__filter-group">
+              <span class="functions__filter-label">Formato</span>
+              <input class="functions__filter-input" id="format-2d" name="format" type="radio" value="2d" />
+              <label class="functions__filter" for="format-2d">2D</label>
+              <input class="functions__filter-input" id="format-3d" name="format" type="radio" value="3d" />
+              <label class="functions__filter" for="format-3d">3D</label>
+            </div>
+            <div class="functions__filter-group">
+              <span class="functions__filter-label">Idioma</span>
+              <input class="functions__filter-input" id="language-castellano" name="language" type="radio" value="castellano" checked />
+              <label class="functions__filter is-selected" for="language-castellano">Castellano</label>
+            </div>
+          </fieldset>
+        </form>
+
+        <section class="functions__schedule" aria-labelledby="schedule-title">
+          <header>
+            <h2 id="schedule-title">4. Elegí un horario</h2>
+            <p>Sunstar Cinemas · 01/09/2026</p>
+          </header>
+
+          <section class="function-group" aria-labelledby="group-2d-title">
+            <header class="function-group__header"><h3 class="function-group__title" id="group-2d-title">2D · Castellano</h3></header>
+            <div class="function-group__list">
+              <article class="function-card is-available">
+                <p class="function-card__time">19:20</p><p class="function-card__format">2D</p><p class="function-card__language">Castellano</p><p class="function-card__price">Precio de referencia del proyecto: $8.500</p><p class="function-card__availability">Disponible</p>
+                <a class="function-card__action btn btn--primary" href="butacas.html">Elegir función</a>
+              </article>
+              <article class="function-card is-low">
+                <p class="function-card__time">22:10</p><p class="function-card__format">2D</p><p class="function-card__language">Castellano</p><p class="function-card__price">Precio de referencia del proyecto: $8.500</p><p class="function-card__availability">Pocos lugares</p>
+                <a class="function-card__action btn btn--primary" href="butacas.html">Elegir función</a>
+              </article>
+            </div>
+          </section>
+
+          <section class="function-group" aria-labelledby="group-3d-title">
+            <header class="function-group__header"><h3 class="function-group__title" id="group-3d-title">3D · Castellano</h3></header>
+            <div class="function-group__list">
+              <article class="function-card is-available">
+                <p class="function-card__time">16:00</p><p class="function-card__format">3D</p><p class="function-card__language">Castellano</p><p class="function-card__price">Precio de referencia del proyecto: $8.500</p><p class="function-card__availability">Disponible</p>
+                <a class="function-card__action btn btn--primary" href="butacas.html">Elegir función</a>
+              </article>
+              <article class="function-card is-sold-out">
+                <p class="function-card__time">19:00</p><p class="function-card__format">3D</p><p class="function-card__language">Castellano</p><p class="function-card__price">Precio de referencia del proyecto: $8.500</p><p class="function-card__availability">Agotada</p>
+                <button class="function-card__action btn btn--primary" type="button" disabled>Elegir función</button>
+              </article>
+              <article class="function-card is-available">
+                <p class="function-card__time">22:00</p><p class="function-card__format">3D</p><p class="function-card__language">Castellano</p><p class="function-card__price">Precio de referencia del proyecto: $8.500</p><p class="function-card__availability">Disponible</p>
+                <a class="function-card__action btn btn--primary" href="butacas.html">Elegir función</a>
+              </article>
+            </div>
+          </section>
+        </section>
+      </section>
+    </main>
+
+    <footer>
+      <div>
+        <section><h2>Cine Tucumán</h2></section>
+        <section><h3>Películas</h3><ul><li><a href="peliculas.html">Cartelera</a></li><li><a href="peliculas.html">Próximos estrenos</a></li></ul></section>
+        <section><h3>Cines</h3><ul><li><a href="sucursales.html">Sucursales</a></li><li><a href="funciones.html">Horarios</a></li></ul></section>
+        <section><h3>Ayuda</h3><ul><li><a href="#">FAQs</a></li><li><a href="#">Contacto</a></li><li><a href="#">Términos</a></li></ul></section>
+        <section>
+          <h3>Nuestras sucursales</h3>
+          <ul>
+            <li><a href="sucursales.html#cine-atlas-monteagudo">Cine Atlas Monteagudo</a></li>
+            <li><a href="sucursales.html#cine-atlas-via-24">Cine Atlas Vía 24</a></li>
+            <li><a href="sucursales.html#cinemacenter-tucuman">Cinemacenter Tucumán</a></li>
+            <li><a href="sucursales.html#sunstar-cinemas">Sunstar Cinemas</a></li>
+            <li><a href="sucursales.html#cines-del-solar">Cines del Solar</a></li>
+          </ul>
+        </section>
+      </div>
+      <p>&copy; 2026 Cine Tucumán</p>
+    </footer>
+  </body>
+</html>
