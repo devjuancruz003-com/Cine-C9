@@ -16,51 +16,55 @@
 
 <body>
 
-  <header>
-    <nav aria-label="Navegación principal">
-      <a href="index.html" aria-label="Cine Tucumán - Inicio">
+  <header class="site-header">
+    <nav class="navbar" aria-label="Navegación principal">
+      <div class="navbar__container">
+      <a class="navbar__brand" href="index.html" aria-label="Cine Tucumán - Inicio">
         Cine Tucumán
       </a>
 
-      <ul>
+      <ul class="navbar__menu">
         <li>
-          <a href="index.html">Inicio</a>
+          <a class="navbar__link" href="index.html">Inicio</a>
         </li>
 
         <li>
-          <a href="peliculas.html">Películas</a>
+          <a class="navbar__link" href="peliculas.html">Películas</a>
         </li>
 
         <li>
-          <a href="sucursales.html">Cines</a>
+          <a class="navbar__link" href="sucursales.html">Cines</a>
         </li>
 
         <li>
-          <a href="candybar.html">Candy Bar</a>
+          <a class="navbar__link" href="candybar.html">Candy Bar</a>
         </li>
       </ul>
 
-      <a href="peliculas.html"> Comprar entradas </a>
+      <div class="navbar__actions">
+      <a class="navbar__tickets btn btn--primary" href="peliculas.html"> Comprar entradas </a>
 
-      <button type="button" aria-label="Abrir buscador">Buscar</button>
+      <button class="navbar__search" type="button" aria-label="Abrir buscador">Buscar</button>
 
-      <a href="carrito.html" aria-label="Ver carrito de compra"> Carrito </a>
+      <a class="navbar__cart" href="carrito.html" aria-label="Ver carrito de compra"> Carrito </a>
 
-      <a href="login.html"> Iniciar sesión </a>
+      <a class="navbar__auth" href="login.html"> Iniciar sesión </a>
+      </div>
+      </div>
     </nav>
   </header>
 
 
-  <main>
+  <main class="page page--home">
 
-    <section aria-labelledby="hero-title">
-      <article>
-        <figure>
+    <section class="hero" aria-labelledby="hero-title">
+      <article class="hero__content">
+        <figure class="hero__image">
           <img src="../images/movies/spider-man-un-nuevo-dia.jpg" alt="Spider-Man: Un nuevo día" />
         </figure>
 
-        <header>
-          <p>En cartelera</p>
+        <header class="hero__header">
+          <p class="hero__status">En cartelera</p>
 
           <h1 id="hero-title">Spider-Man: Un nuevo día</h1>
         </header>
@@ -75,7 +79,7 @@
           nuevas amenazas mientras intenta continuar su vida como Spider-Man.
         </p>
 
-        <div>
+        <div class="hero__actions">
           <a href="funciones.html?pelicula=spider-man-un-nuevo-dia">
             Ver funciones
           </a>
@@ -88,26 +92,26 @@
     </section>
 
 
-    <section aria-labelledby="peliculas-destacadas-title">
+    <section class="movies" aria-labelledby="peliculas-destacadas-title">
       <header>
         <h2 id="peliculas-destacadas-title">Películas destacadas</h2>
       </header>
 
 
-      <section aria-labelledby="cartelera-title">
+      <section class="movies__group" aria-labelledby="cartelera-title">
         <h3 id="cartelera-title">En cartelera</h3>
 
-        <div>
+        <div class="movie-grid">
 
-          <article>
-            <figure>
+          <article class="movie-card">
+            <figure class="movie-card__image">
               <img src="../images/movies/spider-man-un-nuevo-dia.jpg" alt="Poster de Spider-Man: Un nuevo día" />
             </figure>
 
-            <header>
-              <p>En cartelera</p>
+            <header class="movie-card__content">
+              <p class="movie-card__status">En cartelera</p>
 
-              <h3>Spider-Man: Un nuevo día</h3>
+              <h3 class="movie-card__title">Spider-Man: Un nuevo día</h3>
             </header>
 
             <p>Acción · Aventuras · Ciencia ficción</p>
@@ -124,15 +128,15 @@
           </article>
 
 
-          <article>
-            <figure>
+          <article class="movie-card">
+            <figure class="movie-card__image">
               <img src="../images/movies/toy-story-5.jpg" alt="Poster de Toy Story 5" />
             </figure>
 
-            <header>
-              <p>En cartelera</p>
+            <header class="movie-card__content">
+              <p class="movie-card__status">En cartelera</p>
 
-              <h3>Toy Story 5</h3>
+              <h3 class="movie-card__title">Toy Story 5</h3>
             </header>
 
             <p>Animación</p>
@@ -147,15 +151,15 @@
           </article>
 
 
-          <article>
-            <figure>
+          <article class="movie-card">
+            <figure class="movie-card__image">
               <img src="../images/movies/la-guerra-de-los-ultimos.jpg" alt="Poster de La guerra de los últimos" />
             </figure>
 
-            <header>
-              <p>En cartelera</p>
+            <header class="movie-card__content">
+              <p class="movie-card__status">En cartelera</p>
 
-              <h3>La guerra de los últimos</h3>
+              <h3 class="movie-card__title">La guerra de los últimos</h3>
             </header>
 
             <p>Ciencia ficción · Thriller</p>
@@ -174,20 +178,20 @@
       </section>
 
 
-      <section aria-labelledby="proximamente-title">
+      <section class="movies__group" aria-labelledby="proximamente-title">
         <h3 id="proximamente-title">Próximamente</h3>
 
-        <div>
+        <div class="movie-grid">
 
-          <article>
-            <figure>
+          <article class="movie-card">
+            <figure class="movie-card__image">
               <img src="../images/movies/pepita-la-pistolera.jpg" alt="Poster de Pepita, la pistolera" />
             </figure>
 
-            <header>
-              <p>Próximamente</p>
+            <header class="movie-card__content">
+              <p class="movie-card__status">Próximamente</p>
 
-              <h3>Pepita, la pistolera</h3>
+              <h3 class="movie-card__title">Pepita, la pistolera</h3>
             </header>
 
             <p>Estreno: 3 de septiembre de 2026</p>
@@ -197,15 +201,15 @@
             </a>
           </article>
 
-          <article>
-            <figure>
+          <article class="movie-card">
+            <figure class="movie-card__image">
               <img src="../images/movies/hechizo-de-amor.jpg" alt="Poster de Hechizo de Amor: La magia continúa" />
             </figure>
 
-            <header>
-              <p>Próximamente</p>
+            <header class="movie-card__content">
+              <p class="movie-card__status">Próximamente</p>
 
-              <h3>Hechizo de Amor: La magia continúa</h3>
+              <h3 class="movie-card__title">Hechizo de Amor: La magia continúa</h3>
             </header>
 
             <p>Estreno: 10 de septiembre de 2026</p>
@@ -216,15 +220,15 @@
           </article>
 
 
-          <article>
-            <figure>
+          <article class="movie-card">
+            <figure class="movie-card__image">
               <img src="../images/movies/codigo-venganza.jpg" alt="Poster de Código: Venganza" />
             </figure>
 
-            <header>
-              <p>Próximamente</p>
+            <header class="movie-card__content">
+              <p class="movie-card__status">Próximamente</p>
 
-              <h3>Código: Venganza</h3>
+              <h3 class="movie-card__title">Código: Venganza</h3>
             </header>
 
             <p>Estreno: 10 de septiembre de 2026</p>
@@ -238,19 +242,19 @@
     </section>
 
 
-    <section aria-labelledby="proximos-estrenos-title">
+    <section class="movies movies--upcoming" aria-labelledby="proximos-estrenos-title">
       <header>
         <h2 id="proximos-estrenos-title">Próximos estrenos</h2>
       </header>
 
-      <div>
+      <div class="movie-grid">
 
-        <article>
-          <figure>
+        <article class="movie-card">
+          <figure class="movie-card__image">
             <img src="../images/movies/esa-cosa-con-alas.jpg" alt="Poster de Esa cosa con alas" />
           </figure>
 
-          <h3>Esa cosa con alas</h3>
+          <h3 class="movie-card__title">Esa cosa con alas</h3>
 
           <a href="pelicula.html?pelicula=esa-cosa-con-alas">
             Ver película
@@ -258,13 +262,13 @@
         </article>
 
 
-        <article>
-          <figure>
+        <article class="movie-card">
+          <figure class="movie-card__image">
             <img src="../images/movies/oasis-dont-look-back-in-anger.jpg"
               alt="Poster de Oasis: Don't Look Back in Anger" />
           </figure>
 
-          <h3>Oasis: Don't Look Back in Anger</h3>
+          <h3 class="movie-card__title">Oasis: Don't Look Back in Anger</h3>
 
           <a href="pelicula.html?pelicula=oasis-dont-look-back-in-anger">
             Ver película
@@ -272,13 +276,13 @@
         </article>
 
 
-        <article>
-          <figure>
+        <article class="movie-card">
+          <figure class="movie-card__image">
             <img src="../images/movies/tadeo-el-explorador.jpg"
               alt="Poster de Tadeo El Explorador y la Lámpara Maravillosa" />
           </figure>
 
-          <h3>Tadeo El Explorador y la Lámpara Maravillosa</h3>
+          <h3 class="movie-card__title">Tadeo El Explorador y la Lámpara Maravillosa</h3>
 
           <a href="pelicula.html?pelicula=tadeo-el-explorador">
             Ver película
@@ -286,33 +290,33 @@
         </article>
 
 
-        <article>
-          <figure>
+        <article class="movie-card">
+          <figure class="movie-card__image">
             <img src="../images/movies/bajo-tus-pies.jpg" alt="Poster de Bajo tus pies" />
           </figure>
 
-          <h3>Bajo tus pies</h3>
+          <h3 class="movie-card__title">Bajo tus pies</h3>
 
           <a href="pelicula.html?pelicula=bajo-tus-pies"> Ver película </a>
         </article>
 
-        <article>
-          <figure>
+        <article class="movie-card">
+          <figure class="movie-card__image">
             <img src="../images/movies/romeo-y-ofelia.jpg" alt="Poster de Romeo y Ofelia" />
           </figure>
 
-          <h3>Romeo y Ofelia</h3>
+          <h3 class="movie-card__title">Romeo y Ofelia</h3>
 
           <a href="pelicula.html?pelicula=romeo-y-ofelia"> Ver película </a>
         </article>
 
 
-        <article>
-          <figure>
+        <article class="movie-card">
+          <figure class="movie-card__image">
             <img src="../images/movies/el-heladero.jpg" alt="Poster de El heladero" />
           </figure>
 
-          <h3>El heladero</h3>
+          <h3 class="movie-card__title">El heladero</h3>
 
           <a href="pelicula.html?pelicula=el-heladero"> Ver película </a>
         </article>
@@ -320,19 +324,19 @@
     </section>
 
 
-    <section aria-labelledby="cines-title">
+    <section class="cinemas" aria-labelledby="cines-title">
       <header>
         <h2 id="cines-title">Cines en Tucumán</h2>
       </header>
 
-      <div>
+      <div class="cinemas__grid">
 
-        <article>
-          <header>
-            <h3>Cinemacenter Tucumán</h3>
+        <article class="cinema-card">
+          <header class="cinema-card__content">
+            <h3 class="cinema-card__title">Cinemacenter Tucumán</h3>
           </header>
 
-          <figure>
+          <figure class="cinema-card__image">
             <img src="../images/cinemas/cinemacenter-tucuman.jpg" alt="Cinemacenter Tucumán" />
           </figure>
 
@@ -342,12 +346,12 @@
         </article>
 
 
-        <article>
-          <header>
-            <h3>Cine Atlas Monteagudo</h3>
+        <article class="cinema-card">
+          <header class="cinema-card__content">
+            <h3 class="cinema-card__title">Cine Atlas Monteagudo</h3>
           </header>
 
-          <figure>
+          <figure class="cinema-card__image">
             <img src="../images/cinemas/cine-atlas-monteagudo.jpg" alt="Cine Atlas Monteagudo" />
           </figure>
 
@@ -357,12 +361,12 @@
         </article>
 
 
-        <article>
-          <header>
-            <h3>Sunstar Cinemas</h3>
+        <article class="cinema-card">
+          <header class="cinema-card__content">
+            <h3 class="cinema-card__title">Sunstar Cinemas</h3>
           </header>
 
-          <figure>
+          <figure class="cinema-card__image">
             <img src="../images/cinemas/sunstar-cinemas.jpg" alt="Sunstar Cinemas en Yerba Buena" />
           </figure>
 
@@ -378,14 +382,14 @@
     </section>
 
 
-    <section aria-labelledby="cta-title">
+    <section class="cta" aria-labelledby="cta-title">
       <header>
         <h2 id="cta-title">¿Listo para ir al cine?</h2>
       </header>
 
       <p>Descubrí las películas disponibles y elegí tu próxima función.</p>
 
-      <a href="peliculas.html"> Comprar entradas </a>
+      <a class="btn btn--primary" href="peliculas.html"> Comprar entradas </a>
 
       <a href="peliculas.html"> Ver cartelera </a>
     </section>
