@@ -10,42 +10,31 @@
     content="Encontrá cines en San Miguel de Tucumán y Yerba Buena, consulta sus direcciones y conocé las funciones disponibles." />
 
   <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/navbar.css">
 
   <title>Cines en Tucumán | Sucursales y direcciones</title>
 </head>
 
 <body>
-  <header>
-    <nav aria-label="Navegación principal">
-      <a href="index.html" aria-label="Cine Tucumán - Inicio">
-        Cine Tucumán
-      </a>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Navegación principal">
+      <div class="navbar__container">
+        <a class="navbar__brand" href="../../index.html" aria-label="Cine Tucumán - Inicio">Cine Tucumán</a>
 
-      <ul>
-        <li>
-          <a href="index.html"> Inicio </a>
-        </li>
+        <ul class="navbar__menu">
+          <li><a class="navbar__link" href="../../index.html">Inicio</a></li>
+          <li><a class="navbar__link" href="peliculas.html">Películas</a></li>
+          <li><a class="navbar__link" href="sucursales.html">Cines</a></li>
+          <li><a class="navbar__link" href="candybar.html">Candy Bar</a></li>
+        </ul>
 
-        <li>
-          <a href="peliculas.html"> Películas </a>
-        </li>
-
-        <li>
-          <a href="sucursales.html"> Cines </a>
-        </li>
-
-        <li>
-          <a href="candybar.html"> Candy Bar </a>
-        </li>
-      </ul>
-
-      <a href="peliculas.html"> Comprar entradas </a>
-
-      <button type="button" aria-label="Abrir buscador">Buscar</button>
-
-      <a href="carrito.html" aria-label="Ver carrito de compra"> Carrito </a>
-
-      <a href="login.html"> Iniciar sesión </a>
+        <div class="navbar__actions">
+          <a class="navbar__tickets btn btn--primary" href="peliculas.html">Comprar entradas</a>
+          <button class="navbar__search" type="button" aria-label="Abrir buscador">Buscar</button>
+          <a class="navbar__cart" href="carrito.html" aria-label="Ver carrito de compra">Carrito</a>
+          <a class="navbar__auth" href="login.html">Iniciar sesión</a>
+        </div>
+      </div>
     </nav>
   </header>
 
@@ -357,73 +346,37 @@
 
       <section>
         <h3>Películas</h3>
-
         <ul>
-          <li>
-            <a href="peliculas.html"> Cartelera </a>
-          </li>
-
-          <li>
-            <a href="peliculas.html"> Próximos estrenos </a>
-          </li>
+          <li><a href="peliculas.html">Cartelera</a></li>
+          <li><a href="peliculas.html">Próximos estrenos</a></li>
         </ul>
       </section>
 
       <section>
         <h3>Cines</h3>
-
         <ul>
-          <li>
-            <a href="sucursales.html"> Sucursales </a>
-          </li>
-
-          <li>
-            <a href="funciones.html"> Horarios </a>
-          </li>
+          <li><a href="sucursales.html">Sucursales</a></li>
+          <li><a href="funciones.html">Horarios</a></li>
         </ul>
       </section>
 
       <section>
         <h3>Ayuda</h3>
-
         <ul>
-          <li>
-            <a href="#"> Preguntas frecuentes </a>
-          </li>
-
-          <li>
-            <a href="#"> Contacto </a>
-          </li>
-
-          <li>
-            <a href="#"> Términos y condiciones </a>
-          </li>
+          <li><a href="#">Preguntas frecuentes</a></li>
+          <li><a href="#">Contacto</a></li>
+          <li><a href="#">Términos y condiciones</a></li>
         </ul>
       </section>
 
       <section>
         <h3>Nuestras sucursales</h3>
-
         <ul>
-          <li>
-            <a href="#cine-atlas-monteagudo"> Cine Atlas Monteagudo </a>
-          </li>
-
-          <li>
-            <a href="#cine-atlas-via-24"> Cine Atlas Vía 24 </a>
-          </li>
-
-          <li>
-            <a href="#cinemacenter-tucuman"> Cinemacenter Tucumán </a>
-          </li>
-
-          <li>
-            <a href="#sunstar-cinemas"> Sunstar Cinemas </a>
-          </li>
-
-          <li>
-            <a href="#cines-del-solar"> Cines del Solar </a>
-          </li>
+          <li><a href="sucursales.html#cine-atlas-monteagudo">Cine Atlas Monteagudo</a></li>
+          <li><a href="sucursales.html#cine-atlas-via-24">Cine Atlas Vía 24</a></li>
+          <li><a href="sucursales.html#cinemacenter-tucuman">Cinemacenter Tucumán</a></li>
+          <li><a href="sucursales.html#sunstar-cinemas">Sunstar Cinemas</a></li>
+          <li><a href="sucursales.html#cines-del-solar">Cines del Solar</a></li>
         </ul>
       </section>
     </div>
