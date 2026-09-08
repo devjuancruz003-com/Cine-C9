@@ -23,36 +23,16 @@
 </head>
 
 <body>
-  <header>
-    <nav aria-label="Navegación principal">
-      <a href="../../index.html" aria-label="Cine Tucumán - Inicio">
-        Cine Tucumán
-      </a>
-
-      <ul>
-        <li>
-          <a href="../../index.html"> Inicio </a>
-        </li>
-
-        <li>
-          <a href="peliculas.html"> Películas </a>
-        </li>
-
-        <li>
-          <a href="sucursales.html"> Cines </a>
-        </li>
-
-        <li>
-          <a href="candybar.html"> Candy Bar </a>
-        </li>
-      </ul>
-
-      <a href="peliculas.html"> Comprar entradas </a>
-
-      <button type="button" aria-label="Abrir buscador">Buscar</button>
-
-      <a href="carrito.html" aria-label="Ver carrito de compra"> Carrito </a>
-
+  <header class="site-header">
+    <nav class="navbar" aria-label="Navegación principal">
+      <div class="navbar__container">
+        <a class="navbar__brand" href="../../index.html" aria-label="Cine Tucumán - Inicio">Cine Tucumán</a>
+        <ul class="navbar__menu">
+          <li><a class="navbar__link" href="../../index.html">Inicio</a></li>
+          <li><a class="navbar__link" href="peliculas.html">Películas</a></li>
+          <li><a class="navbar__link" href="sucursales.html">Cines</a></li>
+          <li><a class="navbar__link" href="candybar.html">Candy Bar</a></li>
+        </ul>
         <div class="navbar__actions">
           <a class="navbar__tickets btn btn--primary" href="peliculas.html">Comprar entradas</a>
           <button class="navbar__search" type="button" aria-label="Abrir buscador">Buscar</button>
