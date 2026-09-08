@@ -9,7 +9,8 @@
   <meta name="description"
     content="Consultá la cartelera de cine en Tucumán, descubrí películas, horarios y sucursales y comprá tus entradas online." />
 
-  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="frontend/css/global.css">
+  <link rel="stylesheet" href="frontend/css/navbar.css">
 
   <title>Cine Tucumán | Cartelera y entradas de cine</title>
 </head>
@@ -19,37 +20,21 @@
   <header class="site-header">
     <nav class="navbar" aria-label="Navegación principal">
       <div class="navbar__container">
-      <a class="navbar__brand" href="index.html" aria-label="Cine Tucumán - Inicio">
-        Cine Tucumán
-      </a>
+        <a class="navbar__brand" href="index.html" aria-label="Cine Tucumán - Inicio">Cine Tucumán</a>
 
-      <ul class="navbar__menu">
-        <li>
-          <a class="navbar__link" href="index.html">Inicio</a>
-        </li>
+        <ul class="navbar__menu">
+          <li><a class="navbar__link" href="index.html">Inicio</a></li>
+          <li><a class="navbar__link" href="frontend/pages/peliculas.html">Películas</a></li>
+          <li><a class="navbar__link" href="frontend/pages/sucursales.html">Cines</a></li>
+          <li><a class="navbar__link" href="frontend/pages/candybar.html">Candy Bar</a></li>
+        </ul>
 
-        <li>
-          <a class="navbar__link" href="peliculas.html">Películas</a>
-        </li>
-
-        <li>
-          <a class="navbar__link" href="sucursales.html">Cines</a>
-        </li>
-
-        <li>
-          <a class="navbar__link" href="candybar.html">Candy Bar</a>
-        </li>
-      </ul>
-
-      <div class="navbar__actions">
-      <a class="navbar__tickets btn btn--primary" href="peliculas.html"> Comprar entradas </a>
-
-      <button class="navbar__search" type="button" aria-label="Abrir buscador">Buscar</button>
-
-      <a class="navbar__cart" href="carrito.html" aria-label="Ver carrito de compra"> Carrito </a>
-
-      <a class="navbar__auth" href="login.html"> Iniciar sesión </a>
-      </div>
+        <div class="navbar__actions">
+          <a class="navbar__tickets btn btn--primary" href="frontend/pages/peliculas.html">Comprar entradas</a>
+          <button class="navbar__search" type="button" aria-label="Abrir buscador">Buscar</button>
+          <a class="navbar__cart" href="frontend/pages/carrito.html" aria-label="Ver carrito de compra">Carrito</a>
+          <a class="navbar__auth" href="frontend/pages/login.html">Iniciar sesión</a>
+        </div>
       </div>
     </nav>
   </header>
@@ -60,7 +45,7 @@
     <section class="hero" aria-labelledby="hero-title">
       <article class="hero__content">
         <figure class="hero__image">
-          <img src="../images/movies/spider-man-un-nuevo-dia.jpg" alt="Spider-Man: Un nuevo día" />
+          <img src="frontend/images/movies/spider-man-un-nuevo-dia.jpg" alt="Spider-Man: Un nuevo día" />
         </figure>
 
         <header class="hero__header">
@@ -80,7 +65,7 @@
         </p>
 
         <div class="hero__actions">
-          <a href="funciones.html?pelicula=spider-man-un-nuevo-dia">
+          <a href="frontend/pages/funciones.html?pelicula=spider-man-un-nuevo-dia">
             Ver funciones
           </a>
 
@@ -105,7 +90,7 @@
 
           <article class="movie-card">
             <figure class="movie-card__image">
-              <img src="../images/movies/spider-man-un-nuevo-dia.jpg" alt="Poster de Spider-Man: Un nuevo día" />
+              <img src="frontend/images/movies/spider-man-un-nuevo-dia.jpg" alt="Poster de Spider-Man: Un nuevo día" />
             </figure>
 
             <header class="movie-card__content">
@@ -122,7 +107,7 @@
 
             <p>2D · Español</p>
 
-            <a href="funciones.html?pelicula=spider-man-un-nuevo-dia">
+            <a href="frontend/pages/funciones.html?pelicula=spider-man-un-nuevo-dia">
               Ver funciones
             </a>
           </article>
@@ -130,7 +115,7 @@
 
           <article class="movie-card">
             <figure class="movie-card__image">
-              <img src="../images/movies/toy-story-5.jpg" alt="Poster de Toy Story 5" />
+              <img src="frontend/images/movies/toy-story-5.jpg" alt="Poster de Toy Story 5" />
             </figure>
 
             <header class="movie-card__content">
@@ -147,13 +132,13 @@
 
             <p>2D · Español</p>
 
-            <a href="funciones.html?pelicula=toy-story-5"> Ver funciones </a>
+            <a href="frontend/pages/funciones.html?pelicula=toy-story-5"> Ver funciones </a>
           </article>
 
 
           <article class="movie-card">
             <figure class="movie-card__image">
-              <img src="../images/movies/la-guerra-de-los-ultimos.jpg" alt="Poster de La guerra de los últimos" />
+              <img src="frontend/images/movies/la-guerra-de-los-ultimos.jpg" alt="Poster de La guerra de los últimos" />
             </figure>
 
             <header class="movie-card__content">
@@ -170,7 +155,7 @@
 
             <p>2D</p>
 
-            <a href="funciones.html?pelicula=la-guerra-de-los-ultimos">
+            <a href="frontend/pages/funciones.html?pelicula=la-guerra-de-los-ultimos">
               Ver funciones
             </a>
           </article>
@@ -185,7 +170,7 @@
 
           <article class="movie-card">
             <figure class="movie-card__image">
-              <img src="../images/movies/pepita-la-pistolera.jpg" alt="Poster de Pepita, la pistolera" />
+              <img src="frontend/images/movies/pepita-la-pistolera.jpg" alt="Poster de Pepita, la pistolera" />
             </figure>
 
             <header class="movie-card__content">
@@ -196,14 +181,14 @@
 
             <p>Estreno: 3 de septiembre de 2026</p>
 
-            <a href="pelicula.html?pelicula=pepita-la-pistolera">
+            <a href="frontend/pages/pelicula.html?pelicula=pepita-la-pistolera">
               Ver película
             </a>
           </article>
 
           <article class="movie-card">
             <figure class="movie-card__image">
-              <img src="../images/movies/hechizo-de-amor.jpg" alt="Poster de Hechizo de Amor: La magia continúa" />
+              <img src="frontend/images/movies/hechizo-de-amor.jpg" alt="Poster de Hechizo de Amor: La magia continúa" />
             </figure>
 
             <header class="movie-card__content">
@@ -214,7 +199,7 @@
 
             <p>Estreno: 10 de septiembre de 2026</p>
 
-            <a href="pelicula.html?pelicula=hechizo-de-amor">
+            <a href="frontend/pages/pelicula.html?pelicula=hechizo-de-amor">
               Ver película
             </a>
           </article>
@@ -222,7 +207,7 @@
 
           <article class="movie-card">
             <figure class="movie-card__image">
-              <img src="../images/movies/codigo-venganza.jpg" alt="Poster de Código: Venganza" />
+              <img src="frontend/images/movies/codigo-venganza.jpg" alt="Poster de Código: Venganza" />
             </figure>
 
             <header class="movie-card__content">
@@ -233,7 +218,7 @@
 
             <p>Estreno: 10 de septiembre de 2026</p>
 
-            <a href="pelicula.html?pelicula=codigo-venganza">
+            <a href="frontend/pages/pelicula.html?pelicula=codigo-venganza">
               Ver película
             </a>
           </article>
@@ -251,12 +236,12 @@
 
         <article class="movie-card">
           <figure class="movie-card__image">
-            <img src="../images/movies/esa-cosa-con-alas.jpg" alt="Poster de Esa cosa con alas" />
+            <img src="frontend/images/movies/esa-cosa-con-alas.jpg" alt="Poster de Esa cosa con alas" />
           </figure>
 
           <h3 class="movie-card__title">Esa cosa con alas</h3>
 
-          <a href="pelicula.html?pelicula=esa-cosa-con-alas">
+          <a href="frontend/pages/pelicula.html?pelicula=esa-cosa-con-alas">
             Ver película
           </a>
         </article>
@@ -264,13 +249,13 @@
 
         <article class="movie-card">
           <figure class="movie-card__image">
-            <img src="../images/movies/oasis-dont-look-back-in-anger.jpg"
+            <img src="frontend/images/movies/oasis-dont-look-back-in-anger.jpg"
               alt="Poster de Oasis: Don't Look Back in Anger" />
           </figure>
 
           <h3 class="movie-card__title">Oasis: Don't Look Back in Anger</h3>
 
-          <a href="pelicula.html?pelicula=oasis-dont-look-back-in-anger">
+          <a href="frontend/pages/pelicula.html?pelicula=oasis-dont-look-back-in-anger">
             Ver película
           </a>
         </article>
@@ -278,13 +263,13 @@
 
         <article class="movie-card">
           <figure class="movie-card__image">
-            <img src="../images/movies/tadeo-el-explorador.jpg"
+            <img src="frontend/images/movies/tadeo-el-explorador.jpg"
               alt="Poster de Tadeo El Explorador y la Lámpara Maravillosa" />
           </figure>
 
           <h3 class="movie-card__title">Tadeo El Explorador y la Lámpara Maravillosa</h3>
 
-          <a href="pelicula.html?pelicula=tadeo-el-explorador">
+          <a href="frontend/pages/pelicula.html?pelicula=tadeo-el-explorador">
             Ver película
           </a>
         </article>
@@ -292,33 +277,33 @@
 
         <article class="movie-card">
           <figure class="movie-card__image">
-            <img src="../images/movies/bajo-tus-pies.jpg" alt="Poster de Bajo tus pies" />
+            <img src="frontend/images/movies/bajo-tus-pies.jpg" alt="Poster de Bajo tus pies" />
           </figure>
 
           <h3 class="movie-card__title">Bajo tus pies</h3>
 
-          <a href="pelicula.html?pelicula=bajo-tus-pies"> Ver película </a>
+          <a href="frontend/pages/pelicula.html?pelicula=bajo-tus-pies"> Ver película </a>
         </article>
 
         <article class="movie-card">
           <figure class="movie-card__image">
-            <img src="../images/movies/romeo-y-ofelia.jpg" alt="Poster de Romeo y Ofelia" />
+            <img src="frontend/images/movies/romeo-y-ofelia.jpg" alt="Poster de Romeo y Ofelia" />
           </figure>
 
           <h3 class="movie-card__title">Romeo y Ofelia</h3>
 
-          <a href="pelicula.html?pelicula=romeo-y-ofelia"> Ver película </a>
+          <a href="frontend/pages/pelicula.html?pelicula=romeo-y-ofelia"> Ver película </a>
         </article>
 
 
         <article class="movie-card">
           <figure class="movie-card__image">
-            <img src="../images/movies/el-heladero.jpg" alt="Poster de El heladero" />
+            <img src="frontend/images/movies/el-heladero.jpg" alt="Poster de El heladero" />
           </figure>
 
           <h3 class="movie-card__title">El heladero</h3>
 
-          <a href="pelicula.html?pelicula=el-heladero"> Ver película </a>
+          <a href="frontend/pages/pelicula.html?pelicula=el-heladero"> Ver película </a>
         </article>
       </div>
     </section>
@@ -337,12 +322,12 @@
           </header>
 
           <figure class="cinema-card__image">
-            <img src="../images/cinemas/cinemacenter-tucuman.jpg" alt="Cinemacenter Tucumán" />
+            <img src="frontend/images/cinemas/cinemacenter-tucuman.jpg" alt="Cinemacenter Tucumán" />
           </figure>
 
           <address>Av. Roca 3450, San Miguel de Tucumán, Tucumán</address>
 
-          <a href="sucursales.html#cinemacenter-tucuman"> Ver sucursal </a>
+          <a href="frontend/pages/sucursales.html#cinemacenter-tucuman"> Ver sucursal </a>
         </article>
 
 
@@ -352,12 +337,12 @@
           </header>
 
           <figure class="cinema-card__image">
-            <img src="../images/cinemas/cine-atlas-monteagudo.jpg" alt="Cine Atlas Monteagudo" />
+            <img src="frontend/images/cinemas/cine-atlas-monteagudo.jpg" alt="Cine Atlas Monteagudo" />
           </figure>
 
           <address>Monteagudo 250, San Miguel de Tucumán, Tucumán</address>
 
-          <a href="sucursales.html#cine-atlas-monteagudo"> Ver sucursal </a>
+          <a href="frontend/pages/sucursales.html#cine-atlas-monteagudo"> Ver sucursal </a>
         </article>
 
 
@@ -367,17 +352,17 @@
           </header>
 
           <figure class="cinema-card__image">
-            <img src="../images/cinemas/sunstar-cinemas.jpg" alt="Sunstar Cinemas en Yerba Buena" />
+            <img src="frontend/images/cinemas/sunstar-cinemas.jpg" alt="Sunstar Cinemas en Yerba Buena" />
           </figure>
 
           <address>Universo y Cariola, Yerba Buena, Tucumán</address>
 
-          <a href="sucursales.html#sunstar-cinemas"> Ver sucursal </a>
+          <a href="frontend/pages/sucursales.html#sunstar-cinemas"> Ver sucursal </a>
         </article>
       </div>
 
       <p>
-        <a href="sucursales.html"> Ver todas las sucursales </a>
+        <a href="frontend/pages/sucursales.html"> Ver todas las sucursales </a>
       </p>
     </section>
 
@@ -389,9 +374,9 @@
 
       <p>Descubrí las películas disponibles y elegí tu próxima función.</p>
 
-      <a class="btn btn--primary" href="peliculas.html"> Comprar entradas </a>
+      <a class="btn btn--primary" href="frontend/pages/peliculas.html"> Comprar entradas </a>
 
-      <a href="peliculas.html"> Ver cartelera </a>
+      <a href="frontend/pages/peliculas.html"> Ver cartelera </a>
     </section>
   </main>
 
@@ -404,79 +389,37 @@
 
       <section>
         <h3>Películas</h3>
-
         <ul>
-          <li>
-            <a href="peliculas.html"> Cartelera </a>
-          </li>
-
-          <li>
-            <a href="peliculas.html"> Próximos estrenos </a>
-          </li>
+          <li><a href="frontend/pages/peliculas.html">Cartelera</a></li>
+          <li><a href="frontend/pages/peliculas.html">Próximos estrenos</a></li>
         </ul>
       </section>
 
       <section>
         <h3>Cines</h3>
-
         <ul>
-          <li>
-            <a href="sucursales.html"> Sucursales </a>
-          </li>
-
-          <li>
-            <a href="funciones.html"> Horarios </a>
-          </li>
+          <li><a href="frontend/pages/sucursales.html">Sucursales</a></li>
+          <li><a href="frontend/pages/funciones.html">Horarios</a></li>
         </ul>
       </section>
 
       <section>
         <h3>Ayuda</h3>
-
         <ul>
-          <li>
-            <a href="#"> Preguntas frecuentes </a>
-          </li>
-
-          <li>
-            <a href="#"> Contacto </a>
-          </li>
-
-          <li>
-            <a href="#"> Términos y condiciones </a>
-          </li>
+          <li><a href="#">Preguntas frecuentes</a></li>
+          <li><a href="#">Contacto</a></li>
+          <li><a href="#">Términos y condiciones</a></li>
         </ul>
       </section>
 
       <section>
         <h3>Nuestras sucursales</h3>
-
         <ul>
-          <li>
-            <a href="sucursales.html#cine-atlas-monteagudo">
-              Cine Atlas Monteagudo
-            </a>
-          </li>
-
-          <li>
-            <a href="sucursales.html#cine-atlas-via-24">
-              Cine Atlas Vía 24
-            </a>
-          </li>
-
-          <li>
-            <a href="sucursales.html#cinemacenter-tucuman">
-              Cinemacenter Tucumán
-            </a>
-          </li>
-
-          <li>
-            <a href="sucursales.html#sunstar-cinemas"> Sunstar Cinemas </a>
-          </li>
-
-          <li>
-            <a href="sucursales.html#cines-del-solar"> Cines del Solar </a>
-          </li>
+          <li><a href="frontend/pages/sucursales.html#cine-atlas-monteagudo">Cine Atlas Monteagudo</a></li>
+          <li><a href="frontend/pages/sucursales.html#cine-atlas-via-24">Cine Atlas Vía 24</a></li>
+          <li><a href="frontend/pages/sucursales.html#cinemacenter-tucuman">Cinemacenter Tucumán</a></li>
+          <li><a href="frontend/pages/sucursales.html#sunstar-cinemas">Sunstar Cinemas</a></li>
+          <li><a href="frontend/pages/sucursales.html#cines-del-solar">Cines del Solar</a></li>
         </ul>
       </section>
     </div>
