@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Consultá las películas en cartelera en Tucumán, filtrá por género, fecha, idioma y formato y encontrá las funciones disponibles.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/navbar.css" />
+    <link rel="stylesheet" href="../css/movies.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+
+
+    <title>
+        Cartelera de cine en Tucumán | Películas y horarios
+    </title>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Navegación principal">
+      <div class="navbar__container">
+        <a class="navbar__brand" href="../../index.html" aria-label="Cine Tucumán - Inicio">Cine Tucumán</a>
+        <ul class="navbar__menu">
+          <li><a class="navbar__link" href="../../index.html">Inicio</a></li>
+          <li><a class="navbar__link" href="peliculas.html">Películas</a></li>
+          <li><a class="navbar__link" href="sucursales.html">Cines</a></li>
+          <li><a class="navbar__link" href="candybar.html">Candy Bar</a></li>
+        </ul>
+
+        <div class="navbar__actions">
+          <a class="navbar__tickets btn btn--primary" href="peliculas.html">Comprar entradas</a>
+          <button class="navbar__search" type="button" aria-label="Abrir buscador">Buscar</button>
+          <a class="navbar__cart" href="carrito.html" aria-label="Ver carrito de compra">Carrito</a>
+          <a class="navbar__auth" href="login.html">Iniciar sesión</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page page--movies">
+    <section class="movies" aria-labelledby="movies-title">
+      <header class="movies__header"><h1 id="movies-title">Cartelera</h1></header>
+
+      <form class="movies__search" role="search">
+        <label for="movie-search">Buscar película</label>
+        <input id="movie-search" name="search" type="search" />
+      </form>
+
+      <form class="movies__filters">
+        <fieldset>
+          <legend>Filtrar películas</legend>
+          <label for="genre-filter">Género</label>
+          <select id="genre-filter" name="genre"><option value="">Todos los géneros</option></select>
+          <label for="date-filter">Fecha de función</label>
+          <input id="date-filter" name="date" type="date" />
+          <label for="language-filter">Idioma</label>
+          <select id="language-filter" name="language"><option value="">Todos los idiomas</option></select>
+          <label for="format-filter">Formato</label>
+          <select id="format-filter" name="format"><option value="">Todos los formatos</option></select>
+          <label for="status-filter">Estado</label>
+          <select id="status-filter" name="status">
+            <option value="now-showing" selected>En cartelera</option>
+            <option value="upcoming">Próximamente</option>
+            <option value="finished">Finalizadas</option>
+          </select>
+        </fieldset>
+      </form>
+
+      <section class="movies__section" aria-labelledby="now-showing-title">
+        <header><h2 id="now-showing-title">En cartelera</h2></header>
+        <div class="movie-grid">
+          <article class="movie-card">
+            <div class="movie-card__image" aria-hidden="true"></div>
+            <div class="movie-card__content">
+              <p class="movie-card__status">En cartelera</p>
+              <h3 class="movie-card__title">Spider-Man: Un nuevo día</h3>
+              <div class="movie-card__meta"><p>Acción · Aventuras · Ciencia ficción</p><p>2 h 30 min</p><p>Supervisión parental sugerida</p><p>2D</p></div>
+              <div class="movie-card__actions"><a href="pelicula.html">Ver funciones</a></div>
+            </div>
+          </article>
+          <article class="movie-card">
+            <div class="movie-card__image" aria-hidden="true"></div>
+            <div class="movie-card__content">
+              <p class="movie-card__status">En cartelera</p>
+              <h3 class="movie-card__title">Toy Story 5</h3>
+              <div class="movie-card__meta"><p>Animación</p><p>1 h 47 min</p><p>ATP</p><p>2D</p></div>
+              <div class="movie-card__actions"><a href="funciones.html">Ver funciones</a></div>
+            </div>
+          </article>
+          <article class="movie-card">
+            <div class="movie-card__image" aria-hidden="true"></div>
+            <div class="movie-card__content">
+              <p class="movie-card__status">En cartelera</p>
+              <h3 class="movie-card__title">La guerra de los últimos</h3>
+              <div class="movie-card__meta"><p>Ciencia ficción · Thriller</p><p>1 h 58 min</p><p>Mayores de 13 años</p><p>2D</p></div>
+              <div class="movie-card__actions"><a href="funciones.html">Ver funciones</a></div>
+            </div>
+          </article>
+          <article class="movie-card"><div class="movie-card__image" aria-hidden="true"></div><div class="movie-card__content"><p class="movie-card__status">En cartelera</p><h3 class="movie-card__title">Yo, Narciso</h3><div class="movie-card__actions"><a href="funciones.html">Ver funciones</a></div></div></article>
+          <article class="movie-card"><div class="movie-card__image" aria-hidden="true"></div><div class="movie-card__content"><p class="movie-card__status">En cartelera</p><h3 class="movie-card__title">Minions &amp; Monsters</h3><div class="movie-card__actions"><a href="funciones.html">Ver funciones</a></div></div></article>
+          <article class="movie-card"><div class="movie-card__image" aria-hidden="true"></div><div class="movie-card__content"><p class="movie-card__status">En cartelera</p><h3 class="movie-card__title">La Odisea</h3><div class="movie-card__actions"><a href="funciones.html">Ver funciones</a></div></div></article>
+          <article class="movie-card"><div class="movie-card__image" aria-hidden="true"></div><div class="movie-card__content"><p class="movie-card__status">En cartelera</p><h3 class="movie-card__title">Paw Patrol: La Dino Película</h3><div class="movie-card__actions"><a href="funciones.html">Ver funciones</a></div></div></article>
+          <article class="movie-card"><div class="movie-card__image" aria-hidden="true"></div><div class="movie-card__content"><p class="movie-card__status">En cartelera</p><h3 class="movie-card__title">La noche del demonio: Están entre nosotros</h3><div class="movie-card__actions"><a href="funciones.html">Ver funciones</a></div></div></article>
+          <article class="movie-card"><div class="movie-card__image" aria-hidden="true"></div><div class="movie-card__content"><p class="movie-card__status">En cartelera</p><h3 class="movie-card__title">Coyote vs. ACME</h3><div class="movie-card__actions"><a href="funciones.html">Ver funciones</a></div></div></article>
+          <article class="movie-card"><div class="movie-card__image" aria-hidden="true"></div><div class="movie-card__content"><p class="movie-card__status">En cartelera</p><h3 class="movie-card__title">Solo por una noche</h3><div class="movie-card__actions"><a href="funciones.html">Ver funciones</a></div></div></article>
+          <article class="movie-card"><div class="movie-card__image" aria-hidden="true"></div><div class="movie-card__content"><p class="movie-card__status">En cartelera</p><h3 class="movie-card__title">Harry Potter y la piedra filosofal</h3><div class="movie-card__actions"><a href="funciones.html">Ver funciones</a></div></div></article>
+        </div>
+      </section>
+
+      <section class="movies__section" aria-labelledby="upcoming-title">
+        <header><h2 id="upcoming-title">Próximamente</h2></header>
+        <div class="movie-grid">
+          <article class="movie-card"><div class="movie-card__image" aria-hidden="true"></div><div class="movie-card__content"><p class="movie-card__status">Próximamente</p><h3 class="movie-card__title">Pepita, la pistolera</h3><div class="movie-card__meta"><p>Estreno: 3 de septiembre de 2026</p></div><div class="movie-card__actions"><a href="funciones.html">Ver funciones</a></div></div></article>
+          <article class="movie-card"><div class="movie-card__image" aria-hidden="true"></div><div class="movie-card__content"><p class="movie-card__status">Próximamente</p><h3 class="movie-card__title">Hechizo de Amor: La magia continúa</h3><div class="movie-card__meta"><p>Estreno: 10 de septiembre de 2026</p></div><div class="movie-card__actions"><a href="funciones.html">Ver funciones</a></div></div></article>
+          <article class="movie-card"><div class="movie-card__image" aria-hidden="true"></div><div class="movie-card__content"><p class="movie-card__status">Próximamente</p><h3 class="movie-card__title">Código: Venganza</h3><div class="movie-card__meta"><p>Estreno: 10 de septiembre de 2026</p></div><div class="movie-card__actions"><a href="funciones.html">Ver funciones</a></div></div></article>
+          <article class="movie-card"><div class="movie-card__image" aria-hidden="true"></div><div class="movie-card__content"><p class="movie-card__status">Próximamente</p><h3 class="movie-card__title">Esa cosa con alas</h3><div class="movie-card__actions"><a href="funciones.html">Ver funciones</a></div></div></article>
+          <article class="movie-card"><div class="movie-card__image" aria-hidden="true"></div><div class="movie-card__content"><p class="movie-card__status">Próximamente</p><h3 class="movie-card__title">Oasis: Don't Look Back in Anger</h3><div class="movie-card__actions"><a href="funciones.html">Ver funciones</a></div></div></article>
+          <article class="movie-card"><div class="movie-card__image" aria-hidden="true"></div><div class="movie-card__content"><p class="movie-card__status">Próximamente</p><h3 class="movie-card__title">Tadeo El Explorador y la Lámpara Maravillosa</h3><div class="movie-card__actions"><a href="funciones.html">Ver funciones</a></div></div></article>
+          <article class="movie-card"><div class="movie-card__image" aria-hidden="true"></div><div class="movie-card__content"><p class="movie-card__status">Próximamente</p><h3 class="movie-card__title">Bajo tus pies</h3><div class="movie-card__actions"><a href="funciones.html">Ver funciones</a></div></div></article>
+          <article class="movie-card"><div class="movie-card__image" aria-hidden="true"></div><div class="movie-card__content"><p class="movie-card__status">Próximamente</p><h3 class="movie-card__title">Romeo y Ofelia</h3><div class="movie-card__actions"><a href="funciones.html">Ver funciones</a></div></div></article>
+          <article class="movie-card"><div class="movie-card__image" aria-hidden="true"></div><div class="movie-card__content"><p class="movie-card__status">Próximamente</p><h3 class="movie-card__title">El heladero</h3><div class="movie-card__actions"><a href="funciones.html">Ver funciones</a></div></div></article>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer>
+    <div>
+      <section>
+        <h2>Cine Tucumán</h2>
+      </section>
+
+      <section>
+        <h3>Películas</h3>
+        <ul>
+          <li><a href="peliculas.html">Cartelera</a></li>
+          <li><a href="peliculas.html">Próximos estrenos</a></li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Cines</h3>
+        <ul>
+          <li><a href="sucursales.html">Sucursales</a></li>
+          <li><a href="funciones.html">Horarios</a></li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Ayuda</h3>
+        <ul>
+          <li><a href="#">Preguntas frecuentes</a></li>
+          <li><a href="#">Contacto</a></li>
+          <li><a href="#">Términos y condiciones</a></li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Nuestras sucursales</h3>
+        <ul>
+          <li><a href="sucursales.html#cine-atlas-monteagudo">Cine Atlas Monteagudo</a></li>
+          <li><a href="sucursales.html#cine-atlas-via-24">Cine Atlas Vía 24</a></li>
+          <li><a href="sucursales.html#cinemacenter-tucuman">Cinemacenter Tucumán</a></li>
+          <li><a href="sucursales.html#sunstar-cinemas">Sunstar Cinemas</a></li>
+          <li><a href="sucursales.html#cines-del-solar">Cines del Solar</a></li>
+        </ul>
+      </section>
+    </div>
+
+    <p>&copy; 2026 Cine Tucumán</p>
+  </footer>
+</body>
+</html>
