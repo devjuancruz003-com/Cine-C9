@@ -1,3 +1,9 @@
+/* ============================================================
+   TP2 — CSS ORIGINAL (conservado como registro histórico)
+   Desactivado en refactor/bootstrap-base al incorporar Bootstrap.
+   No se modifica ni se elimina: solo queda comentado.
+   ============================================================ */
+/*
 
 :root {
   --color-primary: #6E1F2A;
@@ -455,3 +461,5 @@ textarea:disabled {
     padding-inline: var(--space-8);
   }
 }
+
+*/
