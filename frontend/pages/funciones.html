@@ -18,6 +18,7 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
     <link rel="stylesheet" href="../css/navbar-bootstrap.css" />
+    <link rel="stylesheet" href="../css/cinema_theme.css" />
     <!-- TP2 legacy, ver frontend/css/global.css <link rel="stylesheet" href="../css/global.css" /> -->
     <!-- TP2 legacy, ver frontend/css/navbar.css <link rel="stylesheet" href="../css/navbar.css" /> -->
     <!-- TP2 legacy, ver frontend/css/functions.css <link rel="stylesheet" href="../css/functions.css" /> -->
@@ -56,115 +57,130 @@
       </nav>
     </header>
 
-    <main class="page page--functions">
-      <section class="functions" aria-labelledby="functions-title">
-        <header class="functions__header">
+    <main class="page page--functions" data-bs-theme="dark">
+      <section class="functions container py-4" aria-labelledby="functions-title">
+        <header class="functions__header mb-4">
           <h1 id="functions-title">Elegí tu función</h1>
         </header>
 
-        <article class="functions__movie-summary" aria-labelledby="movie-summary-title">
-          <figure class="functions__movie-poster">
-            <img
-              src="../images/movies/spider-man-un-nuevo-dia.jpg"
-              alt="Póster de Spider-Man: Un nuevo día"
-            />
-          </figure>
-          <div>
-            <h2 id="movie-summary-title">Spider-Man: Un nuevo día</h2>
-            <p>2h25min · Acción · Aventura · Ciencia ficción</p>
-            <a href="pelicula.html?pelicula=spider-man-un-nuevo-dia">Ver detalle de la película</a>
+        <article class="functions__movie-summary card mb-4" aria-labelledby="movie-summary-title">
+          <div class="row g-0">
+            <figure class="functions__movie-poster col-4 col-md-3 mb-0">
+              <div class="ratio ratio-2x3">
+                <img
+                  src="../images/movies/spider-man-un-nuevo-dia.jpg"
+                  class="w-100 h-100 object-fit-cover"
+                  alt="Póster de Spider-Man: Un nuevo día"
+                />
+              </div>
+            </figure>
+            <div class="col-8 col-md-9 card-body">
+              <h2 id="movie-summary-title" class="h5">Spider-Man: Un nuevo día</h2>
+              <p class="text-body-secondary">2h25min · Acción · Aventura · Ciencia ficción</p>
+              <a class="btn btn-outline-secondary btn-sm" href="pelicula.html?pelicula=spider-man-un-nuevo-dia">Ver detalle de la película</a>
+            </div>
           </div>
         </article>
 
-        <form class="functions__selection">
-          <fieldset class="functions__branches">
-            <legend>1. Elegí una sucursal</legend>
-            <div class="functions__branch-list">
-              <input class="functions__branch-input" id="branch-atlas-monteagudo" name="branch" type="radio" value="cine-atlas-monteagudo" />
-              <label class="functions__branch" for="branch-atlas-monteagudo">Cine Atlas Monteagudo</label>
-              <input class="functions__branch-input" id="branch-atlas-via-24" name="branch" type="radio" value="cine-atlas-via-24" />
-              <label class="functions__branch" for="branch-atlas-via-24">Cine Atlas Vía 24</label>
-              <input class="functions__branch-input" id="branch-cinemacenter" name="branch" type="radio" value="cinemacenter-tucuman" />
-              <label class="functions__branch" for="branch-cinemacenter">Cinemacenter Tucumán</label>
-              <input class="functions__branch-input" id="branch-sunstar" name="branch" type="radio" value="sunstar-cinemas" checked />
-              <label class="functions__branch is-selected" for="branch-sunstar">Sunstar Cinemas</label>
-              <input class="functions__branch-input" id="branch-solar" name="branch" type="radio" value="cines-del-solar" />
-              <label class="functions__branch" for="branch-solar">Cines del Solar</label>
+        <form class="functions__selection mb-4">
+          <fieldset class="functions__branches border-0 p-0 mb-4">
+            <legend class="h6 text-uppercase text-body-secondary mb-3">1. Elegí una sucursal</legend>
+            <div class="functions__branch-list d-flex flex-wrap gap-2">
+              <input class="functions__branch-input btn-check" id="branch-atlas-monteagudo" name="branch" type="radio" value="cine-atlas-monteagudo" />
+              <label class="functions__branch btn btn-outline-secondary" for="branch-atlas-monteagudo">Cine Atlas Monteagudo</label>
+              <input class="functions__branch-input btn-check" id="branch-atlas-via-24" name="branch" type="radio" value="cine-atlas-via-24" />
+              <label class="functions__branch btn btn-outline-secondary" for="branch-atlas-via-24">Cine Atlas Vía 24</label>
+              <input class="functions__branch-input btn-check" id="branch-cinemacenter" name="branch" type="radio" value="cinemacenter-tucuman" />
+              <label class="functions__branch btn btn-outline-secondary" for="branch-cinemacenter">Cinemacenter Tucumán</label>
+              <input class="functions__branch-input btn-check" id="branch-sunstar" name="branch" type="radio" value="sunstar-cinemas" checked />
+              <label class="functions__branch is-selected btn btn-outline-secondary" for="branch-sunstar">Sunstar Cinemas</label>
+              <input class="functions__branch-input btn-check" id="branch-solar" name="branch" type="radio" value="cines-del-solar" />
+              <label class="functions__branch btn btn-outline-secondary" for="branch-solar">Cines del Solar</label>
             </div>
           </fieldset>
 
-          <fieldset class="functions__dates">
-            <legend>2. Elegí una fecha</legend>
-            <div class="functions__date-list">
-              <input class="functions__date-input" id="date-01" name="date" type="radio" value="2026-09-01" checked />
-              <label class="functions__date is-selected" for="date-01"><span class="functions__date-day">Lun</span><span class="functions__date-number">01</span><span class="functions__date-month">Sep</span></label>
-              <input class="functions__date-input" id="date-02" name="date" type="radio" value="2026-09-02" />
-              <label class="functions__date" for="date-02"><span class="functions__date-day">Mar</span><span class="functions__date-number">02</span><span class="functions__date-month">Sep</span></label>
-              <input class="functions__date-input" id="date-03" name="date" type="radio" value="2026-09-03" />
-              <label class="functions__date" for="date-03"><span class="functions__date-day">Mié</span><span class="functions__date-number">03</span><span class="functions__date-month">Sep</span></label>
-              <input class="functions__date-input" id="date-04" name="date" type="radio" value="2026-09-04" />
-              <label class="functions__date" for="date-04"><span class="functions__date-day">Jue</span><span class="functions__date-number">04</span><span class="functions__date-month">Sep</span></label>
-              <input class="functions__date-input" id="date-05" name="date" type="radio" value="2026-09-05" />
-              <label class="functions__date" for="date-05"><span class="functions__date-day">Vie</span><span class="functions__date-number">05</span><span class="functions__date-month">Sep</span></label>
-              <input class="functions__date-input" id="date-06" name="date" type="radio" value="2026-09-06" />
-              <label class="functions__date" for="date-06"><span class="functions__date-day">Sáb</span><span class="functions__date-number">06</span><span class="functions__date-month">Sep</span></label>
-              <input class="functions__date-input" id="date-07" name="date" type="radio" value="2026-09-07" />
-              <label class="functions__date" for="date-07"><span class="functions__date-day">Dom</span><span class="functions__date-number">07</span><span class="functions__date-month">Sep</span></label>
+          <fieldset class="functions__dates border-0 p-0 mb-4">
+            <legend class="h6 text-uppercase text-body-secondary mb-3">2. Elegí una fecha</legend>
+            <div class="functions__date-list d-flex flex-nowrap overflow-x-auto gap-2 pb-2">
+              <input class="functions__date-input btn-check" id="date-01" name="date" type="radio" value="2026-09-01" checked />
+              <label class="functions__date is-selected btn btn-outline-secondary d-flex flex-column align-items-center flex-shrink-0 px-3" for="date-01"><span class="functions__date-day">Lun</span><span class="functions__date-number fs-5">01</span><span class="functions__date-month">Sep</span></label>
+              <input class="functions__date-input btn-check" id="date-02" name="date" type="radio" value="2026-09-02" />
+              <label class="functions__date btn btn-outline-secondary d-flex flex-column align-items-center flex-shrink-0 px-3" for="date-02"><span class="functions__date-day">Mar</span><span class="functions__date-number fs-5">02</span><span class="functions__date-month">Sep</span></label>
+              <input class="functions__date-input btn-check" id="date-03" name="date" type="radio" value="2026-09-03" />
+              <label class="functions__date btn btn-outline-secondary d-flex flex-column align-items-center flex-shrink-0 px-3" for="date-03"><span class="functions__date-day">Mié</span><span class="functions__date-number fs-5">03</span><span class="functions__date-month">Sep</span></label>
+              <input class="functions__date-input btn-check" id="date-04" name="date" type="radio" value="2026-09-04" />
+              <label class="functions__date btn btn-outline-secondary d-flex flex-column align-items-center flex-shrink-0 px-3" for="date-04"><span class="functions__date-day">Jue</span><span class="functions__date-number fs-5">04</span><span class="functions__date-month">Sep</span></label>
+              <input class="functions__date-input btn-check" id="date-05" name="date" type="radio" value="2026-09-05" />
+              <label class="functions__date btn btn-outline-secondary d-flex flex-column align-items-center flex-shrink-0 px-3" for="date-05"><span class="functions__date-day">Vie</span><span class="functions__date-number fs-5">05</span><span class="functions__date-month">Sep</span></label>
+              <input class="functions__date-input btn-check" id="date-06" name="date" type="radio" value="2026-09-06" />
+              <label class="functions__date btn btn-outline-secondary d-flex flex-column align-items-center flex-shrink-0 px-3" for="date-06"><span class="functions__date-day">Sáb</span><span class="functions__date-number fs-5">06</span><span class="functions__date-month">Sep</span></label>
+              <input class="functions__date-input btn-check" id="date-07" name="date" type="radio" value="2026-09-07" />
+              <label class="functions__date btn btn-outline-secondary d-flex flex-column align-items-center flex-shrink-0 px-3" for="date-07"><span class="functions__date-day">Dom</span><span class="functions__date-number fs-5">07</span><span class="functions__date-month">Sep</span></label>
             </div>
           </fieldset>
 
-          <fieldset class="functions__filters">
-            <legend>3. Filtrá por formato e idioma</legend>
-            <div class="functions__filter-group">
-              <span class="functions__filter-label">Formato</span>
-              <input class="functions__filter-input" id="format-2d" name="format" type="radio" value="2d" />
-              <label class="functions__filter" for="format-2d">2D</label>
-              <input class="functions__filter-input" id="format-3d" name="format" type="radio" value="3d" />
-              <label class="functions__filter" for="format-3d">3D</label>
+          <fieldset class="functions__filters border-0 p-0 mb-0">
+            <legend class="h6 text-uppercase text-body-secondary mb-3">3. Filtrá por formato e idioma</legend>
+            <div class="functions__filter-group d-flex flex-wrap align-items-center gap-2 mb-2">
+              <span class="functions__filter-label fw-semibold me-2">Formato</span>
+              <input class="functions__filter-input btn-check" id="format-2d" name="format" type="radio" value="2d" />
+              <label class="functions__filter btn btn-outline-secondary btn-sm" for="format-2d">2D</label>
+              <input class="functions__filter-input btn-check" id="format-3d" name="format" type="radio" value="3d" />
+              <label class="functions__filter btn btn-outline-secondary btn-sm" for="format-3d">3D</label>
             </div>
-            <div class="functions__filter-group">
-              <span class="functions__filter-label">Idioma</span>
-              <input class="functions__filter-input" id="language-castellano" name="language" type="radio" value="castellano" checked />
-              <label class="functions__filter is-selected" for="language-castellano">Castellano</label>
+            <div class="functions__filter-group d-flex flex-wrap align-items-center gap-2">
+              <span class="functions__filter-label fw-semibold me-2">Idioma</span>
+              <input class="functions__filter-input btn-check" id="language-castellano" name="language" type="radio" value="castellano" checked />
+              <label class="functions__filter is-selected btn btn-outline-secondary btn-sm" for="language-castellano">Castellano</label>
             </div>
           </fieldset>
         </form>
 
         <section class="functions__schedule" aria-labelledby="schedule-title">
-          <header>
+          <header class="mb-3">
             <h2 id="schedule-title">4. Elegí un horario</h2>
-            <p>Sunstar Cinemas · 01/09/2026</p>
+            <p class="text-body-secondary">Sunstar Cinemas · 01/09/2026</p>
           </header>
 
-          <section class="function-group" aria-labelledby="group-2d-title">
-            <header class="function-group__header"><h3 class="function-group__title" id="group-2d-title">2D · Castellano</h3></header>
-            <div class="function-group__list">
-              <article class="function-card is-available">
-                <p class="function-card__time">19:20</p><p class="function-card__format">2D</p><p class="function-card__language">Castellano</p><p class="function-card__price">Precio de referencia del proyecto: $8.500</p><p class="function-card__availability">Disponible</p>
-                <a class="function-card__action btn btn--primary" href="butacas.html">Elegir función</a>
-              </article>
-              <article class="function-card is-low">
-                <p class="function-card__time">22:10</p><p class="function-card__format">2D</p><p class="function-card__language">Castellano</p><p class="function-card__price">Precio de referencia del proyecto: $8.500</p><p class="function-card__availability">Pocos lugares</p>
-                <a class="function-card__action btn btn--primary" href="butacas.html">Elegir función</a>
-              </article>
+          <section class="function-group mb-4" aria-labelledby="group-2d-title">
+            <header class="function-group__header mb-3"><h3 class="function-group__title h5" id="group-2d-title">2D · Castellano</h3></header>
+            <div class="function-group__list row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3">
+              <div class="col">
+                <article class="function-card is-available card h-100 card-body d-flex flex-column gap-1 border-success-subtle">
+                  <p class="function-card__time fw-semibold mb-1">19:20</p><p class="function-card__format small text-body-secondary mb-1">2D</p><p class="function-card__language small text-body-secondary mb-1">Castellano</p><p class="function-card__price small text-body-secondary mb-1">Precio de referencia del proyecto: $8.500</p><p class="function-card__availability badge text-bg-success align-self-start mb-2">Disponible</p>
+                  <a class="function-card__action btn btn--primary btn-brand mt-auto" href="butacas.html">Elegir función</a>
+                </article>
+              </div>
+              <div class="col">
+                <article class="function-card is-low card h-100 card-body d-flex flex-column gap-1 border-warning-subtle">
+                  <p class="function-card__time fw-semibold mb-1">22:10</p><p class="function-card__format small text-body-secondary mb-1">2D</p><p class="function-card__language small text-body-secondary mb-1">Castellano</p><p class="function-card__price small text-body-secondary mb-1">Precio de referencia del proyecto: $8.500</p><p class="function-card__availability badge text-bg-warning align-self-start mb-2">Pocos lugares</p>
+                  <a class="function-card__action btn btn--primary btn-brand mt-auto" href="butacas.html">Elegir función</a>
+                </article>
+              </div>
             </div>
           </section>
 
-          <section class="function-group" aria-labelledby="group-3d-title">
-            <header class="function-group__header"><h3 class="function-group__title" id="group-3d-title">3D · Castellano</h3></header>
-            <div class="function-group__list">
-              <article class="function-card is-available">
-                <p class="function-card__time">16:00</p><p class="function-card__format">3D</p><p class="function-card__language">Castellano</p><p class="function-card__price">Precio de referencia del proyecto: $8.500</p><p class="function-card__availability">Disponible</p>
-                <a class="function-card__action btn btn--primary" href="butacas.html">Elegir función</a>
-              </article>
-              <article class="function-card is-sold-out">
-                <p class="function-card__time">19:00</p><p class="function-card__format">3D</p><p class="function-card__language">Castellano</p><p class="function-card__price">Precio de referencia del proyecto: $8.500</p><p class="function-card__availability">Agotada</p>
-                <button class="function-card__action btn btn--primary" type="button" disabled>Elegir función</button>
-              </article>
-              <article class="function-card is-available">
-                <p class="function-card__time">22:00</p><p class="function-card__format">3D</p><p class="function-card__language">Castellano</p><p class="function-card__price">Precio de referencia del proyecto: $8.500</p><p class="function-card__availability">Disponible</p>
-                <a class="function-card__action btn btn--primary" href="butacas.html">Elegir función</a>
-              </article>
+          <section class="function-group mb-4" aria-labelledby="group-3d-title">
+            <header class="function-group__header mb-3"><h3 class="function-group__title h5" id="group-3d-title">3D · Castellano</h3></header>
+            <div class="function-group__list row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3">
+              <div class="col">
+                <article class="function-card is-available card h-100 card-body d-flex flex-column gap-1 border-success-subtle">
+                  <p class="function-card__time fw-semibold mb-1">16:00</p><p class="function-card__format small text-body-secondary mb-1">3D</p><p class="function-card__language small text-body-secondary mb-1">Castellano</p><p class="function-card__price small text-body-secondary mb-1">Precio de referencia del proyecto: $8.500</p><p class="function-card__availability badge text-bg-success align-self-start mb-2">Disponible</p>
+                  <a class="function-card__action btn btn--primary btn-brand mt-auto" href="butacas.html">Elegir función</a>
+                </article>
+              </div>
+              <div class="col">
+                <article class="function-card is-sold-out card h-100 card-body d-flex flex-column gap-1 border-secondary-subtle opacity-75">
+                  <p class="function-card__time fw-semibold mb-1">19:00</p><p class="function-card__format small text-body-secondary mb-1">3D</p><p class="function-card__language small text-body-secondary mb-1">Castellano</p><p class="function-card__price small text-body-secondary mb-1">Precio de referencia del proyecto: $8.500</p><p class="function-card__availability badge text-bg-secondary align-self-start mb-2">Agotada</p>
+                  <button class="function-card__action btn btn--primary btn-secondary mt-auto" type="button" disabled>Elegir función</button>
+                </article>
+              </div>
+              <div class="col">
+                <article class="function-card is-available card h-100 card-body d-flex flex-column gap-1 border-success-subtle">
+                  <p class="function-card__time fw-semibold mb-1">22:00</p><p class="function-card__format small text-body-secondary mb-1">3D</p><p class="function-card__language small text-body-secondary mb-1">Castellano</p><p class="function-card__price small text-body-secondary mb-1">Precio de referencia del proyecto: $8.500</p><p class="function-card__availability badge text-bg-success align-self-start mb-2">Disponible</p>
+                  <a class="function-card__action btn btn--primary btn-brand mt-auto" href="butacas.html">Elegir función</a>
+                </article>
+              </div>
             </div>
           </section>
         </section>
