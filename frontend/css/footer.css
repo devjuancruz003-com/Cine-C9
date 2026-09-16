@@ -1,3 +1,10 @@
+/* ============================================================
+   TP2 — CSS ORIGINAL (conservado como registro histórico)
+   Desactivado en refactor/bootstrap-base al incorporar Bootstrap.
+   No se modifica ni se elimina: solo queda comentado.
+   ============================================================ */
+/*
+
 footer {
   background: var(--color-surface);
   border-top: 1px solid var(--color-border);
@@ -120,3 +127,4 @@ footer a:hover,
 footer a:focus-visible {
   color: var(--color-accent-light);
 }
+*/
