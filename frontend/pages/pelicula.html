@@ -16,63 +16,79 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="../css/global.css" />
-    <link rel="stylesheet" href="../css/navbar.css" />
-    <link rel="stylesheet" href="../css/movie-detail.css" />
-    <link rel="stylesheet" href="../css/footer.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../css/navbar-bootstrap.css" />
+    <link rel="stylesheet" href="../css/cinema_theme.css" />
+    <!-- TP2 legacy, ver frontend/css/global.css <link rel="stylesheet" href="../css/global.css" /> -->
+    <!-- TP2 legacy, ver frontend/css/navbar.css <link rel="stylesheet" href="../css/navbar.css" /> -->
+    <!-- TP2 legacy, ver frontend/css/movie-detail.css <link rel="stylesheet" href="../css/movie-detail.css" /> -->
+    <!-- TP2 legacy, ver frontend/css/footer.css <link rel="stylesheet" href="../css/footer.css" /> -->
 
   </head>
 
   <body>
-    <header class="site-header">
-      <nav class="navbar" aria-label="Navegación principal">
-        <div class="navbar__container">
-          <a class="navbar__brand" href="../../index.html" aria-label="Cine Tucumán - Inicio">
+    <header class="site-header sticky-top">
+      <nav class="navbar navbar-expand-lg navbar-dark" aria-label="Navegación principal">
+        <div class="container">
+          <a class="navbar-brand" href="../../index.html" aria-label="Cine Tucumán - Inicio">
             Cine Tucumán
           </a>
 
-          <ul class="navbar__menu">
-            <li><a class="navbar__link" href="../../index.html">Inicio</a></li>
-            <li><a class="navbar__link" href="peliculas.html">Películas</a></li>
-            <li><a class="navbar__link" href="sucursales.html">Cines</a></li>
-            <li><a class="navbar__link" href="candybar.html">Candy Bar</a></li>
-          </ul>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarMain" aria-controls="navbarMain"
+            aria-expanded="false" aria-label="Abrir menú de navegación">
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-          <div class="navbar__actions">
-            <a class="navbar__tickets btn btn--primary" href="peliculas.html">Comprar entradas</a>
-            <button class="navbar__search" type="button" aria-label="Abrir buscador">Buscar</button>
-            <a class="navbar__cart" href="carrito.html" aria-label="Ver carrito de compra">Carrito</a>
-            <a class="navbar__auth" href="login.html">Iniciar sesión</a>
+          <div class="collapse navbar-collapse" id="navbarMain">
+            <ul class="navbar-nav me-lg-auto mb-2 mb-lg-0">
+              <li class="nav-item"><a class="nav-link" href="../../index.html">Inicio</a></li>
+              <li class="nav-item"><a class="nav-link" href="peliculas.html">Películas</a></li>
+              <li class="nav-item"><a class="nav-link" href="sucursales.html">Cines</a></li>
+              <li class="nav-item"><a class="nav-link" href="candybar.html">Candy Bar</a></li>
+            </ul>
+
+            <div class="d-flex flex-column flex-lg-row align-items-lg-center gap-2 gap-lg-3">
+              <a class="btn btn-brand" href="peliculas.html">Comprar entradas</a>
+              <button class="btn btn-outline-light btn-sm" type="button" aria-label="Abrir buscador">Buscar</button>
+              <a class="nav-link px-0 px-lg-2" href="carrito.html" aria-label="Ver carrito de compra">Carrito</a>
+              <a class="nav-link px-0 px-lg-2" href="login.html">Iniciar sesión</a>
+            </div>
           </div>
         </div>
       </nav>
     </header>
 
-    <main class="page page--movie-detail">
-      <article class="movie-detail">
-        <section class="movie-detail__hero" aria-labelledby="movie-title">
-          <figure class="movie-detail__poster">
-            <img
-              src="../images/movies/spider-man-un-nuevo-dia.jpg"
-              alt="Póster de Spider-Man: Un nuevo día"
-            />
+    <main class="page page--movie-detail" data-bs-theme="dark">
+      <article class="movie-detail container py-4">
+        <section class="movie-detail__hero row g-4 align-items-start mb-5" aria-labelledby="movie-title">
+          <figure class="movie-detail__poster col-12 col-md-4">
+            <div class="ratio ratio-2x3">
+              <img
+                src="../images/movies/spider-man-un-nuevo-dia.jpg"
+                class="w-100 h-100 object-fit-cover"
+                alt="Póster de Spider-Man: Un nuevo día"
+              />
+            </div>
           </figure>
 
-          <div class="movie-detail__info">
-            <p class="movie-detail__status">En cartelera</p>
+          <div class="movie-detail__info col-12 col-md-8">
+            <p class="movie-detail__status badge text-bg-primary mb-2">En cartelera</p>
             <h1 id="movie-title">Spider-Man: Un nuevo día</h1>
-            <p class="movie-detail__original-title">Spider-Man: Brand New Day</p>
-            <p class="movie-detail__genres">Acción · Aventura · Ciencia ficción</p>
-            <p class="movie-detail__runtime">2h25min</p>
-            <p class="movie-detail__rating">Supervisión parental sugerida</p>
-            <a class="btn btn--primary" href="funciones.html?pelicula=spider-man-un-nuevo-dia">
+            <p class="movie-detail__original-title text-body-secondary fst-italic mb-2">Spider-Man: Brand New Day</p>
+            <div class="d-flex flex-wrap gap-3 text-body-secondary mb-3">
+              <p class="movie-detail__genres mb-0">Acción · Aventura · Ciencia ficción</p>
+              <p class="movie-detail__runtime mb-0">2h25min</p>
+              <p class="movie-detail__rating mb-0">Supervisión parental sugerida</p>
+            </div>
+            <a class="btn btn--primary btn-brand btn-lg mt-2" href="funciones.html?pelicula=spider-man-un-nuevo-dia">
               Ver funciones
             </a>
           </div>
         </section>
 
-        <section class="movie-detail__synopsis" aria-labelledby="synopsis-title">
-          <header>
+        <section class="movie-detail__synopsis mb-5" aria-labelledby="synopsis-title">
+          <header class="mb-3">
             <h2 id="synopsis-title">Sinopsis</h2>
           </header>
           <p>
@@ -80,97 +96,99 @@
           </p>
         </section>
 
-        <section class="movie-detail__technical" aria-labelledby="technical-title">
-          <header>
+        <section class="movie-detail__technical mb-5" aria-labelledby="technical-title">
+          <header class="mb-3">
             <h2 id="technical-title">Ficha técnica</h2>
           </header>
-          <dl class="movie-detail__technical-list">
-            <div class="movie-detail__technical-item">
-              <dt>Director</dt>
-              <dd>Destin Daniel Cretton</dd>
+          <dl class="movie-detail__technical-list mb-0">
+            <div class="movie-detail__technical-item row mb-2">
+              <dt class="col-sm-4 fw-semibold">Director</dt>
+              <dd class="col-sm-8 mb-0">Destin Daniel Cretton</dd>
             </div>
-            <div class="movie-detail__technical-item">
-              <dt>Año</dt>
-              <dd>2026</dd>
+            <div class="movie-detail__technical-item row mb-2">
+              <dt class="col-sm-4 fw-semibold">Año</dt>
+              <dd class="col-sm-8 mb-0">2026</dd>
             </div>
-            <div class="movie-detail__technical-item">
-              <dt>Estreno en Argentina</dt>
-              <dd>30 de julio de 2026</dd>
+            <div class="movie-detail__technical-item row mb-2">
+              <dt class="col-sm-4 fw-semibold">Estreno en Argentina</dt>
+              <dd class="col-sm-8 mb-0">30 de julio de 2026</dd>
             </div>
-            <div class="movie-detail__technical-item">
-              <dt>Origen</dt>
-              <dd>Estados Unidos</dd>
+            <div class="movie-detail__technical-item row mb-2">
+              <dt class="col-sm-4 fw-semibold">Origen</dt>
+              <dd class="col-sm-8 mb-0">Estados Unidos</dd>
             </div>
           </dl>
         </section>
 
-        <section class="movie-detail__cast" aria-labelledby="cast-title">
-          <header>
+        <section class="movie-detail__cast mb-5" aria-labelledby="cast-title">
+          <header class="mb-3">
             <h2 id="cast-title">Reparto principal</h2>
           </header>
-          <ul class="movie-detail__cast-list">
-            <li class="movie-detail__cast-item"><div class="movie-detail__cast-image" aria-hidden="true"></div><p class="movie-detail__cast-name">Tom Holland</p></li>
-            <li class="movie-detail__cast-item"><div class="movie-detail__cast-image" aria-hidden="true"></div><p class="movie-detail__cast-name">Zendaya</p></li>
-            <li class="movie-detail__cast-item"><div class="movie-detail__cast-image" aria-hidden="true"></div><p class="movie-detail__cast-name">Sadie Sink</p></li>
-            <li class="movie-detail__cast-item"><div class="movie-detail__cast-image" aria-hidden="true"></div><p class="movie-detail__cast-name">Jacob Batalon</p></li>
-            <li class="movie-detail__cast-item"><div class="movie-detail__cast-image" aria-hidden="true"></div><p class="movie-detail__cast-name">Jon Bernthal</p></li>
-            <li class="movie-detail__cast-item"><div class="movie-detail__cast-image" aria-hidden="true"></div><p class="movie-detail__cast-name">Mark Ruffalo</p></li>
+          <ul class="movie-detail__cast-list row row-cols-3 row-cols-md-6 g-3 list-unstyled mb-0">
+            <li class="movie-detail__cast-item col text-center"><div class="movie-detail__cast-image ratio ratio-1x1 rounded-circle bg-body-secondary" aria-hidden="true"></div><p class="movie-detail__cast-name small mb-0 mt-2">Tom Holland</p></li>
+            <li class="movie-detail__cast-item col text-center"><div class="movie-detail__cast-image ratio ratio-1x1 rounded-circle bg-body-secondary" aria-hidden="true"></div><p class="movie-detail__cast-name small mb-0 mt-2">Zendaya</p></li>
+            <li class="movie-detail__cast-item col text-center"><div class="movie-detail__cast-image ratio ratio-1x1 rounded-circle bg-body-secondary" aria-hidden="true"></div><p class="movie-detail__cast-name small mb-0 mt-2">Sadie Sink</p></li>
+            <li class="movie-detail__cast-item col text-center"><div class="movie-detail__cast-image ratio ratio-1x1 rounded-circle bg-body-secondary" aria-hidden="true"></div><p class="movie-detail__cast-name small mb-0 mt-2">Jacob Batalon</p></li>
+            <li class="movie-detail__cast-item col text-center"><div class="movie-detail__cast-image ratio ratio-1x1 rounded-circle bg-body-secondary" aria-hidden="true"></div><p class="movie-detail__cast-name small mb-0 mt-2">Jon Bernthal</p></li>
+            <li class="movie-detail__cast-item col text-center"><div class="movie-detail__cast-image ratio ratio-1x1 rounded-circle bg-body-secondary" aria-hidden="true"></div><p class="movie-detail__cast-name small mb-0 mt-2">Mark Ruffalo</p></li>
           </ul>
         </section>
 
-        <section class="movie-detail__trailer" aria-labelledby="trailer-title">
-          <header>
+        <section class="movie-detail__trailer mb-5" aria-labelledby="trailer-title">
+          <header class="mb-3">
             <h2 id="trailer-title">Tráiler oficial</h2>
           </header>
-          <div class="movie-detail__trailer-placeholder">
-            <p>Enlace al tráiler oficial pendiente de confirmación.</p>
+          <div class="movie-detail__trailer-placeholder ratio ratio-16x9 bg-body-secondary d-flex align-items-center justify-content-center text-body-secondary text-center p-3">
+            <p class="mb-0">Enlace al tráiler oficial pendiente de confirmación.</p>
           </div>
         </section>
 
         <section class="movie-detail__functions" aria-labelledby="functions-title">
-          <header>
+          <header class="mb-3">
             <h2 id="functions-title">Funciones</h2>
             <p>Consultá las funciones disponibles por sucursal.</p>
           </header>
 
-          <article class="movie-detail__branch">
-            <header>
-              <h3>Sunstar Cinemas</h3>
-              <p>01/09/2026</p>
+          <article class="movie-detail__branch card mb-3">
+            <header class="card-header d-flex flex-wrap justify-content-between align-items-center gap-2">
+              <h3 class="h6 mb-0">Sunstar Cinemas</h3>
+              <p class="mb-0 text-body-secondary small">01/09/2026</p>
             </header>
-            <section class="movie-detail__function-group" aria-labelledby="sunstar-2d-title">
-              <h4 id="sunstar-2d-title">2D · Castellano</h4>
-              <ul class="movie-detail__time-list">
-                <li><a href="funciones.html?pelicula=spider-man-un-nuevo-dia&amp;sucursal=sunstar-cinemas">19:20</a></li>
-                <li><a href="funciones.html?pelicula=spider-man-un-nuevo-dia&amp;sucursal=sunstar-cinemas">22:10</a></li>
-              </ul>
-            </section>
-            <section class="movie-detail__function-group" aria-labelledby="sunstar-3d-title">
-              <h4 id="sunstar-3d-title">3D · Castellano</h4>
-              <ul class="movie-detail__time-list">
-                <li><a href="funciones.html?pelicula=spider-man-un-nuevo-dia&amp;sucursal=sunstar-cinemas">16:00</a></li>
-                <li><a href="funciones.html?pelicula=spider-man-un-nuevo-dia&amp;sucursal=sunstar-cinemas">19:00</a></li>
-                <li><a href="funciones.html?pelicula=spider-man-un-nuevo-dia&amp;sucursal=sunstar-cinemas">22:00</a></li>
-              </ul>
-            </section>
-            <p class="movie-detail__reference-price">Precio de referencia del proyecto: $8.500</p>
+            <div class="card-body">
+              <section class="movie-detail__function-group mb-3" aria-labelledby="sunstar-2d-title">
+                <h4 class="h6" id="sunstar-2d-title">2D · Castellano</h4>
+                <ul class="movie-detail__time-list d-flex flex-wrap gap-2 list-unstyled mb-0">
+                  <li><a class="btn btn-outline-secondary btn-sm" href="funciones.html?pelicula=spider-man-un-nuevo-dia&amp;sucursal=sunstar-cinemas">19:20</a></li>
+                  <li><a class="btn btn-outline-secondary btn-sm" href="funciones.html?pelicula=spider-man-un-nuevo-dia&amp;sucursal=sunstar-cinemas">22:10</a></li>
+                </ul>
+              </section>
+              <section class="movie-detail__function-group mb-3" aria-labelledby="sunstar-3d-title">
+                <h4 class="h6" id="sunstar-3d-title">3D · Castellano</h4>
+                <ul class="movie-detail__time-list d-flex flex-wrap gap-2 list-unstyled mb-0">
+                  <li><a class="btn btn-outline-secondary btn-sm" href="funciones.html?pelicula=spider-man-un-nuevo-dia&amp;sucursal=sunstar-cinemas">16:00</a></li>
+                  <li><a class="btn btn-outline-secondary btn-sm" href="funciones.html?pelicula=spider-man-un-nuevo-dia&amp;sucursal=sunstar-cinemas">19:00</a></li>
+                  <li><a class="btn btn-outline-secondary btn-sm" href="funciones.html?pelicula=spider-man-un-nuevo-dia&amp;sucursal=sunstar-cinemas">22:00</a></li>
+                </ul>
+              </section>
+              <p class="movie-detail__reference-price text-body-secondary small mb-0">Precio de referencia del proyecto: $8.500</p>
+            </div>
           </article>
 
-          <article class="movie-detail__branch">
-            <header><h3>Cine Atlas Monteagudo</h3></header>
-            <p class="movie-detail__pending-functions">Funciones próximas a confirmar.</p>
+          <article class="movie-detail__branch card mb-3">
+            <header class="card-header"><h3 class="h6 mb-0">Cine Atlas Monteagudo</h3></header>
+            <p class="movie-detail__pending-functions card-body text-body-secondary mb-0">Funciones próximas a confirmar.</p>
           </article>
-          <article class="movie-detail__branch">
-            <header><h3>Cine Atlas Vía 24</h3></header>
-            <p class="movie-detail__pending-functions">Funciones próximas a confirmar.</p>
+          <article class="movie-detail__branch card mb-3">
+            <header class="card-header"><h3 class="h6 mb-0">Cine Atlas Vía 24</h3></header>
+            <p class="movie-detail__pending-functions card-body text-body-secondary mb-0">Funciones próximas a confirmar.</p>
           </article>
-          <article class="movie-detail__branch">
-            <header><h3>Cinemacenter Tucumán</h3></header>
-            <p class="movie-detail__pending-functions">Funciones próximas a confirmar.</p>
+          <article class="movie-detail__branch card mb-3">
+            <header class="card-header"><h3 class="h6 mb-0">Cinemacenter Tucumán</h3></header>
+            <p class="movie-detail__pending-functions card-body text-body-secondary mb-0">Funciones próximas a confirmar.</p>
           </article>
-          <article class="movie-detail__branch">
-            <header><h3>Cines del Solar</h3></header>
-            <p class="movie-detail__pending-functions">Funciones próximas a confirmar.</p>
+          <article class="movie-detail__branch card mb-3">
+            <header class="card-header"><h3 class="h6 mb-0">Cines del Solar</h3></header>
+            <p class="movie-detail__pending-functions card-body text-body-secondary mb-0">Funciones próximas a confirmar.</p>
           </article>
         </section>
       </article>
@@ -221,5 +239,8 @@
 
       <p>&copy; 2026 Cine Tucumán</p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"></script>
   </body>
 </html>

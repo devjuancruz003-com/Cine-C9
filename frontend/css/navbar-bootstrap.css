@@ -1,0 +1,20 @@
+.site-header .navbar-brand {
+  font-family: "DM Serif Display", serif;
+}
+
+.site-header .navbar {
+  background-color: #1D1517;
+}
+
+.btn-brand {
+  --bs-btn-color: #1D1517;
+  --bs-btn-bg: #B87333;
+  --bs-btn-border-color: #B87333;
+  --bs-btn-hover-color: #1D1517;
+  --bs-btn-hover-bg: #D39A61;
+  --bs-btn-hover-border-color: #D39A61;
+  --bs-btn-active-color: #1D1517;
+  --bs-btn-active-bg: #D39A61;
+  --bs-btn-active-border-color: #D39A61;
+  --bs-btn-focus-shadow-rgb: 184, 115, 51;
+}
