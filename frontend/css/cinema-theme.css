@@ -1,7 +1,9 @@
 .page--home,
 .page--movies,
 .page--movie-detail,
-.page--functions {
+.page--functions,
+.page--branches,
+.site-footer {
 
   background-color: var(--bs-body-bg);
   color: var(--bs-body-color);
@@ -33,7 +35,11 @@
 .page--movie-detail h3,
 .page--functions h1,
 .page--functions h2,
-.page--functions h3 {
+.page--functions h3,
+.page--branches h1,
+.page--branches h2,
+.page--branches h3,
+.site-footer h2 {
   font-family: "DM Serif Display", serif;
 }
 
@@ -44,4 +50,9 @@
 
 .page--home .ratio>img {
   object-fit: cover;
+}
+
+
+.branch-detail-card {
+  scroll-margin-top: 96px;
 }
