@@ -1,7 +1,8 @@
 .page--home,
 .page--movies,
 .page--movie-detail,
-.page--functions {
+.page--functions,
+.site-footer {
 
   background-color: var(--bs-body-bg);
   color: var(--bs-body-color);
@@ -33,7 +34,8 @@
 .page--movie-detail h3,
 .page--functions h1,
 .page--functions h2,
-.page--functions h3 {
+.page--functions h3,
+.site-footer h2 {
   font-family: "DM Serif Display", serif;
 }
 
