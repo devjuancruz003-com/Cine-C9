@@ -17,7 +17,7 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
     <link rel="stylesheet" href="../css/navbar-bootstrap.css" />
-    <link rel="stylesheet" href="../css/cinema_theme.css" />
+    <link rel="stylesheet" href="../css/cinema-theme.css" />
     <!-- TP2 legacy, ver frontend/css/global.css <link rel="stylesheet" href="../css/global.css" /> -->
     <!-- TP2 legacy, ver frontend/css/navbar.css <link rel="stylesheet" href="../css/navbar.css" /> -->
     <!-- TP2 legacy, ver frontend/css/movies.css <link rel="stylesheet" href="../css/movies.css" /> -->
@@ -304,50 +304,56 @@
     </section>
   </main>
 
-  <footer>
-    <div>
-      <section>
-        <h2>Cine Tucumán</h2>
-      </section>
+  <footer class="site-footer border-top border-secondary-subtle" data-bs-theme="dark">
+    <div class="container py-5">
+      <div class="row gy-4 gy-lg-0">
 
-      <section>
-        <h3>Películas</h3>
-        <ul>
-          <li><a href="peliculas.html">Cartelera</a></li>
-          <li><a href="peliculas.html">Próximos estrenos</a></li>
-        </ul>
-      </section>
+        <div class="col-12 col-lg-4">
+          <h2 class="h4 mb-0">Cine Tucumán</h2>
+        </div>
 
-      <section>
-        <h3>Cines</h3>
-        <ul>
-          <li><a href="sucursales.html">Sucursales</a></li>
-          <li><a href="funciones.html">Horarios</a></li>
-        </ul>
-      </section>
+        <div class="col-6 col-md-3 col-lg-2">
+          <h3 class="h6 text-uppercase text-body-secondary mb-3">Películas</h3>
+          <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
+            <li><a class="text-decoration-none" href="peliculas.html">Cartelera</a></li>
+            <li><a class="text-decoration-none" href="peliculas.html">Próximos estrenos</a></li>
+          </ul>
+        </div>
 
-      <section>
-        <h3>Ayuda</h3>
-        <ul>
-          <li><a href="#">Preguntas frecuentes</a></li>
-          <li><a href="#">Contacto</a></li>
-          <li><a href="#">Términos y condiciones</a></li>
-        </ul>
-      </section>
+        <div class="col-6 col-md-3 col-lg-2">
+          <h3 class="h6 text-uppercase text-body-secondary mb-3">Cines</h3>
+          <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
+            <li><a class="text-decoration-none" href="sucursales.html">Sucursales</a></li>
+            <li><a class="text-decoration-none" href="funciones.html">Horarios</a></li>
+          </ul>
+        </div>
 
-      <section>
-        <h3>Nuestras sucursales</h3>
-        <ul>
-          <li><a href="sucursales.html#cine-atlas-monteagudo">Cine Atlas Monteagudo</a></li>
-          <li><a href="sucursales.html#cine-atlas-via-24">Cine Atlas Vía 24</a></li>
-          <li><a href="sucursales.html#cinemacenter-tucuman">Cinemacenter Tucumán</a></li>
-          <li><a href="sucursales.html#sunstar-cinemas">Sunstar Cinemas</a></li>
-          <li><a href="sucursales.html#cines-del-solar">Cines del Solar</a></li>
-        </ul>
-      </section>
+        <div class="col-6 col-md-3 col-lg-2">
+          <h3 class="h6 text-uppercase text-body-secondary mb-3">Ayuda</h3>
+          <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
+            <li><a class="text-decoration-none" href="#">Preguntas frecuentes</a></li>
+            <li><a class="text-decoration-none" href="#">Contacto</a></li>
+            <li><a class="text-decoration-none" href="#">Términos y condiciones</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-3 col-lg-2">
+          <h3 class="h6 text-uppercase text-body-secondary mb-3">Nuestras sucursales</h3>
+          <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
+            <li><a class="text-decoration-none" href="sucursales.html#cine-atlas-monteagudo">Cine Atlas Monteagudo</a></li>
+            <li><a class="text-decoration-none" href="sucursales.html#cine-atlas-via-24">Cine Atlas Vía 24</a></li>
+            <li><a class="text-decoration-none" href="sucursales.html#cinemacenter-tucuman">Cinemacenter Tucumán</a></li>
+            <li><a class="text-decoration-none" href="sucursales.html#sunstar-cinemas">Sunstar Cinemas</a></li>
+            <li><a class="text-decoration-none" href="sucursales.html#cines-del-solar">Cines del Solar</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <hr class="my-4 border-secondary-subtle" />
+
+      <p class="text-center text-body-secondary small mb-0">&copy; 2026 Cine Tucumán</p>
     </div>
-
-    <p>&copy; 2026 Cine Tucumán</p>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
