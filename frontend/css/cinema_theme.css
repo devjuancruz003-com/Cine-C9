@@ -1,0 +1,32 @@
+.page--home {
+
+  --bs-body-bg: #120D0E;
+  --bs-body-color: #F5EEE8;
+  --bs-border-color: #3B2A2D;
+  --bs-secondary-bg: #1D1517;
+  --bs-tertiary-bg: #1D1517;
+  --bs-card-bg: #1D1517;
+  --bs-primary: #6E1F2A;
+  --bs-primary-rgb: 110, 31, 42;
+  --bs-secondary: #B87333;
+  --bs-secondary-rgb: 184, 115, 51;
+  --bs-link-color: #B87333;
+  --bs-link-hover-color: #D39A61;
+  --bs-body-font-family: "Manrope", var(--bs-font-sans-serif);
+}
+
+
+.page--home h1,
+.page--home h2,
+.page--home h3 {
+  font-family: "DM Serif Display", serif;
+}
+
+
+.ratio-2x3 {
+  --bs-aspect-ratio: 150%;
+}
+
+.page--home .ratio>img {
+  object-fit: cover;
+}
