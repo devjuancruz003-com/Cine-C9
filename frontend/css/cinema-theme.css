@@ -7,6 +7,10 @@
 .page--login,
 .page--registration,
 .page--cart,
+.page--checkout,
+.page--confirmation,
+.page--candybar,
+.page--tickets,
 .site-footer {
 
   background-color: var(--bs-body-bg);
@@ -35,7 +39,11 @@
 .page--seats,
 .page--login,
 .page--registration,
-.page--cart {
+.page--cart,
+.page--checkout,
+.page--confirmation,
+.page--candybar,
+.page--tickets {
   background-image: url("../assets/background/stars-pattern.svg");
   background-repeat: repeat;
 }
