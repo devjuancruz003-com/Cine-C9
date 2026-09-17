@@ -54,6 +54,9 @@
 .page--branches h1,
 .page--branches h2,
 .page--branches h3,
+.page--seats h1,
+.page--seats h2,
+.page--seats h3,
 .site-footer h2 {
   font-family: "DM Serif Display", serif;
 }
@@ -70,4 +73,112 @@
 
 .branch-detail-card {
   scroll-margin-top: 96px;
+}
+
+
+
+.seats__screen {
+  max-width: 26rem;
+  padding: .5rem 2rem;
+  border: 1px solid var(--bs-border-color);
+  border-bottom: none;
+  border-radius: 50% 50% 6% 6% / 100% 100% 10% 10%;
+  background-image: linear-gradient(180deg, var(--bs-secondary-bg), var(--bs-body-bg));
+  text-align: center;
+}
+
+.seats__screen p {
+  color: var(--bs-secondary-color);
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .25em;
+  text-transform: uppercase;
+}
+
+.seats__row-label {
+  min-width: 3.5rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .seats__row-label {
+    text-align: start;
+  }
+}
+
+.seats__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 2.25rem) .75rem repeat(4, 2.25rem);
+  gap: .375rem;
+  width: fit-content;
+}
+
+@media (min-width: 768px) {
+  .seats__grid {
+    grid-template-columns: repeat(4, 2.75rem) 1rem repeat(4, 2.75rem);
+    gap: .5rem;
+  }
+}
+
+.seats__grid > .seat:nth-child(5) {
+  grid-column: 6;
+}
+
+.seats__grid > .seat:nth-child(6) {
+  grid-column: 7;
+}
+
+.seats__grid > .seat:nth-child(7) {
+  grid-column: 8;
+}
+
+.seats__grid > .seat:nth-child(8) {
+  grid-column: 9;
+}
+
+.seat {
+  aspect-ratio: 1 / 1;
+  padding: 0;
+  border-radius: 4px 4px 8px 8px;
+  font-size: .7rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+@media (min-width: 768px) {
+  .seat {
+    font-size: .8rem;
+  }
+}
+
+.seat--sample {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+.seat--occupied,
+.seat--occupied:disabled {
+  opacity: 1;
+  background-image: repeating-linear-gradient(45deg, var(--bs-secondary-bg), var(--bs-secondary-bg) 4px, var(--bs-border-color) 4px, var(--bs-border-color) 8px);
+  border-color: var(--bs-border-color);
+  color: var(--bs-secondary-color);
+}
+
+.seat--accessible {
+  border-style: dashed;
+  border-color: var(--bs-secondary);
+}
+
+.seat--selected {
+  background-color: var(--bs-secondary);
+  border-color: var(--bs-secondary);
+  color: var(--bs-secondary-bg);
+}
+
+.seats__summary-card {
+  max-width: 26rem;
 }
