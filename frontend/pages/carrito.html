@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta name="description"
+    content="Revisá las entradas y productos de Candy Bar seleccionados antes de continuar con tu compra en Cine Tucumán." />
+
+  <link rel="icon" href="../assets/icons/pochoclin.ico" type="image/x-icon" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+  <link rel="stylesheet" href="../css/navbar-bootstrap.css" />
+  <link rel="stylesheet" href="../css/cinema-theme.css" />
+
+  <title>Tu carrito | Cine Tucumán</title>
+</head>
+
+<body>
+
+  <header class="site-header sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark" aria-label="Navegación principal">
+      <div class="container">
+        <a class="navbar-brand" href="../../index.html" aria-label="Cine Tucumán - Inicio">Cine Tucumán</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarMain" aria-controls="navbarMain"
+          aria-expanded="false" aria-label="Abrir menú de navegación">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarMain">
+          <ul class="navbar-nav me-lg-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="../../index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="peliculas.html">Películas</a></li>
+            <li class="nav-item"><a class="nav-link" href="sucursales.html">Cines</a></li>
+            <li class="nav-item"><a class="nav-link" href="candybar.html">Candy Bar</a></li>
+          </ul>
+
+          <div class="d-flex flex-column flex-lg-row align-items-lg-center gap-2 gap-lg-3">
+            <a class="btn btn-brand" href="peliculas.html">Comprar entradas</a>
+            <button class="btn btn-outline-light btn-sm" type="button" aria-label="Abrir buscador">Buscar</button>
+            <a class="nav-link px-0 px-lg-2" href="carrito.html" aria-label="Ver carrito de compra" aria-current="page">Carrito</a>
+            <a class="nav-link px-0 px-lg-2" href="login.html">Iniciar sesión</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page page--cart" data-bs-theme="dark">
+    <section class="container py-4 py-lg-5" aria-labelledby="page-title">
+
+      <nav aria-label="Progreso de compra" class="mb-4">
+        <ol class="seats__progress d-flex flex-wrap align-items-center gap-2 list-unstyled small text-body-secondary mb-0">
+          <li class="d-flex align-items-center gap-1"><span aria-hidden="true">✓</span> Función</li>
+          <li aria-hidden="true">›</li>
+          <li class="d-flex align-items-center gap-1"><span aria-hidden="true">✓</span> Butacas</li>
+          <li aria-hidden="true">›</li>
+          <li class="d-flex align-items-center gap-1"><span aria-hidden="true">✓</span> Candy Bar</li>
+          <li aria-hidden="true">›</li>
+          <li aria-current="step" class="d-flex align-items-center gap-1 text-white fw-semibold"><span aria-hidden="true">●</span> Carrito</li>
+          <li aria-hidden="true">›</li>
+          <li class="d-flex align-items-center gap-1"><span aria-hidden="true">○</span> Checkout</li>
+          <li aria-hidden="true">›</li>
+          <li class="d-flex align-items-center gap-1"><span aria-hidden="true">○</span> Confirmación</li>
+        </ol>
+      </nav>
+
+      <header class="mb-4">
+        <h1 id="page-title">Tu carrito</h1>
+        <p class="text-body-secondary mb-0">Estas son las entradas y los productos de Candy Bar que seleccionaste.</p>
+      </header>
+
+      <div class="row g-4">
+
+        <div class="col-12 col-lg-8">
+
+          <section class="card p-3 p-md-4 mb-4" aria-labelledby="tickets-summary-title">
+            <header>
+              <h2 id="tickets-summary-title" class="h5 mb-3">Entradas</h2>
+            </header>
+
+            <h3 class="h6 mb-3">Spider-Man: Un nuevo día</h3>
+
+            <dl class="row mb-3">
+              <div class="col-6 col-sm-4 mb-3">
+                <dt class="text-body-secondary small mb-1">Sucursal</dt>
+                <dd class="mb-0">Sunstar Cinemas</dd>
+              </div>
+              <div class="col-6 col-sm-4 mb-3">
+                <dt class="text-body-secondary small mb-1">Fecha</dt>
+                <dd class="mb-0">1 de septiembre de 2026</dd>
+              </div>
+              <div class="col-6 col-sm-4 mb-3">
+                <dt class="text-body-secondary small mb-1">Horario</dt>
+                <dd class="mb-0">19:00</dd>
+              </div>
+              <div class="col-6 col-sm-4 mb-3">
+                <dt class="text-body-secondary small mb-1">Sala</dt>
+                <dd class="mb-0">Sala 1</dd>
+              </div>
+              <div class="col-6 col-sm-4 mb-3">
+                <dt class="text-body-secondary small mb-1">Formato</dt>
+                <dd class="mb-0">3D</dd>
+              </div>
+              <div class="col-6 col-sm-4 mb-3">
+                <dt class="text-body-secondary small mb-1">Idioma</dt>
+                <dd class="mb-0">Castellano</dd>
+              </div>
+              <div class="col-12">
+                <dt class="text-body-secondary small mb-1">Butacas seleccionadas</dt>
+                <dd class="mb-0 d-flex flex-wrap gap-2">
+                  <span class="badge text-bg-secondary">C3</span>
+                  <span class="badge text-bg-secondary">C6</span>
+                </dd>
+              </div>
+            </dl>
+
+            <div class="d-flex justify-content-between align-items-center border-top pt-3">
+              <span class="text-body-secondary">2 entradas &times; $8.500</span>
+              <span class="fs-5 fw-semibold">$17.000</span>
+            </div>
+          </section>
+
+          <section class="card p-3 p-md-4" aria-labelledby="candybar-summary-title">
+            <header>
+              <h2 id="candybar-summary-title" class="h5 mb-3">Candy Bar</h2>
+            </header>
+
+            <div class="d-flex justify-content-between align-items-start">
+              <div>
+                <h3 class="h6 mb-1">Combo Clásico</h3>
+                <p class="text-body-secondary small mb-0">Pochoclos grande + gaseosa mediana</p>
+              </div>
+              <span class="text-body-secondary">1 &times; $6.000</span>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center border-top pt-3 mt-3">
+              <span class="text-body-secondary">Subtotal Candy Bar</span>
+              <span class="fs-5 fw-semibold">$6.000</span>
+            </div>
+          </section>
+
+        </div>
+
+        <div class="col-12 col-lg-4">
+          <aside aria-labelledby="purchase-summary-title">
+            <div class="seats__summary-card card p-4">
+              <header>
+                <h2 id="purchase-summary-title" class="h5 mb-3">Resumen de compra</h2>
+              </header>
+
+              <dl class="mb-4">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <dt class="text-body-secondary fw-normal">Entradas</dt>
+                  <dd class="mb-0">$17.000</dd>
+                </div>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <dt class="text-body-secondary fw-normal">Candy Bar</dt>
+                  <dd class="mb-0">$6.000</dd>
+                </div>
+                <div class="d-flex justify-content-between align-items-center border-top pt-2">
+                  <dt class="text-body-secondary fw-normal">Total</dt>
+                  <dd class="mb-0 fs-4 fw-semibold">$23.000</dd>
+                </div>
+              </dl>
+
+              <a class="btn btn-brand w-100" href="checkout.html">Continuar con la compra</a>
+            </div>
+          </aside>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer border-top border-secondary-subtle" data-bs-theme="dark">
+    <div class="container py-5">
+      <div class="row gy-4 gy-lg-0">
+
+        <div class="col-12 col-lg-4">
+          <h2 class="h4 mb-0">Cine Tucumán</h2>
+        </div>
+
+        <div class="col-6 col-md-3 col-lg-2">
+          <h3 class="h6 text-uppercase text-body-secondary mb-3">Películas</h3>
+          <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
+            <li><a class="text-decoration-none" href="peliculas.html">Cartelera</a></li>
+            <li><a class="text-decoration-none" href="peliculas.html">Próximos estrenos</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-3 col-lg-2">
+          <h3 class="h6 text-uppercase text-body-secondary mb-3">Cines</h3>
+          <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
+            <li><a class="text-decoration-none" href="sucursales.html">Sucursales</a></li>
+            <li><a class="text-decoration-none" href="funciones.html">Horarios</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-3 col-lg-2">
+          <h3 class="h6 text-uppercase text-body-secondary mb-3">Ayuda</h3>
+          <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
+            <li><a class="text-decoration-none" href="#">Preguntas frecuentes</a></li>
+            <li><a class="text-decoration-none" href="#">Contacto</a></li>
+            <li><a class="text-decoration-none" href="#">Términos y condiciones</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-3 col-lg-2">
+          <h3 class="h6 text-uppercase text-body-secondary mb-3">Nuestras sucursales</h3>
+          <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
+            <li><a class="text-decoration-none" href="sucursales.html#cine-atlas-monteagudo">Cine Atlas Monteagudo</a></li>
+            <li><a class="text-decoration-none" href="sucursales.html#cine-atlas-via-24">Cine Atlas Vía 24</a></li>
+            <li><a class="text-decoration-none" href="sucursales.html#cinemacenter-tucuman">Cinemacenter Tucumán</a></li>
+            <li><a class="text-decoration-none" href="sucursales.html#sunstar-cinemas">Sunstar Cinemas</a></li>
+            <li><a class="text-decoration-none" href="sucursales.html#cines-del-solar">Cines del Solar</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <hr class="my-4 border-secondary-subtle" />
+
+      <p class="text-center text-body-secondary small mb-0">&copy; 2026 Cine Tucumán</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

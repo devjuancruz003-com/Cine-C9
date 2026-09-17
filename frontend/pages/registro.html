@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta name="description"
+    content="Creá tu cuenta en Cine Tucumán para comprar entradas, gestionar tus reservas y sumarte a nuestros beneficios." />
+
+  <link rel="icon" href="../assets/icons/pochoclin.ico" type="image/x-icon" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+  <link rel="stylesheet" href="../css/navbar-bootstrap.css" />
+  <link rel="stylesheet" href="../css/cinema-theme.css" />
+
+  <title>Crear cuenta | Cine Tucumán</title>
+</head>
+
+<body>
+
+  <header class="site-header sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark" aria-label="Navegación principal">
+      <div class="container">
+        <a class="navbar-brand" href="../../index.html" aria-label="Cine Tucumán - Inicio">Cine Tucumán</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarMain" aria-controls="navbarMain"
+          aria-expanded="false" aria-label="Abrir menú de navegación">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarMain">
+          <ul class="navbar-nav me-lg-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="../../index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="peliculas.html">Películas</a></li>
+            <li class="nav-item"><a class="nav-link" href="sucursales.html">Cines</a></li>
+            <li class="nav-item"><a class="nav-link" href="candybar.html">Candy Bar</a></li>
+          </ul>
+
+          <div class="d-flex flex-column flex-lg-row align-items-lg-center gap-2 gap-lg-3">
+            <a class="btn btn-brand" href="peliculas.html">Comprar entradas</a>
+            <button class="btn btn-outline-light btn-sm" type="button" aria-label="Abrir buscador">Buscar</button>
+            <a class="nav-link px-0 px-lg-2" href="carrito.html" aria-label="Ver carrito de compra">Carrito</a>
+            <a class="nav-link px-0 px-lg-2" href="login.html">Iniciar sesión</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page page--registration" data-bs-theme="dark">
+    <section class="container py-4 py-lg-5" aria-labelledby="page-title">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6">
+
+          <header class="text-center mb-4">
+            <h1 id="page-title">Creá tu cuenta</h1>
+            <p class="text-body-secondary">Registrate para comprar entradas y gestionar tus reservas.</p>
+          </header>
+
+          <div class="card p-4 p-md-5">
+            <form>
+              <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                  <label class="form-label" for="register-firstname">Nombre</label>
+                  <input class="form-control" id="register-firstname" name="firstName" type="text" autocomplete="given-name" required />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="register-lastname">Apellido</label>
+                  <input class="form-control" id="register-lastname" name="lastName" type="text" autocomplete="family-name" required />
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label" for="register-email">Correo electrónico</label>
+                <input class="form-control" id="register-email" name="email" type="email" autocomplete="email" required />
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label" for="register-password">Contraseña</label>
+                <input class="form-control" id="register-password" name="password" type="password" autocomplete="new-password" required />
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label" for="register-password-confirm">Confirmar contraseña</label>
+                <input class="form-control" id="register-password-confirm" name="passwordConfirm" type="password" autocomplete="new-password" required />
+              </div>
+
+              <div class="form-check mb-4">
+                <input class="form-check-input" id="register-terms" name="terms" type="checkbox" required />
+                <label class="form-check-label" for="register-terms">
+                  Acepto los <a href="#">términos y condiciones</a>
+                </label>
+              </div>
+
+              <button class="btn btn-brand w-100" type="submit">Crear cuenta</button>
+            </form>
+
+            <p class="text-center mt-4 mb-0">¿Ya tenés una cuenta? <a href="login.html">Iniciá sesión</a></p>
+          </div>
+
+          <p class="text-center mt-4"><a href="../../index.html">Volver al inicio</a></p>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer border-top border-secondary-subtle" data-bs-theme="dark">
+    <div class="container py-5">
+      <div class="row gy-4 gy-lg-0">
+
+        <div class="col-12 col-lg-4">
+          <h2 class="h4 mb-0">Cine Tucumán</h2>
+        </div>
+
+        <div class="col-6 col-md-3 col-lg-2">
+          <h3 class="h6 text-uppercase text-body-secondary mb-3">Películas</h3>
+          <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
+            <li><a class="text-decoration-none" href="peliculas.html">Cartelera</a></li>
+            <li><a class="text-decoration-none" href="peliculas.html">Próximos estrenos</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-3 col-lg-2">
+          <h3 class="h6 text-uppercase text-body-secondary mb-3">Cines</h3>
+          <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
+            <li><a class="text-decoration-none" href="sucursales.html">Sucursales</a></li>
+            <li><a class="text-decoration-none" href="funciones.html">Horarios</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-3 col-lg-2">
+          <h3 class="h6 text-uppercase text-body-secondary mb-3">Ayuda</h3>
+          <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
+            <li><a class="text-decoration-none" href="#">Preguntas frecuentes</a></li>
+            <li><a class="text-decoration-none" href="#">Contacto</a></li>
+            <li><a class="text-decoration-none" href="#">Términos y condiciones</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-3 col-lg-2">
+          <h3 class="h6 text-uppercase text-body-secondary mb-3">Nuestras sucursales</h3>
+          <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
+            <li><a class="text-decoration-none" href="sucursales.html#cine-atlas-monteagudo">Cine Atlas Monteagudo</a></li>
+            <li><a class="text-decoration-none" href="sucursales.html#cine-atlas-via-24">Cine Atlas Vía 24</a></li>
+            <li><a class="text-decoration-none" href="sucursales.html#cinemacenter-tucuman">Cinemacenter Tucumán</a></li>
+            <li><a class="text-decoration-none" href="sucursales.html#sunstar-cinemas">Sunstar Cinemas</a></li>
+            <li><a class="text-decoration-none" href="sucursales.html#cines-del-solar">Cines del Solar</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <hr class="my-4 border-secondary-subtle" />
+
+      <p class="text-center text-body-secondary small mb-0">&copy; 2026 Cine Tucumán</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
