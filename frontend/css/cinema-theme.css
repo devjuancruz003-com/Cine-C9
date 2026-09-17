@@ -3,6 +3,7 @@
 .page--movie-detail,
 .page--functions,
 .page--branches,
+.page--seats,
 .site-footer {
 
   background-color: var(--bs-body-bg);
@@ -21,6 +22,20 @@
   --bs-link-color: #B87333;
   --bs-link-hover-color: #D39A61;
   --bs-body-font-family: "Manrope", var(--bs-font-sans-serif);
+}
+
+.page--home,
+.page--movies,
+.page--movie-detail,
+.page--functions,
+.page--branches,
+.page--seats {
+  background-image: url("../assets/background/stars-pattern.svg");
+  background-repeat: repeat;
+}
+
+.site-footer {
+  background-color: var(--bs-secondary-bg);
 }
 
 
