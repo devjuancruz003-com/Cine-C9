@@ -11,6 +11,7 @@
 .page--confirmation,
 .page--candybar,
 .page--tickets,
+.page--profile,
 .site-footer {
 
   background-color: var(--bs-body-bg);
@@ -43,7 +44,8 @@
 .page--checkout,
 .page--confirmation,
 .page--candybar,
-.page--tickets {
+.page--tickets,
+.page--profile {
   background-image: url("../assets/background/stars-pattern.svg");
   background-repeat: repeat;
 }
@@ -80,6 +82,9 @@
 .page--cart h1,
 .page--cart h2,
 .page--cart h3,
+.page--profile h1,
+.page--profile h2,
+.page--profile h3,
 .site-footer h2 {
   font-family: "DM Serif Display", serif;
 }
