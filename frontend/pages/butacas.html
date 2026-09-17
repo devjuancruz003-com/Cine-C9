@@ -62,348 +62,348 @@
   </header>
 
 
-  <main class="page page--seats">
+  <main class="page page--seats" data-bs-theme="dark">
+    <div class="seats container py-4 py-lg-5">
 
-    <nav aria-label="Progreso de compra">
-      <ol>
-        <li>
-          <span>✓</span>
-          Función
-        </li>
+      <nav aria-label="Progreso de compra" class="mb-4">
+        <ol class="seats__progress d-flex flex-wrap align-items-center gap-2 list-unstyled small text-body-secondary mb-0">
+          <li class="d-flex align-items-center gap-1"><span aria-hidden="true">✓</span> Función</li>
+          <li aria-hidden="true">›</li>
 
-        <li aria-current="step">
-          <span>●</span>
-          Butacas
-        </li>
+          <li aria-current="step" class="d-flex align-items-center gap-1 text-white fw-semibold"><span aria-hidden="true">●</span> Butacas</li>
+          <li aria-hidden="true">›</li>
 
-        <li>
-          <span>○</span>
-          Candy Bar
-        </li>
+          <li class="d-flex align-items-center gap-1"><span aria-hidden="true">○</span> Candy Bar</li>
+          <li aria-hidden="true">›</li>
 
-        <li>
-          <span>○</span>
-          Carrito
-        </li>
+          <li class="d-flex align-items-center gap-1"><span aria-hidden="true">○</span> Carrito</li>
+          <li aria-hidden="true">›</li>
 
-        <li>
-          <span>○</span>
-          Checkout
-        </li>
+          <li class="d-flex align-items-center gap-1"><span aria-hidden="true">○</span> Checkout</li>
+          <li aria-hidden="true">›</li>
 
-        <li>
-          <span>○</span>
-          Confirmación
-        </li>
-      </ol>
-
-    </nav>
+          <li class="d-flex align-items-center gap-1"><span aria-hidden="true">○</span> Confirmación</li>
+        </ol>
+      </nav>
 
 
-    <section aria-labelledby="function-summary-title">
-      <header>
-        <h1 id="function-summary-title">Spider-Man: Un nuevo día</h1>
-      </header>
+      <section class="seats__summary card p-3 p-md-4 mb-5" aria-labelledby="function-summary-title">
+        <div class="row g-4 align-items-center">
+          <div class="col-12 col-md-4 col-lg-3">
+            <figure class="mb-0">
+              <div class="ratio ratio-2x3">
+                <img src="../images/movies/spider-man-un-nuevo-dia.jpg" class="w-100 h-100 object-fit-cover rounded" alt="Poster de Spider-Man: Un nuevo día" />
+              </div>
+            </figure>
+          </div>
 
-      <figure>
-        <img src="../images/movies/spider-man-un-nuevo-dia.jpg" alt="Poster de Spider-Man: Un nuevo día" />
-      </figure>
+          <div class="col-12 col-md-8 col-lg-9">
+            <h1 id="function-summary-title" class="h3 mb-3">Spider-Man: Un nuevo día</h1>
 
-      <dl>
-        <div>
-          <dt>Sucursal</dt>
+            <dl class="row mb-0">
+              <div class="col-6 col-sm-4 mb-3">
+                <dt class="text-body-secondary small mb-1">Sucursal</dt>
+                <dd class="mb-0">Sunstar Cinemas</dd>
+              </div>
 
-          <dd>Sunstar Cinemas</dd>
+              <div class="col-6 col-sm-4 mb-3">
+                <dt class="text-body-secondary small mb-1">Fecha</dt>
+                <dd class="mb-0">1 de septiembre de 2026</dd>
+              </div>
+
+              <div class="col-6 col-sm-4 mb-3">
+                <dt class="text-body-secondary small mb-1">Horario</dt>
+                <dd class="mb-0">19:00</dd>
+              </div>
+
+              <div class="col-6 col-sm-4 mb-3">
+                <dt class="text-body-secondary small mb-1">Sala</dt>
+                <dd class="mb-0">Sala 1</dd>
+              </div>
+
+              <div class="col-6 col-sm-4 mb-3">
+                <dt class="text-body-secondary small mb-1">Formato</dt>
+                <dd class="mb-0">3D</dd>
+              </div>
+
+              <div class="col-6 col-sm-4 mb-3">
+                <dt class="text-body-secondary small mb-1">Idioma</dt>
+                <dd class="mb-0">Castellano</dd>
+              </div>
+
+              <div class="col-6 col-sm-4">
+                <dt class="text-body-secondary small mb-1">Precio por entrada</dt>
+                <dd class="mb-0">$8.500</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="seats__map card p-3 p-md-4 p-lg-5 mb-5" aria-labelledby="seat-map-title">
+        <header class="text-center mb-3">
+          <h2 id="seat-map-title" class="h4">Seleccioná tus butacas</h2>
+          <p class="text-body-secondary small mb-0">Elegí una o más butacas disponibles para continuar con tu compra.</p>
+        </header>
+
+        <div class="seats__screen mx-auto mb-4">
+          <p class="mb-0">PANTALLA</p>
         </div>
 
-        <div>
-          <dt>Fecha</dt>
 
-          <dd>1 de septiembre de 2026</dd>
+        <section class="seats__row d-flex flex-column flex-md-row justify-content-center align-items-center gap-2 gap-md-3 mb-2" aria-label="Fila A">
+          <h3 class="seats__row-label h6 text-body-secondary mb-0">Fila A</h3>
+
+          <div class="seats__grid">
+            <button type="button" class="seat btn btn-outline-secondary seat--accessible" aria-label="Butaca A1 - Accesible - Libre">
+              A1 ♿
+            </button>
+
+            <button type="button" class="seat btn btn-outline-secondary" aria-label="Butaca A2 - Libre">A2</button>
+
+            <button type="button" class="seat btn btn-outline-secondary" aria-label="Butaca A3 - Libre">A3</button>
+
+            <button type="button" class="seat btn btn-outline-secondary" aria-label="Butaca A4 - Libre">A4</button>
+
+            <button type="button" class="seat btn btn-outline-secondary" aria-label="Butaca A5 - Libre">A5</button>
+
+            <button type="button" class="seat btn btn-outline-secondary" aria-label="Butaca A6 - Libre">A6</button>
+
+            <button type="button" class="seat btn btn-outline-secondary" aria-label="Butaca A7 - Libre">A7</button>
+
+            <button type="button" class="seat btn btn-outline-secondary seat--accessible" aria-label="Butaca A8 - Accesible - Libre">
+              A8 ♿
+            </button>
+          </div>
+        </section>
+
+
+        <section class="seats__row d-flex flex-column flex-md-row justify-content-center align-items-center gap-2 gap-md-3 mb-2" aria-label="Fila B">
+          <h3 class="seats__row-label h6 text-body-secondary mb-0">Fila B</h3>
+
+          <div class="seats__grid">
+            <button type="button" class="seat btn btn-outline-secondary" aria-label="Butaca B1 - Libre">B1</button>
+
+            <button type="button" class="seat btn btn-outline-secondary" aria-label="Butaca B2 - Libre">B2</button>
+
+            <button type="button" class="seat btn btn-outline-secondary seat--occupied" aria-label="Butaca B3 - Ocupada" disabled>
+              B3
+            </button>
+
+            <button type="button" class="seat btn btn-outline-secondary" aria-label="Butaca B4 - Libre">B4</button>
+
+            <button type="button" class="seat btn btn-outline-secondary" aria-label="Butaca B5 - Libre">B5</button>
+
+            <button type="button" class="seat btn btn-outline-secondary seat--occupied" aria-label="Butaca B6 - Ocupada" disabled>
+              B6
+            </button>
+
+            <button type="button" class="seat btn btn-outline-secondary" aria-label="Butaca B7 - Libre">B7</button>
+
+            <button type="button" class="seat btn btn-outline-secondary" aria-label="Butaca B8 - Libre">B8</button>
+          </div>
+        </section>
+
+
+        <section class="seats__row d-flex flex-column flex-md-row justify-content-center align-items-center gap-2 gap-md-3 mb-2" aria-label="Fila C">
+          <h3 class="seats__row-label h6 text-body-secondary mb-0">Fila C</h3>
+
+          <div class="seats__grid">
+            <button type="button" class="seat btn btn-outline-secondary" aria-label="Butaca C1 - Libre">C1</button>
+
+            <button type="button" class="seat btn btn-outline-secondary seat--occupied" aria-label="Butaca C2 - Ocupada" disabled>
+              C2
+            </button>
+
+            <button type="button" class="seat btn btn-outline-secondary" aria-label="Butaca C3 - Libre">C3</button>
+
+            <button type="button" class="seat btn btn-outline-secondary" aria-label="Butaca C4 - Libre">C4</button>
+
+            <button type="button" class="seat btn btn-outline-secondary" aria-label="Butaca C5 - Libre">C5</button>
+
+            <button type="button" class="seat btn btn-outline-secondary" aria-label="Butaca C6 - Libre">C6</button>
+
+            <button type="button" class="seat btn btn-outline-secondary seat--occupied" aria-label="Butaca C7 - Ocupada" disabled>
+              C7
+            </button>
+
+            <button type="button" class="seat btn btn-outline-secondary" aria-label="Butaca C8 - Libre">C8</button>
+          </div>
+        </section>
+
+
+        <section class="seats__row d-flex flex-column flex-md-row justify-content-center align-items-center gap-2 gap-md-3 mb-2" aria-label="Fila D">
+          <h3 class="seats__row-label h6 text-body-secondary mb-0">Fila D</h3>
+
+          <div class="seats__grid">
+            <button type="button" class="seat btn btn-outline-secondary" aria-label="Butaca D1 - Libre">D1</button>
+
+            <button type="button" class="seat btn btn-outline-secondary" aria-label="Butaca D2 - Libre">D2</button>
+
+            <button type="button" class="seat btn btn-outline-secondary" aria-label="Butaca D3 - Libre">D3</button>
+
+            <button type="button" class="seat btn btn-outline-secondary seat--occupied" aria-label="Butaca D4 - Ocupada" disabled>
+              D4
+            </button>
+
+            <button type="button" class="seat btn btn-outline-secondary" aria-label="Butaca D5 - Libre">D5</button>
+
+            <button type="button" class="seat btn btn-outline-secondary" aria-label="Butaca D6 - Libre">D6</button>
+
+            <button type="button" class="seat btn btn-outline-secondary" aria-label="Butaca D7 - Libre">D7</button>
+
+            <button type="button" class="seat btn btn-outline-secondary" aria-label="Butaca D8 - Libre">D8</button>
+          </div>
+        </section>
+
+
+        <section class="seats__row d-flex flex-column flex-md-row justify-content-center align-items-center gap-2 gap-md-3 mb-2" aria-label="Fila E">
+          <h3 class="seats__row-label h6 text-body-secondary mb-0">Fila E</h3>
+
+          <div class="seats__grid">
+            <button type="button" class="seat btn btn-outline-secondary" aria-label="Butaca E1 - Libre">E1</button>
+
+            <button type="button" class="seat btn btn-outline-secondary" aria-label="Butaca E2 - Libre">E2</button>
+
+            <button type="button" class="seat btn btn-outline-secondary seat--occupied" aria-label="Butaca E3 - Ocupada" disabled>
+              E3
+            </button>
+
+            <button type="button" class="seat btn btn-outline-secondary" aria-label="Butaca E4 - Libre">E4</button>
+
+            <button type="button" class="seat btn btn-outline-secondary" aria-label="Butaca E5 - Libre">E5</button>
+
+            <button type="button" class="seat btn btn-outline-secondary" aria-label="Butaca E6 - Libre">E6</button>
+
+            <button type="button" class="seat btn btn-outline-secondary" aria-label="Butaca E7 - Libre">E7</button>
+
+            <button type="button" class="seat btn btn-outline-secondary seat--occupied" aria-label="Butaca E8 - Ocupada" disabled>
+              E8
+            </button>
+          </div>
+        </section>
+
+
+        <section class="seats__row d-flex flex-column flex-md-row justify-content-center align-items-center gap-2 gap-md-3 mb-2" aria-label="Fila F">
+          <h3 class="seats__row-label h6 text-body-secondary mb-0">Fila F</h3>
+
+          <div class="seats__grid">
+            <button type="button" class="seat btn btn-outline-secondary" aria-label="Butaca F1 - Libre">F1</button>
+
+            <button type="button" class="seat btn btn-outline-secondary" aria-label="Butaca F2 - Libre">F2</button>
+
+            <button type="button" class="seat btn btn-outline-secondary" aria-label="Butaca F3 - Libre">F3</button>
+
+            <button type="button" class="seat btn btn-outline-secondary" aria-label="Butaca F4 - Libre">F4</button>
+
+            <button type="button" class="seat btn btn-outline-secondary seat--occupied" aria-label="Butaca F5 - Ocupada" disabled>
+              F5
+            </button>
+
+            <button type="button" class="seat btn btn-outline-secondary" aria-label="Butaca F6 - Libre">F6</button>
+
+            <button type="button" class="seat btn btn-outline-secondary" aria-label="Butaca F7 - Libre">F7</button>
+
+            <button type="button" class="seat btn btn-outline-secondary" aria-label="Butaca F8 - Libre">F8</button>
+          </div>
+        </section>
+      </section>
+
+
+      <section class="seats__legend card p-3 p-md-4 mb-5" aria-labelledby="legend-title">
+        <header>
+          <h2 id="legend-title" class="h5 mb-4">Referencia de butacas</h2>
+        </header>
+
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+          <section aria-labelledby="state-title">
+            <h3 id="state-title" class="h6 text-body-secondary text-uppercase small mb-3">Estado de la butaca</h3>
+
+            <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
+              <li class="d-flex align-items-start gap-2">
+                <span class="seat seat--sample btn btn-outline-secondary" aria-hidden="true"></span>
+                <span>
+                  <span class="fw-semibold">Libre</span>
+                  <p class="text-body-secondary small mb-0">No seleccionada y disponible.</p>
+                </span>
+              </li>
+
+              <li class="d-flex align-items-start gap-2">
+                <span class="seat seat--sample seat--occupied" aria-hidden="true"></span>
+                <span>
+                  <span class="fw-semibold">Ocupada</span>
+                  <p class="text-body-secondary small mb-0">Ya fue adquirida para esta función.</p>
+                </span>
+              </li>
+
+              <li class="d-flex align-items-start gap-2">
+                <span class="seat seat--sample seat--selected" aria-hidden="true"></span>
+                <span>
+                  <span class="fw-semibold">Seleccionada</span>
+                  <p class="text-body-secondary small mb-0">Elegida por vos.</p>
+                </span>
+              </li>
+            </ul>
+          </section>
+
+          <section aria-labelledby="type-title">
+            <h3 id="type-title" class="h6 text-body-secondary text-uppercase small mb-3">Tipo de butaca</h3>
+
+            <ul class="list-unstyled mb-0">
+              <li class="d-flex align-items-start gap-2">
+                <span class="seat seat--sample seat--accessible btn btn-outline-secondary" aria-hidden="true">♿</span>
+                <span>
+                  <span class="fw-semibold">♿ Accesible</span>
+                  <p class="text-body-secondary small mb-0">
+                    Butaca adaptada para accesibilidad. Puede estar libre,
+                    seleccionada u ocupada.
+                  </p>
+                </span>
+              </li>
+            </ul>
+          </section>
         </div>
-
-        <div>
-          <dt>Horario</dt>
-
-          <dd>19:00</dd>
-        </div>
-
-        <div>
-          <dt>Sala</dt>
-
-          <dd>Sala 1</dd>
-        </div>
-
-        <div>
-          <dt>Formato</dt>
-
-          <dd>3D</dd>
-        </div>
-
-        <div>
-          <dt>Idioma</dt>
-
-          <dd>Castellano</dd>
-        </div>
-
-        <div>
-          <dt>Precio por entrada</dt>
-
-          <dd>$8.500</dd>
-        </div>
-      </dl>
-    </section>
+      </section>
 
 
-    <section aria-labelledby="seat-map-title">
-      <header>
-        <h2 id="seat-map-title">Seleccioná tus butacas</h2>
-      </header>
+      <section class="seats__selected card p-3 p-md-4 mb-5" aria-labelledby="selected-seats-title">
+        <header>
+          <h2 id="selected-seats-title" class="h5 mb-3">Butacas seleccionadas</h2>
+        </header>
 
-      <p>Elegí una o más butacas disponibles para continuar con tu compra.</p>
+        <p class="text-body-secondary mb-0">Todavía no seleccionaste ninguna butaca.</p>
 
-      <div>
-        <p>PANTALLA</p>
+
+        <ul class="list-unstyled d-flex flex-wrap gap-2 mb-0">
+        </ul>
+      </section>
+    </div>
+
+
+    <aside class="container pb-5" aria-labelledby="selection-summary-title">
+      <div class="seats__summary-card card p-4 mx-auto">
+        <header>
+          <h2 id="selection-summary-title" class="h5 mb-3">Resumen</h2>
+        </header>
+
+        <dl class="mb-4">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <dt class="text-body-secondary fw-normal">Entradas</dt>
+
+            <dd class="mb-0 fw-semibold">0</dd>
+          </div>
+
+          <div class="d-flex justify-content-between align-items-center border-top pt-2">
+            <dt class="text-body-secondary fw-normal">Total</dt>
+
+            <dd class="mb-0 fs-4 fw-semibold">$0</dd>
+          </div>
+        </dl>
+
+
+        <button type="button" class="btn btn-secondary w-100" disabled>Seleccioná tus butacas</button>
       </div>
-
-
-      <section aria-label="Fila A">
-        <h3>Fila A</h3>
-
-        <div>
-          <button type="button" aria-label="Butaca A1 - Accesible - Libre">
-            A1 ♿
-          </button>
-
-          <button type="button" aria-label="Butaca A2 - Libre">A2</button>
-
-          <button type="button" aria-label="Butaca A3 - Libre">A3</button>
-
-          <button type="button" aria-label="Butaca A4 - Libre">A4</button>
-
-
-          <button type="button" aria-label="Butaca A5 - Libre">A5</button>
-
-          <button type="button" aria-label="Butaca A6 - Libre">A6</button>
-
-          <button type="button" aria-label="Butaca A7 - Libre">A7</button>
-
-          <button type="button" aria-label="Butaca A8 - Accesible - Libre">
-            A8 ♿
-          </button>
-        </div>
-      </section>
-
-
-      <section aria-label="Fila B">
-        <h3>Fila B</h3>
-
-        <div>
-          <button type="button" aria-label="Butaca B1 - Libre">B1</button>
-
-          <button type="button" aria-label="Butaca B2 - Libre">B2</button>
-
-          <button type="button" aria-label="Butaca B3 - Ocupada" disabled>
-            B3
-          </button>
-
-          <button type="button" aria-label="Butaca B4 - Libre">B4</button>
-
-          <button type="button" aria-label="Butaca B5 - Libre">B5</button>
-
-          <button type="button" aria-label="Butaca B6 - Ocupada" disabled>
-            B6
-          </button>
-
-          <button type="button" aria-label="Butaca B7 - Libre">B7</button>
-
-          <button type="button" aria-label="Butaca B8 - Libre">B8</button>
-        </div>
-      </section>
-
-
-      <section aria-label="Fila C">
-        <h3>Fila C</h3>
-
-        <div>
-          <button type="button" aria-label="Butaca C1 - Libre">C1</button>
-
-          <button type="button" aria-label="Butaca C2 - Ocupada" disabled>
-            C2
-          </button>
-
-          <button type="button" aria-label="Butaca C3 - Libre">C3</button>
-
-          <button type="button" aria-label="Butaca C4 - Libre">C4</button>
-
-          <button type="button" aria-label="Butaca C5 - Libre">C5</button>
-
-          <button type="button" aria-label="Butaca C6 - Libre">C6</button>
-
-          <button type="button" aria-label="Butaca C7 - Ocupada" disabled>
-            C7
-          </button>
-
-          <button type="button" aria-label="Butaca C8 - Libre">C8</button>
-        </div>
-      </section>
-
-
-      <section aria-label="Fila D">
-        <h3>Fila D</h3>
-
-        <div>
-          <button type="button" aria-label="Butaca D1 - Libre">D1</button>
-
-          <button type="button" aria-label="Butaca D2 - Libre">D2</button>
-
-          <button type="button" aria-label="Butaca D3 - Libre">D3</button>
-
-          <button type="button" aria-label="Butaca D4 - Ocupada" disabled>
-            D4
-          </button>
-
-          <button type="button" aria-label="Butaca D5 - Libre">D5</button>
-
-          <button type="button" aria-label="Butaca D6 - Libre">D6</button>
-
-          <button type="button" aria-label="Butaca D7 - Libre">D7</button>
-
-          <button type="button" aria-label="Butaca D8 - Libre">D8</button>
-        </div>
-      </section>
-
-
-      <section aria-label="Fila E">
-        <h3>Fila E</h3>
-
-        <div>
-          <button type="button" aria-label="Butaca E1 - Libre">E1</button>
-
-          <button type="button" aria-label="Butaca E2 - Libre">E2</button>
-
-          <button type="button" aria-label="Butaca E3 - Ocupada" disabled>
-            E3
-          </button>
-
-          <button type="button" aria-label="Butaca E4 - Libre">E4</button>
-
-          <button type="button" aria-label="Butaca E5 - Libre">E5</button>
-
-          <button type="button" aria-label="Butaca E6 - Libre">E6</button>
-
-          <button type="button" aria-label="Butaca E7 - Libre">E7</button>
-
-          <button type="button" aria-label="Butaca E8 - Ocupada" disabled>
-            E8
-          </button>
-        </div>
-      </section>
-
-
-      <section aria-label="Fila F">
-        <h3>Fila F</h3>
-
-        <div>
-          <button type="button" aria-label="Butaca F1 - Libre">F1</button>
-
-          <button type="button" aria-label="Butaca F2 - Libre">F2</button>
-
-          <button type="button" aria-label="Butaca F3 - Libre">F3</button>
-
-          <button type="button" aria-label="Butaca F4 - Libre">F4</button>
-
-          <button type="button" aria-label="Butaca F5 - Ocupada" disabled>
-            F5
-          </button>
-
-          <button type="button" aria-label="Butaca F6 - Libre">F6</button>
-
-          <button type="button" aria-label="Butaca F7 - Libre">F7</button>
-
-          <button type="button" aria-label="Butaca F8 - Libre">F8</button>
-        </div>
-      </section>
-    </section>
-
-
-    <section aria-labelledby="legend-title">
-      <header>
-        <h2 id="legend-title">Referencia de butacas</h2>
-      </header>
-
-      <section aria-labelledby="state-title">
-        <h3 id="state-title">Estado de la butaca</h3>
-
-        <ul>
-          <li>
-            ■ Libre
-            <p>No seleccionada y disponible.</p>
-          </li>
-
-          <li>
-            ■ Ocupada
-            <p>Ya fue adquirida para esta función.</p>
-          </li>
-
-          <li>
-            ■ Seleccionada
-            <p>Elegida por vos.</p>
-          </li>
-        </ul>
-      </section>
-
-      <section aria-labelledby="type-title">
-        <h3 id="type-title">Tipo de butaca</h3>
-
-        <ul>
-          <li>
-            ♿ Accesible
-
-            <p>
-              Butaca adaptada para accesibilidad. Puede estar libre,
-              seleccionada u ocupada.
-            </p>
-          </li>
-        </ul>
-      </section>
-    </section>
-
-
-    <section aria-labelledby="selected-seats-title">
-      <header>
-        <h2 id="selected-seats-title">Butacas seleccionadas</h2>
-      </header>
-
-      <p>Todavía no seleccionaste ninguna butaca.</p>
-
-
-      <ul>
-      </ul>
-    </section>
-
-
-    <aside aria-labelledby="selection-summary-title">
-      <header>
-        <h2 id="selection-summary-title">Resumen</h2>
-      </header>
-
-      <dl>
-        <div>
-          <dt>Entradas</dt>
-
-          <dd>0</dd>
-        </div>
-
-        <div>
-          <dt>Total</dt>
-
-          <dd>$0</dd>
-        </div>
-      </dl>
-
-
-      <button type="button" disabled>Seleccioná tus butacas</button>
     </aside>
   </main>
 
