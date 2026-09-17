@@ -4,6 +4,7 @@
 .page--functions,
 .page--branches,
 .page--seats,
+.page--login,
 .site-footer {
 
   background-color: var(--bs-body-bg);
@@ -29,7 +30,8 @@
 .page--movie-detail,
 .page--functions,
 .page--branches,
-.page--seats {
+.page--seats,
+.page--login {
   background-image: url("../assets/background/stars-pattern.svg");
   background-repeat: repeat;
 }
@@ -57,6 +59,9 @@
 .page--seats h1,
 .page--seats h2,
 .page--seats h3,
+.page--login h1,
+.page--login h2,
+.page--login h3,
 .site-footer h2 {
   font-family: "DM Serif Display", serif;
 }
