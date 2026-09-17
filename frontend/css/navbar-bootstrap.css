@@ -6,6 +6,15 @@
   background-color: #1D1517;
 }
 
+.site-header .nav-link {
+  color: rgba(255, 255, 255, .55);
+}
+
+.site-header .nav-link:hover,
+.site-header .nav-link:focus {
+  color: rgba(255, 255, 255, .75);
+}
+
 .btn-brand {
   --bs-btn-color: #1D1517;
   --bs-btn-bg: #B87333;
