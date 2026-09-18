@@ -12,6 +12,7 @@
 .page--candybar,
 .page--tickets,
 .page--profile,
+.page--history,
 .site-footer {
 
   background-color: var(--bs-body-bg);
@@ -45,7 +46,8 @@
 .page--confirmation,
 .page--candybar,
 .page--tickets,
-.page--profile {
+.page--profile,
+.page--history {
   background-image: url("../assets/background/stars-pattern.svg");
   background-repeat: repeat;
 }
@@ -85,6 +87,9 @@
 .page--profile h1,
 .page--profile h2,
 .page--profile h3,
+.page--history h1,
+.page--history h2,
+.page--history h3,
 .site-footer h2 {
   font-family: "DM Serif Display", serif;
 }
