@@ -5,6 +5,14 @@
 .page--branches,
 .page--seats,
 .page--login,
+.page--registration,
+.page--cart,
+.page--checkout,
+.page--confirmation,
+.page--candybar,
+.page--tickets,
+.page--profile,
+.page--history,
 .site-footer {
 
   background-color: var(--bs-body-bg);
@@ -31,7 +39,15 @@
 .page--functions,
 .page--branches,
 .page--seats,
-.page--login {
+.page--login,
+.page--registration,
+.page--cart,
+.page--checkout,
+.page--confirmation,
+.page--candybar,
+.page--tickets,
+.page--profile,
+.page--history {
   background-image: url("../assets/background/stars-pattern.svg");
   background-repeat: repeat;
 }
@@ -62,6 +78,18 @@
 .page--login h1,
 .page--login h2,
 .page--login h3,
+.page--registration h1,
+.page--registration h2,
+.page--registration h3,
+.page--cart h1,
+.page--cart h2,
+.page--cart h3,
+.page--profile h1,
+.page--profile h2,
+.page--profile h3,
+.page--history h1,
+.page--history h2,
+.page--history h3,
 .site-footer h2 {
   font-family: "DM Serif Display", serif;
 }
