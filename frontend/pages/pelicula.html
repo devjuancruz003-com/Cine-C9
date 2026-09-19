@@ -127,12 +127,12 @@
             <h2 id="cast-title">Reparto principal</h2>
           </header>
           <ul class="movie-detail__cast-list row row-cols-3 row-cols-md-6 g-3 list-unstyled mb-0">
-            <li class="movie-detail__cast-item col text-center"><div class="movie-detail__cast-image ratio ratio-1x1 rounded-circle bg-body-secondary" aria-hidden="true"></div><p class="movie-detail__cast-name small mb-0 mt-2">Tom Holland</p></li>
-            <li class="movie-detail__cast-item col text-center"><div class="movie-detail__cast-image ratio ratio-1x1 rounded-circle bg-body-secondary" aria-hidden="true"></div><p class="movie-detail__cast-name small mb-0 mt-2">Zendaya</p></li>
-            <li class="movie-detail__cast-item col text-center"><div class="movie-detail__cast-image ratio ratio-1x1 rounded-circle bg-body-secondary" aria-hidden="true"></div><p class="movie-detail__cast-name small mb-0 mt-2">Sadie Sink</p></li>
-            <li class="movie-detail__cast-item col text-center"><div class="movie-detail__cast-image ratio ratio-1x1 rounded-circle bg-body-secondary" aria-hidden="true"></div><p class="movie-detail__cast-name small mb-0 mt-2">Jacob Batalon</p></li>
-            <li class="movie-detail__cast-item col text-center"><div class="movie-detail__cast-image ratio ratio-1x1 rounded-circle bg-body-secondary" aria-hidden="true"></div><p class="movie-detail__cast-name small mb-0 mt-2">Jon Bernthal</p></li>
-            <li class="movie-detail__cast-item col text-center"><div class="movie-detail__cast-image ratio ratio-1x1 rounded-circle bg-body-secondary" aria-hidden="true"></div><p class="movie-detail__cast-name small mb-0 mt-2">Mark Ruffalo</p></li>
+            <li class="movie-detail__cast-item col text-center"><div class="movie-detail__cast-image ratio ratio-1x1 rounded-circle overflow-hidden border border-secondary"><img src="../images/actors/tom-holland.jpg" class="w-100 h-100 object-fit-cover" alt="Foto de Tom Holland" loading="lazy" /></div><p class="movie-detail__cast-name small mb-0 mt-2">Tom Holland</p></li>
+            <li class="movie-detail__cast-item col text-center"><div class="movie-detail__cast-image ratio ratio-1x1 rounded-circle overflow-hidden border border-secondary"><img src="../images/actors/zendaya.jpg" class="w-100 h-100 object-fit-cover" alt="Foto de Zendaya" loading="lazy" /></div><p class="movie-detail__cast-name small mb-0 mt-2">Zendaya</p></li>
+            <li class="movie-detail__cast-item col text-center"><div class="movie-detail__cast-image ratio ratio-1x1 rounded-circle overflow-hidden border border-secondary"><img src="../images/actors/sadie-sink.jpg" class="w-100 h-100 object-fit-cover" alt="Foto de Sadie Sink" loading="lazy" /></div><p class="movie-detail__cast-name small mb-0 mt-2">Sadie Sink</p></li>
+            <li class="movie-detail__cast-item col text-center"><div class="movie-detail__cast-image ratio ratio-1x1 rounded-circle overflow-hidden border border-secondary"><img src="../images/actors/jacob-batalon.jpg" class="w-100 h-100 object-fit-cover" alt="Foto de Jacob Batalon" loading="lazy" /></div><p class="movie-detail__cast-name small mb-0 mt-2">Jacob Batalon</p></li>
+            <li class="movie-detail__cast-item col text-center"><div class="movie-detail__cast-image ratio ratio-1x1 rounded-circle overflow-hidden border border-secondary"><img src="../images/actors/jon-bernthal.jpg" class="w-100 h-100 object-fit-cover" alt="Foto de Jon Bernthal" loading="lazy" /></div><p class="movie-detail__cast-name small mb-0 mt-2">Jon Bernthal</p></li>
+            <li class="movie-detail__cast-item col text-center"><div class="movie-detail__cast-image ratio ratio-1x1 rounded-circle overflow-hidden border border-secondary"><img src="../images/actors/mark-ruffalo.jpg" class="w-100 h-100 object-fit-cover" alt="Foto de Mark Ruffalo" loading="lazy" /></div><p class="movie-detail__cast-name small mb-0 mt-2">Mark Ruffalo</p></li>
           </ul>
         </section>
 
@@ -140,9 +140,18 @@
           <header class="mb-3">
             <h2 id="trailer-title">Tráiler oficial</h2>
           </header>
-          <div class="movie-detail__trailer-placeholder ratio ratio-16x9 bg-body-secondary d-flex align-items-center justify-content-center text-body-secondary text-center p-3">
-            <p class="mb-0">Enlace al tráiler oficial pendiente de confirmación.</p>
+          <!-- Embed de terceros (YouTube): primer iframe externo del sitio -->
+          <div class="movie-detail__trailer-frame ratio ratio-16x9 rounded overflow-hidden border border-secondary-subtle bg-body-secondary">
+            <iframe
+              src="https://www.youtube.com/embed/62bIsvRcPv0?si=ChcnAtkbr7K70YTI"
+              title="Tráiler oficial de Spider-Man: Un nuevo día"
+              loading="lazy"
+              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
           </div>
+          <p class="movie-detail__trailer-link small mt-2 mb-0"><a href="https://www.youtube.com/watch?v=62bIsvRcPv0" target="_blank" rel="noopener noreferrer">Ver el tráiler en YouTube</a></p>
         </section>
 
         <section class="movie-detail__functions" data-reveal aria-labelledby="functions-title">

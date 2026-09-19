@@ -109,6 +109,11 @@
 }
 
 
+#trailer-title {
+  scroll-margin-top: 96px;
+}
+
+
 
 .seats__screen {
   max-width: 26rem;
@@ -223,12 +228,11 @@
   color: var(--bs-secondary-bg);
 }
 
-/* Escala solo en el mapa: la muestra de la leyenda no debe crecer. */
 .seats__grid .seat--selected {
   transform: scale(1.08);
 }
 
-/* Mismo color de selección, con más especificidad que el hover de .btn-outline-secondary. */
+
 .seats__grid .seat--selected,
 .seats__grid .seat--selected:hover,
 .seats__grid .seat--selected:focus-visible {
@@ -281,7 +285,7 @@
   max-width: 26rem;
 }
 
-/* Filtrado de la cartelera (peliculas.js): las cards salen/entran con fade + leve movimiento vertical. */
+
 .movie-card.is-entering {
   animation: movie-card-enter .3s ease-out both;
 }
@@ -314,12 +318,12 @@
   }
 }
 
-/* Filtrado de funciones (funciones.js): las cards que vuelven a mostrarse entran con el mismo fade; sin animación de salida. */
+
 .function-card.is-entering {
   animation: movie-card-enter .3s ease-out both;
 }
 
-/* Feedback "Agregado ✓" de Candy Bar (candybar.js): fade-in/out; min-height evita que la card salte. */
+
 .candybar__feedback {
   min-height: 1.5em;
   opacity: 0;
@@ -330,7 +334,7 @@
   opacity: 1;
 }
 
-/* Duración casi nula (no "animation: none"): peliculas.js y funciones.js necesitan que se dispare animationend. */
+
 @media (prefers-reduced-motion: reduce) {
   .movie-card.is-entering,
   .movie-card.is-leaving,
@@ -338,14 +342,12 @@
     animation-duration: .01ms;
   }
 
-  /* Sin fade, pero el mensaje sigue apareciendo y desapareciendo con el mismo temporizador. */
+
   .candybar__feedback {
     transition: none;
   }
 }
 
-/* Eliminación en el carrito (carrito-vista.js): fade-out + colapso de altura con transition; el nodo se saca en transitionend.
-   Colapsa una fila de grid (1fr -> 0fr) porque height: auto no se puede animar. Padding y márgenes van dentro de __inner. */
 .cart-collapse {
   display: grid;
   grid-template-rows: 1fr;
@@ -363,27 +365,25 @@
   opacity: 0;
 }
 
-/* Duración casi nula (no "transition: none"): carrito-vista.js necesita que se dispare transitionend. */
+
 @media (prefers-reduced-motion: reduce) {
   .cart-collapse {
     transition-duration: .01ms;
   }
 }
 
-/* Envío del formulario de checkout (checkout.js): el campo inválido se sacude con el mismo keyframe que las butacas. */
+
 .form-control.is-shaking {
   animation: seat-shake .4s ease-in-out;
 }
 
-/* Duración casi nula (no "animation: none"): checkout.js necesita que se dispare animationend para sacar la clase. */
 @media (prefers-reduced-motion: reduce) {
   .form-control.is-shaking {
     animation-duration: .01ms;
   }
 }
 
-/* Éxito de la confirmación (confirmacion.js): al mostrar la compra se agrega is-success y el check se dibuja, primero el
-   círculo y después el trazo (stroke-dashoffset). El estado base ya es el check dibujado; --check-largo es la longitud de cada trazo. */
+
 .confirmation__check {
   flex: none;
   width: 3.5rem;
@@ -426,7 +426,7 @@
   }
 }
 
-/* "animation: none" (a diferencia de los de arriba): confirmacion.js no espera animationend y el check queda ya dibujado. */
+
 @media (prefers-reduced-motion: reduce) {
   .confirmation__check.is-success .confirmation__check-circle,
   .confirmation__check.is-success .confirmation__check-mark {
@@ -434,8 +434,7 @@
   }
 }
 
-/* Perfil (perfil.js): en lectura los inputs se ven como texto plano; al pasar a is-editing aparece el marco (fade de borde y fondo)
-   y el texto se desliza hacia adentro (padding-inline). Borde y padding vertical no cambian, así el card no salta de alto. */
+
 .profile__input {
   transition: background-color .25s ease, border-color .25s ease, padding-inline .25s ease;
 }
@@ -447,18 +446,14 @@
   box-shadow: none;
 }
 
-/* "transition: none": ningún JS espera transitionend. */
+
 @media (prefers-reduced-motion: reduce) {
   .profile__input {
     transition: none;
   }
 }
 
-/* ===== Pulido (PATCH 20) ===== */
 
-/* Fade-in de carga en las 15 páginas: solo opacidad y solo en <main> (sin transform, para no correr el destino de anclas como
-   sucursales.html#cine-atlas-monteagudo; header y footer no animan). Sin fill-mode ni delay: el estado natural es opaco, así
-   que si esta regla no se aplica no queda nada oculto. */
 @keyframes page-fade-in {
   from {
     opacity: 0;
@@ -469,15 +464,14 @@ main.page {
   animation: page-fade-in .35s ease-out;
 }
 
-/* "animation: none": ningún JS espera animationend. */
+
 @media (prefers-reduced-motion: reduce) {
   main.page {
     animation: none;
   }
 }
 
-/* Scroll-reveal (revelar.js): visible por defecto. El JS solo agrega is-pending a los [data-reveal] que quedan bajo el pliegue
-   y lo saca al entrar en pantalla; con transition (no keyframes) para no competir con las animaciones de otros scripts. */
+
 [data-reveal] {
   transition: opacity .4s ease-out, transform .4s ease-out;
 }
@@ -493,7 +487,7 @@ main.page {
   }
 }
 
-/* Al imprimir no hay scroll: lo que siga pendiente se muestra igual. */
+
 @media print {
   [data-reveal].is-pending {
     opacity: 1;
@@ -501,9 +495,7 @@ main.page {
   }
 }
 
-/* Cards interactivas: borde cobre + sombra (sin movimiento) al pasar el mouse o al tener foco adentro. Solo con puntero real (en táctil :hover queda
-   pegado). No va sobre .card en general (contenedores de formulario y resumen). function-card conserva el borde de estado
-   (border-*-subtle es !important); box-shadow con !important porque .shadow-sm (peliculas.html) también lo es. */
+
 @media (hover: hover) {
 
   .movie-card:hover,
@@ -526,14 +518,13 @@ main.page {
     border-color: var(--bs-secondary);
   }
 
-  /* Botones: sombra al pasar el mouse. Con foco de teclado se deja el anillo de Bootstrap (es un box-shadow y esta regla lo pisaría). */
+
   .btn:where(:not(:disabled, .disabled, .seat)):hover:not(:focus-visible, :active) {
     box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .4);
   }
 }
 
-/* Transiciones suaves de borde y sombra en las cards, solo sin reduced-motion. No hay lift (transform) a propósito: mover el elemento
-   bajo el puntero hace que :hover parpadee en el borde inferior y que se pierdan clicks sobre los botones. */
+
 @media (hover: hover) and (prefers-reduced-motion: no-preference) {
 
   .movie-card,
@@ -544,8 +535,7 @@ main.page {
   }
 }
 
-/* Foco de teclado cobre en links del contenido y del footer. Los .btn conservan su anillo de Bootstrap; el navbar y los inputs de
-   formulario no se tocan. */
+
 .page a:not(.btn):focus-visible,
 .site-footer a:not(.btn):focus-visible {
   outline: 2px solid var(--bs-link-hover-color);
