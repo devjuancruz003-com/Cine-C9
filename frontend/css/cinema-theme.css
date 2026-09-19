@@ -108,6 +108,11 @@
   scroll-margin-top: 96px;
 }
 
+/* Destino de "Ver tráiler" (index.html -> pelicula.html#trailer-title): el navbar es sticky y taparía el título. */
+#trailer-title {
+  scroll-margin-top: 96px;
+}
+
 
 
 .seats__screen {
