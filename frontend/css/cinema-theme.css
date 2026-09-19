@@ -343,3 +343,29 @@
     transition: none;
   }
 }
+
+/* Eliminación en el carrito (carrito-vista.js): fade-out + colapso de altura con transition; el nodo se saca en transitionend.
+   Colapsa una fila de grid (1fr -> 0fr) porque height: auto no se puede animar. Padding y márgenes van dentro de __inner. */
+.cart-collapse {
+  display: grid;
+  grid-template-rows: 1fr;
+  opacity: 1;
+  transition: grid-template-rows .3s ease, opacity .25s ease;
+}
+
+.cart-collapse__inner {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.cart-collapse.is-removing {
+  grid-template-rows: 0fr;
+  opacity: 0;
+}
+
+/* Duración casi nula (no "transition: none"): carrito-vista.js necesita que se dispare transitionend. */
+@media (prefers-reduced-motion: reduce) {
+  .cart-collapse {
+    transition-duration: .01ms;
+  }
+}
