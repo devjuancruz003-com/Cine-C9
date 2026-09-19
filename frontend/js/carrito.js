@@ -84,6 +84,7 @@
   }
 
 
+  
   function vaciar() {
     guardar([]);
   }

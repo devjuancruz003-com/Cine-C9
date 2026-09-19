@@ -7,6 +7,7 @@
   const resumenFuncion = qs("#function-summary");
   if (!resumenFuncion) return;
 
+  
   const mapa = qs(".seats__map");
   const contador = qs("#summary-count");
   const total = qs("#summary-total");

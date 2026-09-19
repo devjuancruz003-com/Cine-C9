@@ -223,12 +223,10 @@
   color: var(--bs-secondary-bg);
 }
 
-/* Escala solo en el mapa: la muestra de la leyenda no debe crecer. */
 .seats__grid .seat--selected {
   transform: scale(1.08);
 }
 
-/* Mismo color de selección, con más especificidad que el hover de .btn-outline-secondary. */
 .seats__grid .seat--selected,
 .seats__grid .seat--selected:hover,
 .seats__grid .seat--selected:focus-visible {

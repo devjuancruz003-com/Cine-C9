@@ -43,6 +43,7 @@
     return Array.from(contexto.querySelectorAll(selector));
   }
 
+  
   window.CineTucuman.utils = {
     formatCurrency,
     parseCurrencyText,
