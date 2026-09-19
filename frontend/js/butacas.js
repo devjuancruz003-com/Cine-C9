@@ -1,138 +1,137 @@
-/**
- * butacas.js
- * Selección interactiva de butacas (frontend/pages/butacas.html).
- * - Permite marcar/desmarcar butacas libres (no ocupadas).
- * - Limita la cantidad máxima de butacas seleccionables.
- * - Calcula el total según el precio por entrada de la función.
- * - Muestra la lista de butacas elegidas y habilita el botón de continuar.
- * - Guarda la selección en el carrito compartido (localStorage) al continuar.
- */
+(() => {
+  const { qs, qsa, formatCurrency } = window.CineTucuman.utils;
 
-document.addEventListener("DOMContentLoaded", () => {
-  const resumenFuncion = document.getElementById("function-summary");
-  const asientos = document.querySelectorAll(".seat:not(.seat--occupied):not(.seat--sample)");
-  const listaSeleccionadas = document.getElementById("selected-seats-list");
-  const textoVacio = document.getElementById("selected-seats-empty");
-  const contadorEntradas = document.getElementById("summary-count");
-  const totalEntradas = document.getElementById("summary-total");
-  const botonContinuar = document.getElementById("btn-continuar-butacas");
+  const MAX_BUTACAS = 6;
+  const SIGUIENTE_PAGINA = "candybar.html";
 
-  if (!resumenFuncion || asientos.length === 0) return;
+  const resumenFuncion = qs("#function-summary");
+  if (!resumenFuncion) return;
 
-  const MAX_BUTACAS = 8;
-  const precioPorEntrada = Number(resumenFuncion.dataset.precio || 0);
+  const mapa = qs(".seats__map");
+  const contador = qs("#summary-count");
+  const total = qs("#summary-total");
+  const lista = qs("#selected-seats-list");
+  const textoVacio = qs("#selected-seats-empty");
+  const botonContinuar = qs("#btn-continuar-butacas");
 
-  const datosFuncion = {
-    pelicula: resumenFuncion.dataset.pelicula || "",
-    sucursal: resumenFuncion.dataset.sucursal || "",
-    fecha: resumenFuncion.dataset.fecha || "",
-    horario: resumenFuncion.dataset.horario || "",
-    sala: resumenFuncion.dataset.sala || "",
-    formato: resumenFuncion.dataset.formato || "",
-    idioma: resumenFuncion.dataset.idioma || "",
-  };
+  const precio = Number(resumenFuncion.dataset.precio);
 
-  let seleccionadas = [];
 
-  function nombreButaca(boton) {
-    // Usa solo el primer "token" del texto (ej: "A1") sin el ícono de accesibilidad.
-    return boton.textContent.trim().split(/\s+/)[0];
+  const butacas = qsa(".seats__grid button.seat");
+
+
+  function codigoDe(butaca) {
+    return butaca.textContent.trim().split(/\s+/)[0];
   }
 
-  function actualizarAria(boton, estado) {
-    const nombre = nombreButaca(boton);
-    const esAccesible = boton.classList.contains("seat--accessible");
-    const tipo = esAccesible ? " - Accesible" : "";
-    boton.setAttribute("aria-label", `Butaca ${nombre}${tipo} - ${estado}`);
+
+  function obtenerSeleccionadas() {
+    return butacas.filter((butaca) => butaca.classList.contains("seat--selected"));
   }
 
-  function renderResumen() {
-    // Lista de butacas elegidas.
-    listaSeleccionadas.innerHTML = "";
-    seleccionadas.forEach((nombre) => {
-      const item = document.createElement("li");
-      item.className = "badge text-bg-secondary";
-      item.textContent = nombre;
-      listaSeleccionadas.appendChild(item);
-    });
 
-    if (textoVacio) {
-      textoVacio.classList.toggle("d-none", seleccionadas.length > 0);
-    }
-
-    // Contador y total.
-    const cantidad = seleccionadas.length;
-    const total = cantidad * precioPorEntrada;
-
-    if (contadorEntradas) contadorEntradas.textContent = cantidad;
-    if (totalEntradas) {
-      totalEntradas.textContent = window.CineTucuman
-        ? window.CineTucuman.formatearPrecio(total)
-        : `$${total}`;
-    }
-
-    // Botón de continuar.
-    if (botonContinuar) {
-      botonContinuar.disabled = cantidad === 0;
-      botonContinuar.textContent =
-        cantidad === 0
-          ? "Seleccioná tus butacas"
-          : `Continuar con ${cantidad} ${cantidad === 1 ? "butaca" : "butacas"}`;
-    }
+  function sacudir(butaca) {
+    butaca.classList.add("seat--shake");
   }
 
-  asientos.forEach((boton) => {
-    boton.addEventListener("click", () => {
-      const nombre = nombreButaca(boton);
-      const yaSeleccionada = boton.classList.contains("seat--selected");
 
-      if (yaSeleccionada) {
-        boton.classList.remove("seat--selected");
-        actualizarAria(boton, "Libre");
-        seleccionadas = seleccionadas.filter((n) => n !== nombre);
-      } else {
-        if (seleccionadas.length >= MAX_BUTACAS) {
-          if (window.CineTucuman) {
-            window.CineTucuman.mostrarToast(
-              `Podés seleccionar hasta ${MAX_BUTACAS} butacas por compra.`,
-              "error"
-            );
-          } else {
-            alert(`Podés seleccionar hasta ${MAX_BUTACAS} butacas por compra.`);
-          }
-          return;
-        }
-        boton.classList.add("seat--selected");
-        actualizarAria(boton, "Seleccionada");
-        seleccionadas.push(nombre);
-      }
+  function alternarSeleccion(butaca) {
+    const seleccionar = !butaca.classList.contains("seat--selected");
+    const etiqueta = butaca.getAttribute("aria-label");
 
-      renderResumen();
-    });
+    butaca.classList.toggle("seat--selected", seleccionar);
+    butaca.setAttribute("aria-pressed", String(seleccionar));
+    butaca.setAttribute(
+      "aria-label",
+      seleccionar
+        ? etiqueta.replace("- Libre", "- Seleccionada")
+        : etiqueta.replace("- Seleccionada", "- Libre")
+    );
+  }
+
+  function actualizarVista() {
+    const seleccionadas = obtenerSeleccionadas();
+    const hayseleccion = seleccionadas.length > 0;
+
+    contador.textContent = seleccionadas.length;
+    total.textContent = formatCurrency(seleccionadas.length * precio);
+
+    lista.replaceChildren(
+      ...seleccionadas.map((butaca) => {
+        const item = document.createElement("li");
+        const chip = document.createElement("span");
+        chip.className = "badge text-bg-secondary";
+        chip.textContent = codigoDe(butaca);
+        item.appendChild(chip);
+        return item;
+      })
+    );
+
+    textoVacio.classList.toggle("d-none", hayseleccion);
+
+    botonContinuar.disabled = !hayseleccion;
+    botonContinuar.classList.toggle("btn-brand", hayseleccion);
+    botonContinuar.classList.toggle("btn-secondary", !hayseleccion);
+    botonContinuar.textContent = hayseleccion ? "Continuar" : "Seleccioná tus butacas";
+  }
+  function armarItemEntrada() {
+    const { pelicula, sucursal, fecha, horario, sala, formato, idioma } = resumenFuncion.dataset;
+    const codigos = obtenerSeleccionadas().map(codigoDe);
+
+    return {
+      id: `entrada:${pelicula}|${sucursal}|${fecha}|${horario}|${sala}`,
+      tipo: "entrada",
+      nombre: `Entradas — ${pelicula}`,
+      precioUnitario: precio,
+      cantidad: codigos.length,
+      funcion: { pelicula, sucursal, fecha, horario, sala, formato, idioma },
+      butacas: codigos,
+    };
+  }
+
+  butacas.forEach((butaca) => {
+    if (butaca.classList.contains("seat--occupied")) {
+      butaca.disabled = false;
+      butaca.setAttribute("aria-disabled", "true");
+    } else {
+      butaca.setAttribute("aria-pressed", "false");
+    }
   });
 
-  if (botonContinuar) {
-    botonContinuar.addEventListener("click", () => {
-      if (seleccionadas.length === 0 || !window.CineTucuman) return;
+  mapa.addEventListener("click", (evento) => {
+    const butaca = evento.target.closest(".seats__grid button.seat");
+    if (!butaca) return;
 
-      const carrito = window.CineTucuman.leerCarrito();
+    if (butaca.classList.contains("seat--occupied")) {
+      sacudir(butaca);
+      return;
+    }
 
-      // Reemplaza cualquier selección previa de butacas por la actual
-      // (este flujo maneja una única función por compra).
-      carrito.entradas = [
-        {
-          ...datosFuncion,
-          precioUnitario: precioPorEntrada,
-          butacas: [...seleccionadas],
-        },
-      ];
+    const yaSeleccionada = butaca.classList.contains("seat--selected");
+    if (!yaSeleccionada && obtenerSeleccionadas().length >= MAX_BUTACAS) {
+      sacudir(butaca);
+      return;
+    }
 
-      window.CineTucuman.guardarCarrito(carrito);
-      window.CineTucuman.mostrarToast("Butacas guardadas. ¡Ahora elegí tu Candy Bar!");
+    alternarSeleccion(butaca);
+    actualizarVista();
+  });
 
-      window.location.href = "carrito.html";
-    });
-  }
+  mapa.addEventListener("animationend", (evento) => {
+    const butaca = evento.target.closest("button.seat");
+    if (butaca) butaca.classList.remove("seat--shake");
+  });
 
-  renderResumen();
-});
+  botonContinuar.addEventListener("click", () => {
+    if (obtenerSeleccionadas().length === 0) return;
+
+    const item = armarItemEntrada();
+    const items = window.CineTucuman.carrito.agregar(item);
+
+    if (items.some((guardado) => guardado.id === item.id)) {
+      window.location.href = SIGUIENTE_PAGINA;
+    }
+  });
+
+  actualizarVista();
+})();
