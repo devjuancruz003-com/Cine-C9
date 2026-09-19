@@ -48,7 +48,7 @@
 
           <div class="d-flex flex-column flex-lg-row align-items-lg-center gap-2 gap-lg-3">
             <a class="btn btn-brand" href="peliculas.html">Comprar entradas</a>
-            <button class="btn btn-outline-light btn-sm" type="button" aria-label="Abrir buscador">Buscar</button>
+            <a class="btn btn-outline-light btn-sm" id="navbar-search-btn" href="peliculas.html#movie-search" aria-label="Buscar película">Buscar</a>
             <a class="nav-link px-0 px-lg-2" href="carrito.html" aria-label="Ver carrito de compra">Carrito</a>
             <a class="nav-link px-0 px-lg-2" href="login.html">Iniciar sesión</a>
           </div>
@@ -58,7 +58,7 @@
   </header>
 
   <main class="page page--confirmation" data-bs-theme="dark">
-    <section class="container py-4 py-lg-5" aria-labelledby="page-title">
+    <section id="order-content" class="container py-4 py-lg-5 d-none" aria-labelledby="page-title">
 
       <nav aria-label="Progreso de compra" class="mb-4">
         <ol class="seats__progress d-flex flex-wrap align-items-center gap-2 list-unstyled small text-body-secondary mb-0">
@@ -76,60 +76,66 @@
         </ol>
       </nav>
 
-      <header class="mb-4">
-        <h1 id="page-title">¡Compra confirmada!</h1>
-        <p class="text-body-secondary mb-1">Tu compra fue procesada correctamente dentro de esta simulación académica. No se realizó ningún pago real.</p>
-        <p class="text-body-secondary small mb-0">Código de compra (simulación): <strong>DEMO-2026-001</strong></p>
+      <header class="d-flex align-items-start gap-3 mb-4">
+        <div class="confirmation__check" data-confirmation-check aria-hidden="true">
+          <svg viewBox="0 0 52 52" focusable="false">
+            <circle class="confirmation__check-circle" cx="26" cy="26" r="24" />
+            <path class="confirmation__check-mark" d="M15 27l8 8 14-16" />
+          </svg>
+        </div>
+
+        <div>
+          <h1 id="page-title">¡Compra confirmada!</h1>
+          <p class="text-body-secondary mb-1">Tu compra fue procesada correctamente dentro de esta simulación académica. No se realizó ningún pago real.</p>
+          <p class="text-body-secondary small mb-0">Código de compra (simulación): <strong id="order-number" class="text-nowrap"></strong></p>
+        </div>
       </header>
 
       <div class="row g-4">
         <div class="col-12 col-lg-8">
 
-          <section class="card p-3 p-md-4 mb-4" aria-labelledby="ticket-title">
+          <section id="order-summary" class="card p-3 p-md-4 mb-4" aria-labelledby="ticket-title">
             <header class="mb-3">
               <h2 id="ticket-title" class="h5 mb-1">Tu entrada</h2>
               <p class="text-body-secondary small mb-0">Presentá este comprobante en la sucursal el día de la función.</p>
             </header>
 
             <div class="row g-4 align-items-center">
-              <div class="col-12 col-md-8">
-                <h3 class="h6 mb-3">Spider-Man: Un nuevo día</h3>
+              <div class="col-12 col-md-8" data-resumen-funcion>
+                <h3 class="h6 mb-3" data-field="pelicula"></h3>
 
                 <dl class="row mb-3">
                   <div class="col-6 col-sm-4 mb-3">
                     <dt class="text-body-secondary small mb-1">Sucursal</dt>
-                    <dd class="mb-0">Sunstar Cinemas</dd>
+                    <dd class="mb-0" data-field="sucursal"></dd>
                   </div>
                   <div class="col-6 col-sm-4 mb-3">
                     <dt class="text-body-secondary small mb-1">Fecha</dt>
-                    <dd class="mb-0">1 de septiembre de 2026</dd>
+                    <dd class="mb-0" data-field="fecha"></dd>
                   </div>
                   <div class="col-6 col-sm-4 mb-3">
                     <dt class="text-body-secondary small mb-1">Horario</dt>
-                    <dd class="mb-0">19:00</dd>
+                    <dd class="mb-0" data-field="horario"></dd>
                   </div>
                   <div class="col-6 col-sm-4 mb-3">
                     <dt class="text-body-secondary small mb-1">Sala</dt>
-                    <dd class="mb-0">Sala 1</dd>
+                    <dd class="mb-0" data-field="sala"></dd>
                   </div>
                   <div class="col-6 col-sm-4 mb-3">
                     <dt class="text-body-secondary small mb-1">Formato</dt>
-                    <dd class="mb-0">3D</dd>
+                    <dd class="mb-0" data-field="formato"></dd>
                   </div>
                   <div class="col-6 col-sm-4 mb-3">
                     <dt class="text-body-secondary small mb-1">Idioma</dt>
-                    <dd class="mb-0">Castellano</dd>
+                    <dd class="mb-0" data-field="idioma"></dd>
                   </div>
                   <div class="col-12">
                     <dt class="text-body-secondary small mb-1">Butacas</dt>
-                    <dd class="mb-0 d-flex flex-wrap gap-2">
-                      <span class="badge text-bg-secondary">C3</span>
-                      <span class="badge text-bg-secondary">C6</span>
-                    </dd>
+                    <dd class="mb-0 d-flex flex-wrap gap-2" data-field="butacas"></dd>
                   </div>
-                  <div class="col-12">
+                  <div class="col-12" data-resumen-candybar>
                     <dt class="text-body-secondary small mb-1">Candy Bar</dt>
-                    <dd class="mb-0">Combo Clásico</dd>
+                    <dd class="mb-0" data-field="productos"></dd>
                   </div>
                 </dl>
               </div>
@@ -149,17 +155,9 @@
             </div>
 
             <dl class="mb-0 border-top pt-3 mt-3">
-              <div class="d-flex justify-content-between align-items-center mb-2">
-                <dt class="text-body-secondary fw-normal">Entradas (2 &times; $8.500)</dt>
-                <dd class="mb-0">$17.000</dd>
-              </div>
-              <div class="d-flex justify-content-between align-items-center mb-2">
-                <dt class="text-body-secondary fw-normal">Candy Bar &mdash; Combo Clásico (1 &times; $6.000)</dt>
-                <dd class="mb-0">$6.000</dd>
-              </div>
-              <div class="d-flex justify-content-between align-items-center border-top pt-2 mt-2">
+              <div class="d-flex justify-content-between align-items-center border-top pt-2 mt-2" data-resumen-total-fila>
                 <dt class="fs-5 fw-semibold">Total</dt>
-                <dd class="mb-0 fs-4 fw-semibold">$23.000</dd>
+                <dd class="mb-0 fs-4 fw-semibold" data-field="total"></dd>
               </div>
             </dl>
           </section>
@@ -178,6 +176,17 @@
           </section>
         </div>
 
+      </div>
+    </section>
+
+    <section id="order-missing" class="container py-4 py-lg-5 d-none" aria-labelledby="missing-title">
+      <div class="card p-4 p-md-5 text-center" role="status">
+        <h1 id="missing-title" class="h4 mb-2">No hay una compra reciente</h1>
+        <p class="text-body-secondary mb-4">Esta página muestra el comprobante de una compra recién confirmada. Si querés comprar entradas, empezá por la cartelera.</p>
+        <div class="d-flex flex-column flex-sm-row justify-content-center gap-2">
+          <a class="btn btn-brand" href="peliculas.html">Ver cartelera</a>
+          <a class="btn btn-outline-light" href="../../index.html">Volver al inicio</a>
+        </div>
       </div>
     </section>
   </main>
@@ -237,6 +246,13 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"></script>
+
+  <script src="../js/utils.js"></script>
+  <script src="../js/orden.js"></script>
+  <script src="../js/resumen-compra.js"></script>
+  <script src="../js/confirmacion.js"></script>
+  <script src="../js/carrito.js"></script>
+  <script src="../js/navbar.js"></script>
 </body>
 
 </html>

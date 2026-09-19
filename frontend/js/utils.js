@@ -9,7 +9,6 @@
     maximumFractionDigits: 0,
   });
 
-
   function formatCurrency(valor) {
     const numero = Number(valor);
 

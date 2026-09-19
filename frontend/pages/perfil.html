@@ -48,7 +48,7 @@
 
           <div class="d-flex flex-column flex-lg-row align-items-lg-center gap-2 gap-lg-3">
             <a class="btn btn-brand" href="peliculas.html">Comprar entradas</a>
-            <button class="btn btn-outline-light btn-sm" type="button" aria-label="Abrir buscador">Buscar</button>
+            <a class="btn btn-outline-light btn-sm" id="navbar-search-btn" href="peliculas.html#movie-search" aria-label="Buscar película">Buscar</a>
             <a class="nav-link px-0 px-lg-2" href="carrito.html" aria-label="Ver carrito de compra">Carrito</a>
             <a class="nav-link px-0 px-lg-2" href="login.html">Iniciar sesión</a>
           </div>
@@ -82,20 +82,35 @@
               </p>
             </header>
 
-            <dl class="row mb-0">
-              <div class="col-12 col-sm-6 mb-3">
-                <dt class="text-body-secondary small mb-1">Nombre</dt>
-                <dd class="mb-0">Nombre de ejemplo</dd>
+            <form id="perfil-form" class="profile__form" novalidate autocomplete="off">
+              <div class="row g-3">
+                <div class="col-12 col-sm-6">
+                  <label for="perfil-nombre" class="form-label text-body-secondary small mb-1">Nombre</label>
+                  <input type="text" class="form-control profile__input" id="perfil-nombre" name="nombre" autocomplete="off" value="Nombre de ejemplo" readonly aria-describedby="perfil-nombre-error">
+                  <div class="invalid-feedback" id="perfil-nombre-error"></div>
+                </div>
+                <div class="col-12 col-sm-6">
+                  <label for="perfil-apellido" class="form-label text-body-secondary small mb-1">Apellido</label>
+                  <input type="text" class="form-control profile__input" id="perfil-apellido" name="apellido" autocomplete="off" value="Apellido de ejemplo" readonly aria-describedby="perfil-apellido-error">
+                  <div class="invalid-feedback" id="perfil-apellido-error"></div>
+                </div>
+                <div class="col-12">
+                  <label for="perfil-email" class="form-label text-body-secondary small mb-1">Correo electrónico</label>
+                  <input type="email" class="form-control profile__input" id="perfil-email" name="email" autocomplete="off" value="correo.ejemplo@example.com" readonly aria-describedby="perfil-email-error">
+                  <div class="invalid-feedback" id="perfil-email-error"></div>
+                </div>
               </div>
-              <div class="col-12 col-sm-6 mb-3">
-                <dt class="text-body-secondary small mb-1">Apellido</dt>
-                <dd class="mb-0">Apellido de ejemplo</dd>
+
+              <p class="text-body-secondary small mt-3 mb-0" id="perfil-aviso" hidden>
+                Los cambios se muestran mientras la página esté abierta.
+              </p>
+
+              <div class="d-flex flex-wrap gap-2 mt-3">
+                <button type="button" class="btn btn-brand" id="perfil-editar">Editar</button>
+                <button type="submit" class="btn btn-brand" id="perfil-guardar" hidden>Guardar</button>
+                <button type="button" class="btn btn-outline-light" id="perfil-cancelar" hidden>Cancelar</button>
               </div>
-              <div class="col-12">
-                <dt class="text-body-secondary small mb-1">Correo electrónico</dt>
-                <dd class="mb-0">correo.ejemplo@example.com</dd>
-              </div>
-            </dl>
+            </form>
           </section>
 
         </div>
@@ -171,6 +186,10 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"></script>
+  <script src="../js/utils.js"></script>
+  <script src="../js/perfil.js"></script>
+  <script src="../js/carrito.js"></script>
+  <script src="../js/navbar.js"></script>
 </body>
 
 </html>

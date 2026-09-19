@@ -48,7 +48,7 @@
 
           <div class="d-flex flex-column flex-lg-row align-items-lg-center gap-2 gap-lg-3">
             <a class="btn btn-brand" href="peliculas.html">Comprar entradas</a>
-            <button class="btn btn-outline-light btn-sm" type="button" aria-label="Abrir buscador">Buscar</button>
+            <a class="btn btn-outline-light btn-sm" id="navbar-search-btn" href="peliculas.html#movie-search" aria-label="Buscar película">Buscar</a>
             <a class="nav-link px-0 px-lg-2" href="carrito.html" aria-label="Ver carrito de compra">Carrito</a>
             <a class="nav-link px-0 px-lg-2" href="login.html">Iniciar sesión</a>
           </div>
@@ -89,56 +89,55 @@
               <h2 id="order-summary-title" class="h5 mb-3">Resumen de compra</h2>
             </header>
 
-            <h3 class="h6 mb-3">Spider-Man: Un nuevo día</h3>
+            <div id="checkout-empty" class="d-none" role="status">
+              <p class="fw-semibold mb-1">Para pagar necesitás al menos una entrada.</p>
+              <p class="text-body-secondary mb-3">Elegí una función y tus butacas desde la cartelera.</p>
+              <a class="btn btn-brand" href="peliculas.html">Ver cartelera</a>
+            </div>
 
-            <dl class="row mb-3">
-              <div class="col-6 col-sm-4 mb-3">
-                <dt class="text-body-secondary small mb-1">Sucursal</dt>
-                <dd class="mb-0">Sunstar Cinemas</dd>
-              </div>
-              <div class="col-6 col-sm-4 mb-3">
-                <dt class="text-body-secondary small mb-1">Fecha</dt>
-                <dd class="mb-0">1 de septiembre de 2026</dd>
-              </div>
-              <div class="col-6 col-sm-4 mb-3">
-                <dt class="text-body-secondary small mb-1">Horario</dt>
-                <dd class="mb-0">19:00</dd>
-              </div>
-              <div class="col-6 col-sm-4 mb-3">
-                <dt class="text-body-secondary small mb-1">Sala</dt>
-                <dd class="mb-0">Sala 1</dd>
-              </div>
-              <div class="col-6 col-sm-4 mb-3">
-                <dt class="text-body-secondary small mb-1">Formato</dt>
-                <dd class="mb-0">3D</dd>
-              </div>
-              <div class="col-6 col-sm-4 mb-3">
-                <dt class="text-body-secondary small mb-1">Idioma</dt>
-                <dd class="mb-0">Castellano</dd>
-              </div>
-              <div class="col-12">
-                <dt class="text-body-secondary small mb-1">Butacas seleccionadas</dt>
-                <dd class="mb-0 d-flex flex-wrap gap-2">
-                  <span class="badge text-bg-secondary">C3</span>
-                  <span class="badge text-bg-secondary">C6</span>
-                </dd>
-              </div>
-            </dl>
+            <div id="checkout-content" class="d-none">
+              <div data-resumen-funcion>
+                <h3 class="h6 mb-3" data-field="pelicula"></h3>
 
-            <dl class="mb-0 border-top pt-3">
-              <div class="d-flex justify-content-between align-items-center mb-2">
-                <dt class="text-body-secondary fw-normal">Entradas (2 &times; $8.500)</dt>
-                <dd class="mb-0">$17.000</dd>
+                <dl class="row mb-3">
+                  <div class="col-6 col-sm-4 mb-3">
+                    <dt class="text-body-secondary small mb-1">Sucursal</dt>
+                    <dd class="mb-0" data-field="sucursal"></dd>
+                  </div>
+                  <div class="col-6 col-sm-4 mb-3">
+                    <dt class="text-body-secondary small mb-1">Fecha</dt>
+                    <dd class="mb-0" data-field="fecha"></dd>
+                  </div>
+                  <div class="col-6 col-sm-4 mb-3">
+                    <dt class="text-body-secondary small mb-1">Horario</dt>
+                    <dd class="mb-0" data-field="horario"></dd>
+                  </div>
+                  <div class="col-6 col-sm-4 mb-3">
+                    <dt class="text-body-secondary small mb-1">Sala</dt>
+                    <dd class="mb-0" data-field="sala"></dd>
+                  </div>
+                  <div class="col-6 col-sm-4 mb-3">
+                    <dt class="text-body-secondary small mb-1">Formato</dt>
+                    <dd class="mb-0" data-field="formato"></dd>
+                  </div>
+                  <div class="col-6 col-sm-4 mb-3">
+                    <dt class="text-body-secondary small mb-1">Idioma</dt>
+                    <dd class="mb-0" data-field="idioma"></dd>
+                  </div>
+                  <div class="col-12">
+                    <dt class="text-body-secondary small mb-1">Butacas seleccionadas</dt>
+                    <dd class="mb-0 d-flex flex-wrap gap-2" data-field="butacas"></dd>
+                  </div>
+                </dl>
               </div>
-              <div class="d-flex justify-content-between align-items-center mb-2">
-                <dt class="text-body-secondary fw-normal">Candy Bar &mdash; Combo Clásico (1 &times; $6.000)</dt>
-                <dd class="mb-0">$6.000</dd>
-              </div>
-              <div class="d-flex justify-content-between align-items-center border-top pt-2 mt-2">
-                <dt class="fs-5 fw-semibold">Total</dt>
-                <dd class="mb-0 fs-4 fw-semibold">$23.000</dd>
-              </div>
-            </dl>
+
+              <dl class="mb-0 border-top pt-3">
+                <div class="d-flex justify-content-between align-items-center border-top pt-2 mt-2" data-resumen-total-fila>
+                  <dt class="fs-5 fw-semibold">Total</dt>
+                  <dd class="mb-0 fs-4 fw-semibold" data-field="total"></dd>
+                </div>
+              </dl>
+            </div>
           </section>
         </div>
 
@@ -148,7 +147,7 @@
               <h2 id="payment-title" class="h5 mb-3">Medio de pago</h2>
             </header>
 
-            <form>
+            <form id="checkout-form" novalidate>
               <fieldset class="mb-4">
                 <legend class="visually-hidden">Medio de pago</legend>
 
@@ -162,19 +161,23 @@
                 <div class="row g-3">
                   <div class="col-12">
                     <label for="titularTarjeta" class="form-label">Nombre del titular</label>
-                    <input type="text" class="form-control" id="titularTarjeta" name="titularTarjeta" autocomplete="off" placeholder="Nombre y apellido">
+                    <input type="text" class="form-control" id="titularTarjeta" name="titularTarjeta" autocomplete="off" placeholder="Nombre y apellido" required aria-describedby="titularTarjeta-error">
+                    <div class="invalid-feedback" id="titularTarjeta-error"></div>
                   </div>
                   <div class="col-12">
                     <label for="numeroTarjeta" class="form-label">Número de tarjeta</label>
-                    <input type="text" class="form-control" id="numeroTarjeta" name="numeroTarjeta" autocomplete="off" inputmode="numeric" placeholder="0000 0000 0000 0000">
+                    <input type="text" class="form-control" id="numeroTarjeta" name="numeroTarjeta" autocomplete="off" inputmode="numeric" placeholder="0000 0000 0000 0000" required maxlength="19" aria-describedby="numeroTarjeta-error">
+                    <div class="invalid-feedback" id="numeroTarjeta-error"></div>
                   </div>
                   <div class="col-6">
                     <label for="vencimientoTarjeta" class="form-label">Vencimiento</label>
-                    <input type="text" class="form-control" id="vencimientoTarjeta" name="vencimientoTarjeta" autocomplete="off" inputmode="numeric" placeholder="MM/AA">
+                    <input type="text" class="form-control" id="vencimientoTarjeta" name="vencimientoTarjeta" autocomplete="off" inputmode="numeric" placeholder="MM/AA" required maxlength="5" aria-describedby="vencimientoTarjeta-error">
+                    <div class="invalid-feedback" id="vencimientoTarjeta-error"></div>
                   </div>
                   <div class="col-6">
                     <label for="cvvTarjeta" class="form-label">CVV</label>
-                    <input type="text" class="form-control" id="cvvTarjeta" name="cvvTarjeta" autocomplete="off" inputmode="numeric" placeholder="123">
+                    <input type="text" class="form-control" id="cvvTarjeta" name="cvvTarjeta" autocomplete="off" inputmode="numeric" placeholder="123" required maxlength="3" aria-describedby="cvvTarjeta-error">
+                    <div class="invalid-feedback" id="cvvTarjeta-error"></div>
                   </div>
                 </div>
 
@@ -184,7 +187,7 @@
               </fieldset>
 
               <div class="d-grid gap-2">
-                <a class="btn btn-brand" href="confirmacion.html" id="btn-confirmar-compra">Confirmar compra (simulación)</a>
+                <button type="submit" class="btn btn-brand" id="btn-confirmar-compra">Confirmar compra (simulación)</button>
                 <a class="btn btn-outline-light" href="carrito.html">Volver al carrito</a>
               </div>
             </form>
@@ -250,6 +253,14 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"></script>
+
+  <script src="../js/utils.js"></script>
+  <script src="../js/carrito.js"></script>
+  <script src="../js/orden.js"></script>
+  <script src="../js/resumen-compra.js"></script>
+  <script src="../js/checkout.js"></script>
+  <script src="../js/checkout-vista.js"></script>
+  <script src="../js/navbar.js"></script>
 </body>
 
 </html>

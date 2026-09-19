@@ -67,7 +67,7 @@
           <div class="d-flex flex-column flex-lg-row align-items-lg-center gap-2 gap-lg-3">
             <a class="btn btn-brand" href="frontend/pages/peliculas.html"> Comprar entradas </a>
 
-            <button class="btn btn-outline-light btn-sm" type="button" aria-label="Abrir buscador">Buscar</button>
+            <a class="btn btn-outline-light btn-sm" id="navbar-search-btn" href="frontend/pages/peliculas.html#movie-search" aria-label="Buscar película">Buscar</a>
 
             <a class="nav-link px-0 px-lg-2" href="frontend/pages/carrito.html" aria-label="Ver carrito de compra"> Carrito </a>
 
@@ -115,7 +115,7 @@
                   Ver funciones
                 </a>
 
-                <a class="btn btn-outline-light btn-lg" href="#" aria-label="Ver tráiler de Spider-Man: Un nuevo día">
+                <a class="btn btn-outline-light btn-lg" href="frontend/pages/pelicula.html#trailer-title" aria-label="Ver tráiler de Spider-Man: Un nuevo día">
                   Ver tráiler
                 </a>
               </div>
@@ -126,7 +126,7 @@
     </section>
 
 
-    <section class="movies py-5" aria-labelledby="peliculas-destacadas-title">
+    <section class="movies py-5" data-reveal aria-labelledby="peliculas-destacadas-title">
       <div class="container">
         <header>
           <h2 id="peliculas-destacadas-title" class="mb-4">Películas destacadas</h2>
@@ -302,7 +302,7 @@
     </section>
 
 
-    <section class="movies movies--upcoming py-5" aria-labelledby="proximos-estrenos-title">
+    <section class="movies movies--upcoming py-5" data-reveal aria-labelledby="proximos-estrenos-title">
       <div class="container">
         <header>
           <h2 id="proximos-estrenos-title" class="mb-4">Próximos estrenos</h2>
@@ -422,7 +422,7 @@
     </section>
 
 
-    <section class="cinemas py-5" aria-labelledby="cines-title">
+    <section class="cinemas py-5" data-reveal aria-labelledby="cines-title">
       <div class="container">
         <header>
           <h2 id="cines-title" class="mb-4">Cines en Tucumán</h2>
@@ -500,7 +500,7 @@
     </section>
 
 
-    <section class="cta py-5 text-center" aria-labelledby="cta-title">
+    <section class="cta py-5 text-center" data-reveal aria-labelledby="cta-title">
       <div class="container">
         <header>
           <h2 id="cta-title">¿Listo para ir al cine?</h2>
@@ -614,6 +614,9 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"></script>
+  <script src="frontend/js/carrito.js"></script>
+  <script src="frontend/js/navbar.js"></script>
+  <script src="frontend/js/revelar.js"></script>
 </body>
 
 </html>

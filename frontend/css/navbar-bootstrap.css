@@ -27,3 +27,9 @@
   --bs-btn-active-border-color: #D39A61;
   --bs-btn-focus-shadow-rgb: 184, 115, 51;
 }
+
+.site-header .navbar-cart-badge {
+  margin-left: .4rem;
+  background-color: #B87333;
+  color: #1D1517;
+}

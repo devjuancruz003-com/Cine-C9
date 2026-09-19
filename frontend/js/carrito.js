@@ -15,7 +15,6 @@
     }
   }
 
-
   function obtenerItems() {
     try {
       const data = localStorage.getItem(STORAGE_KEY);

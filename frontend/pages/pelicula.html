@@ -52,7 +52,7 @@
 
             <div class="d-flex flex-column flex-lg-row align-items-lg-center gap-2 gap-lg-3">
               <a class="btn btn-brand" href="peliculas.html">Comprar entradas</a>
-              <button class="btn btn-outline-light btn-sm" type="button" aria-label="Abrir buscador">Buscar</button>
+              <a class="btn btn-outline-light btn-sm" id="navbar-search-btn" href="peliculas.html#movie-search" aria-label="Buscar película">Buscar</a>
               <a class="nav-link px-0 px-lg-2" href="carrito.html" aria-label="Ver carrito de compra">Carrito</a>
               <a class="nav-link px-0 px-lg-2" href="login.html">Iniciar sesión</a>
             </div>
@@ -89,7 +89,7 @@
           </div>
         </section>
 
-        <section class="movie-detail__synopsis mb-5" aria-labelledby="synopsis-title">
+        <section class="movie-detail__synopsis mb-5" data-reveal aria-labelledby="synopsis-title">
           <header class="mb-3">
             <h2 id="synopsis-title">Sinopsis</h2>
           </header>
@@ -98,7 +98,7 @@
           </p>
         </section>
 
-        <section class="movie-detail__technical mb-5" aria-labelledby="technical-title">
+        <section class="movie-detail__technical mb-5" data-reveal aria-labelledby="technical-title">
           <header class="mb-3">
             <h2 id="technical-title">Ficha técnica</h2>
           </header>
@@ -122,30 +122,39 @@
           </dl>
         </section>
 
-        <section class="movie-detail__cast mb-5" aria-labelledby="cast-title">
+        <section class="movie-detail__cast mb-5" data-reveal aria-labelledby="cast-title">
           <header class="mb-3">
             <h2 id="cast-title">Reparto principal</h2>
           </header>
           <ul class="movie-detail__cast-list row row-cols-3 row-cols-md-6 g-3 list-unstyled mb-0">
-            <li class="movie-detail__cast-item col text-center"><div class="movie-detail__cast-image ratio ratio-1x1 rounded-circle bg-body-secondary" aria-hidden="true"></div><p class="movie-detail__cast-name small mb-0 mt-2">Tom Holland</p></li>
-            <li class="movie-detail__cast-item col text-center"><div class="movie-detail__cast-image ratio ratio-1x1 rounded-circle bg-body-secondary" aria-hidden="true"></div><p class="movie-detail__cast-name small mb-0 mt-2">Zendaya</p></li>
-            <li class="movie-detail__cast-item col text-center"><div class="movie-detail__cast-image ratio ratio-1x1 rounded-circle bg-body-secondary" aria-hidden="true"></div><p class="movie-detail__cast-name small mb-0 mt-2">Sadie Sink</p></li>
-            <li class="movie-detail__cast-item col text-center"><div class="movie-detail__cast-image ratio ratio-1x1 rounded-circle bg-body-secondary" aria-hidden="true"></div><p class="movie-detail__cast-name small mb-0 mt-2">Jacob Batalon</p></li>
-            <li class="movie-detail__cast-item col text-center"><div class="movie-detail__cast-image ratio ratio-1x1 rounded-circle bg-body-secondary" aria-hidden="true"></div><p class="movie-detail__cast-name small mb-0 mt-2">Jon Bernthal</p></li>
-            <li class="movie-detail__cast-item col text-center"><div class="movie-detail__cast-image ratio ratio-1x1 rounded-circle bg-body-secondary" aria-hidden="true"></div><p class="movie-detail__cast-name small mb-0 mt-2">Mark Ruffalo</p></li>
+            <li class="movie-detail__cast-item col text-center"><div class="movie-detail__cast-image ratio ratio-1x1 rounded-circle overflow-hidden border border-secondary"><img src="../images/actors/tom-holland.jpg" class="w-100 h-100 object-fit-cover" alt="Foto de Tom Holland" loading="lazy" /></div><p class="movie-detail__cast-name small mb-0 mt-2">Tom Holland</p></li>
+            <li class="movie-detail__cast-item col text-center"><div class="movie-detail__cast-image ratio ratio-1x1 rounded-circle overflow-hidden border border-secondary"><img src="../images/actors/zendaya.jpg" class="w-100 h-100 object-fit-cover" alt="Foto de Zendaya" loading="lazy" /></div><p class="movie-detail__cast-name small mb-0 mt-2">Zendaya</p></li>
+            <li class="movie-detail__cast-item col text-center"><div class="movie-detail__cast-image ratio ratio-1x1 rounded-circle overflow-hidden border border-secondary"><img src="../images/actors/sadie-sink.jpg" class="w-100 h-100 object-fit-cover" alt="Foto de Sadie Sink" loading="lazy" /></div><p class="movie-detail__cast-name small mb-0 mt-2">Sadie Sink</p></li>
+            <li class="movie-detail__cast-item col text-center"><div class="movie-detail__cast-image ratio ratio-1x1 rounded-circle overflow-hidden border border-secondary"><img src="../images/actors/jacob-batalon.jpg" class="w-100 h-100 object-fit-cover" alt="Foto de Jacob Batalon" loading="lazy" /></div><p class="movie-detail__cast-name small mb-0 mt-2">Jacob Batalon</p></li>
+            <li class="movie-detail__cast-item col text-center"><div class="movie-detail__cast-image ratio ratio-1x1 rounded-circle overflow-hidden border border-secondary"><img src="../images/actors/jon-bernthal.jpg" class="w-100 h-100 object-fit-cover" alt="Foto de Jon Bernthal" loading="lazy" /></div><p class="movie-detail__cast-name small mb-0 mt-2">Jon Bernthal</p></li>
+            <li class="movie-detail__cast-item col text-center"><div class="movie-detail__cast-image ratio ratio-1x1 rounded-circle overflow-hidden border border-secondary"><img src="../images/actors/mark-ruffalo.jpg" class="w-100 h-100 object-fit-cover" alt="Foto de Mark Ruffalo" loading="lazy" /></div><p class="movie-detail__cast-name small mb-0 mt-2">Mark Ruffalo</p></li>
           </ul>
         </section>
 
-        <section class="movie-detail__trailer mb-5" aria-labelledby="trailer-title">
+        <section class="movie-detail__trailer mb-5" data-reveal aria-labelledby="trailer-title">
           <header class="mb-3">
             <h2 id="trailer-title">Tráiler oficial</h2>
           </header>
-          <div class="movie-detail__trailer-placeholder ratio ratio-16x9 bg-body-secondary d-flex align-items-center justify-content-center text-body-secondary text-center p-3">
-            <p class="mb-0">Enlace al tráiler oficial pendiente de confirmación.</p>
+          <!-- Embed de terceros (YouTube): primer iframe externo del sitio -->
+          <div class="movie-detail__trailer-frame ratio ratio-16x9 rounded overflow-hidden border border-secondary-subtle bg-body-secondary">
+            <iframe
+              src="https://www.youtube.com/embed/62bIsvRcPv0?si=ChcnAtkbr7K70YTI"
+              title="Tráiler oficial de Spider-Man: Un nuevo día"
+              loading="lazy"
+              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
           </div>
+          <p class="movie-detail__trailer-link small mt-2 mb-0"><a href="https://www.youtube.com/watch?v=62bIsvRcPv0" target="_blank" rel="noopener noreferrer">Ver el tráiler en YouTube</a></p>
         </section>
 
-        <section class="movie-detail__functions" aria-labelledby="functions-title">
+        <section class="movie-detail__functions" data-reveal aria-labelledby="functions-title">
           <header class="mb-3">
             <h2 id="functions-title">Funciones</h2>
             <p>Consultá las funciones disponibles por sucursal.</p>
@@ -250,5 +259,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"></script>
+    <script src="../js/carrito.js"></script>
+    <script src="../js/navbar.js"></script>
+    <script src="../js/revelar.js"></script>
   </body>
 </html>

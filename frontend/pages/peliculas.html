@@ -52,7 +52,7 @@
 
           <div class="d-flex flex-column flex-lg-row align-items-lg-center gap-2 gap-lg-3">
             <a class="btn btn-brand" href="peliculas.html">Comprar entradas</a>
-            <button class="btn btn-outline-light btn-sm" type="button" aria-label="Abrir buscador">Buscar</button>
+            <a class="btn btn-outline-light btn-sm" id="navbar-search-btn" href="peliculas.html#movie-search" aria-label="Buscar película">Buscar</a>
             <a class="nav-link px-0 px-lg-2" href="carrito.html" aria-label="Ver carrito de compra">Carrito</a>
             <a class="nav-link px-0 px-lg-2" href="login.html">Iniciar sesión</a>
           </div>
@@ -103,7 +103,7 @@
         </fieldset>
       </form>
 
-      <section class="movies__section mb-5" aria-labelledby="now-showing-title">
+      <section class="movies__section mb-5" data-reveal aria-labelledby="now-showing-title">
         <header class="mb-3"><h2 id="now-showing-title">En cartelera</h2></header>
         <div class="movie-grid row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
           <article class="movie-card col card shadow-sm">
@@ -222,7 +222,7 @@
         </div>
       </section>
 
-      <section class="movies__section" aria-labelledby="upcoming-title">
+      <section class="movies__section" data-reveal aria-labelledby="upcoming-title">
         <header class="mb-3"><h2 id="upcoming-title">Próximamente</h2></header>
         <div class="movie-grid row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
           <article class="movie-card col card shadow-sm">
@@ -381,5 +381,8 @@
     crossorigin="anonymous"></script>
   <script src="../js/utils.js"></script>
   <script src="../js/peliculas.js"></script>
+  <script src="../js/carrito.js"></script>
+  <script src="../js/navbar.js"></script>
+  <script src="../js/revelar.js"></script>
 </body>
 </html>

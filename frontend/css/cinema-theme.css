@@ -109,6 +109,11 @@
 }
 
 
+#trailer-title {
+  scroll-margin-top: 96px;
+}
+
+
 
 .seats__screen {
   max-width: 26rem;
@@ -223,12 +228,11 @@
   color: var(--bs-secondary-bg);
 }
 
-/* Escala solo en el mapa: la muestra de la leyenda no debe crecer. */
 .seats__grid .seat--selected {
   transform: scale(1.08);
 }
 
-/* Mismo color de selección, con más especificidad que el hover de .btn-outline-secondary. */
+
 .seats__grid .seat--selected,
 .seats__grid .seat--selected:hover,
 .seats__grid .seat--selected:focus-visible {
@@ -281,7 +285,7 @@
   max-width: 26rem;
 }
 
-/* Filtrado de la cartelera (peliculas.js): las cards salen/entran con fade + leve movimiento vertical. */
+
 .movie-card.is-entering {
   animation: movie-card-enter .3s ease-out both;
 }
@@ -314,10 +318,226 @@
   }
 }
 
-/* Duración casi nula (no "animation: none"): peliculas.js necesita que se dispare animationend. */
+
+.function-card.is-entering {
+  animation: movie-card-enter .3s ease-out both;
+}
+
+
+.candybar__feedback {
+  min-height: 1.5em;
+  opacity: 0;
+  transition: opacity .2s ease-in-out;
+}
+
+.candybar__feedback.is-visible {
+  opacity: 1;
+}
+
+
 @media (prefers-reduced-motion: reduce) {
   .movie-card.is-entering,
-  .movie-card.is-leaving {
+  .movie-card.is-leaving,
+  .function-card.is-entering {
     animation-duration: .01ms;
   }
+
+
+  .candybar__feedback {
+    transition: none;
+  }
+}
+
+.cart-collapse {
+  display: grid;
+  grid-template-rows: 1fr;
+  opacity: 1;
+  transition: grid-template-rows .3s ease, opacity .25s ease;
+}
+
+.cart-collapse__inner {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.cart-collapse.is-removing {
+  grid-template-rows: 0fr;
+  opacity: 0;
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  .cart-collapse {
+    transition-duration: .01ms;
+  }
+}
+
+
+.form-control.is-shaking {
+  animation: seat-shake .4s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .form-control.is-shaking {
+    animation-duration: .01ms;
+  }
+}
+
+
+.confirmation__check {
+  flex: none;
+  width: 3.5rem;
+  height: 3.5rem;
+  color: var(--bs-secondary);
+}
+
+.confirmation__check svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.confirmation__check-circle {
+  --check-largo: 151;
+  stroke-dasharray: 151;
+}
+
+.confirmation__check-mark {
+  --check-largo: 40;
+  stroke-dasharray: 40;
+}
+
+.confirmation__check.is-success .confirmation__check-circle {
+  animation: check-draw .6s ease-out both;
+}
+
+.confirmation__check.is-success .confirmation__check-mark {
+  animation: check-draw .35s ease-out .5s both;
+}
+
+@keyframes check-draw {
+  from {
+    stroke-dashoffset: var(--check-largo);
+  }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  .confirmation__check.is-success .confirmation__check-circle,
+  .confirmation__check.is-success .confirmation__check-mark {
+    animation: none;
+  }
+}
+
+
+.profile__input {
+  transition: background-color .25s ease, border-color .25s ease, padding-inline .25s ease;
+}
+
+.profile__form:not(.is-editing) .profile__input {
+  padding-inline: 0;
+  border-color: transparent;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  .profile__input {
+    transition: none;
+  }
+}
+
+
+@keyframes page-fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+main.page {
+  animation: page-fade-in .35s ease-out;
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  main.page {
+    animation: none;
+  }
+}
+
+
+[data-reveal] {
+  transition: opacity .4s ease-out, transform .4s ease-out;
+}
+
+[data-reveal].is-pending {
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    transition: none;
+  }
+}
+
+
+@media print {
+  [data-reveal].is-pending {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+
+@media (hover: hover) {
+
+  .movie-card:hover,
+  .movie-card:focus-within,
+  .cinema-card:hover,
+  .cinema-card:focus-within,
+  .branch-card:hover,
+  .branch-card:focus-within,
+  .function-card:not(.is-sold-out):hover,
+  .function-card:not(.is-sold-out):focus-within {
+    box-shadow: 0 .5rem 1.25rem rgba(0, 0, 0, .55) !important;
+  }
+
+  .movie-card:hover,
+  .movie-card:focus-within,
+  .cinema-card:hover,
+  .cinema-card:focus-within,
+  .branch-card:hover,
+  .branch-card:focus-within {
+    border-color: var(--bs-secondary);
+  }
+
+
+  .btn:where(:not(:disabled, .disabled, .seat)):hover:not(:focus-visible, :active) {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .4);
+  }
+}
+
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+
+  .movie-card,
+  .cinema-card,
+  .branch-card,
+  .function-card {
+    transition: box-shadow .3s ease, border-color .3s ease;
+  }
+}
+
+
+.page a:not(.btn):focus-visible,
+.site-footer a:not(.btn):focus-visible {
+  outline: 2px solid var(--bs-link-hover-color);
+  outline-offset: 3px;
 }

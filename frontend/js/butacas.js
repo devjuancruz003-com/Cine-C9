@@ -1,3 +1,5 @@
+
+
 (() => {
   const { qs, qsa, formatCurrency } = window.CineTucuman.utils;
 
@@ -49,6 +51,7 @@
     );
   }
 
+
   function actualizarVista() {
     const seleccionadas = obtenerSeleccionadas();
     const hayseleccion = seleccionadas.length > 0;
@@ -74,6 +77,8 @@
     botonContinuar.classList.toggle("btn-secondary", !hayseleccion);
     botonContinuar.textContent = hayseleccion ? "Continuar" : "Seleccioná tus butacas";
   }
+
+
   function armarItemEntrada() {
     const { pelicula, sucursal, fecha, horario, sala, formato, idioma } = resumenFuncion.dataset;
     const codigos = obtenerSeleccionadas().map(codigoDe);
@@ -88,6 +93,7 @@
       butacas: codigos,
     };
   }
+
 
   butacas.forEach((butaca) => {
     if (butaca.classList.contains("seat--occupied")) {
