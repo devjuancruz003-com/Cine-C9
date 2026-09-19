@@ -433,3 +433,23 @@
     animation: none;
   }
 }
+
+/* Perfil (perfil.js): en lectura los inputs se ven como texto plano; al pasar a is-editing aparece el marco (fade de borde y fondo)
+   y el texto se desliza hacia adentro (padding-inline). Borde y padding vertical no cambian, así el card no salta de alto. */
+.profile__input {
+  transition: background-color .25s ease, border-color .25s ease, padding-inline .25s ease;
+}
+
+.profile__form:not(.is-editing) .profile__input {
+  padding-inline: 0;
+  border-color: transparent;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+/* "transition: none": ningún JS espera transitionend. */
+@media (prefers-reduced-motion: reduce) {
+  .profile__input {
+    transition: none;
+  }
+}
