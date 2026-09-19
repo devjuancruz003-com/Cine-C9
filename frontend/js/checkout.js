@@ -1,7 +1,18 @@
+/**
+ * checkout.js
+ * Formulario de pago simulado de checkout.html: valida titular, número, vencimiento y CVV
+ * (is-invalid + .invalid-feedback), sacude los campos inválidos al enviar y simula el
+ * procesamiento antes de seguir a la confirmación.
+ * Simulación académica: los valores solo se leen para validar; no se guardan, no se
+ * muestran en consola y no se envían a ningún lado.
+ * Depende de utils.js y orden.js (cargados antes; orden.js usa carrito.js).
+ */
+
 (() => {
   const { qs } = window.CineTucuman.utils;
 
   const SIGUIENTE_PAGINA = "confirmacion.html";
+  const PAGINA_CARRITO = "carrito.html";
   const TIEMPO_PROCESANDO = 1500;
 
   const formulario = qs("#checkout-form");
@@ -127,7 +138,9 @@
     formulario.setAttribute("aria-busy", "true");
 
     temporizador = setTimeout(() => {
-      window.location.href = SIGUIENTE_PAGINA;
+      // Guarda la orden y vacía el carrito; null si ya no había entradas que confirmar (p. ej. otra pestaña).
+      const orden = window.CineTucuman.orden.confirmar();
+      window.location.href = orden ? SIGUIENTE_PAGINA : PAGINA_CARRITO;
     }, TIEMPO_PROCESANDO);
   }
   function restaurar() {
