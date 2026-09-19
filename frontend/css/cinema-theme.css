@@ -369,3 +369,15 @@
     transition-duration: .01ms;
   }
 }
+
+/* Envío del formulario de checkout (checkout.js): el campo inválido se sacude con el mismo keyframe que las butacas. */
+.form-control.is-shaking {
+  animation: seat-shake .4s ease-in-out;
+}
+
+/* Duración casi nula (no "animation: none"): checkout.js necesita que se dispare animationend para sacar la clase. */
+@media (prefers-reduced-motion: reduce) {
+  .form-control.is-shaking {
+    animation-duration: .01ms;
+  }
+}
