@@ -1,116 +1,49 @@
 /**
  * peliculas.js
- * Filtrado de la cartelera en peliculas.html: buscador por título (#movie-search)
- * combinado con el filtro de estado (#status-filter). Ambos se aplican a la vez (AND).
- * Las cards salen y entran con una animación (.is-leaving / .is-entering, definidas
- * en cinema-theme.css); el JS solo maneja clases y d-none.
- * Pendiente de datos reales: los filtros de género, idioma, formato y fecha
- * (#genre-filter, #language-filter, #format-filter, #date-filter) no tienen
- * opciones ni comportamiento todavía y no se manejan acá.
- * Depende de utils.js (cargado antes).
+ * Buscador en vivo para la cartelera (frontend/pages/peliculas.html).
+ * Filtra las movie-card visibles según el texto ingresado en #movie-search,
+ * comparando contra el título de cada película.
  */
 
-(() => {
-  const { qs, qsa, normalizeText } = window.CineTucuman.utils;
+document.addEventListener("DOMContentLoaded", () => {
+  const input = document.getElementById("movie-search");
+  if (!input) return;
 
-  const buscador = qs("#movie-search");
-  if (!buscador) return;
+  const secciones = document.querySelectorAll(".movies__section");
 
-  const filtroEstado = qs("#status-filter");
-  const sinResultados = qs("#no-results");
-  const contenedor = qs(".movies");
-
-  const secciones = qsa(".movies__section");
-  const cards = qsa(".movie-card");
-
-  /** Valor vacío ("Todas") = sin filtro de estado. */
-  function coincideEstado(card) {
-    const estado = filtroEstado.value;
-    if (estado === "") return true;
-
-    // El estado de la card sale de su sección: value "upcoming" -> h2 con id "upcoming-title".
-    const seccion = card.closest(".movies__section");
-    return seccion !== null && seccion.getAttribute("aria-labelledby") === `${estado}-title`;
+  function normalizar(texto) {
+    return texto
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, ""); // saca acentos
   }
 
-  /** Coincide si el título contiene el texto buscado (sin acentos ni mayúsculas). */
-  function coincideTitulo(card, termino) {
-    const titulo = qs(".movie-card__title", card);
-    return normalizeText(titulo ? titulo.textContent : "").includes(termino);
-  }
+  function filtrar() {
+    const termino = normalizar(input.value.trim());
 
-  /** Muestra la card: si estaba oculta entra animada; si estaba saliendo, se cancela la salida. */
-  function mostrar(card, animar) {
-    card.classList.remove("is-leaving");
-
-    if (card.classList.contains("d-none")) {
-      card.classList.remove("d-none");
-      if (animar) card.classList.add("is-entering");
-    }
-  }
-
-  /** Oculta la card: con animación queda visible hasta animationend, donde recibe d-none. */
-  function ocultar(card, animar) {
-    if (card.classList.contains("d-none") || card.classList.contains("is-leaving")) return;
-
-    card.classList.remove("is-entering");
-
-    if (animar) {
-      card.classList.add("is-leaving");
-    } else {
-      card.classList.add("d-none");
-    }
-  }
-
-  /** Una sección se oculta cuando todas sus cards ya tienen d-none (las que salen cuentan como visibles). */
-  function sincronizarSecciones() {
     secciones.forEach((seccion) => {
-      const hayVisibles = qsa(".movie-card", seccion).some(
-        (card) => !card.classList.contains("d-none")
-      );
-      seccion.classList.toggle("d-none", !hayVisibles);
+      const tarjetas = seccion.querySelectorAll(".movie-card");
+      let visiblesEnSeccion = 0;
+
+      tarjetas.forEach((tarjeta) => {
+        const tituloEl = tarjeta.querySelector(".movie-card__title");
+        const titulo = tituloEl ? normalizar(tituloEl.textContent) : "";
+        const coincide = termino === "" || titulo.includes(termino);
+
+        tarjeta.classList.toggle("d-none", !coincide);
+        if (coincide) visiblesEnSeccion++;
+      });
+
+      // Si no hay resultados en la sección, la ocultamos entera; si no, la mostramos.
+      seccion.classList.toggle("d-none", visiblesEnSeccion === 0 && termino !== "");
     });
   }
 
-  /** Aplica el buscador y el estado a todas las cards. */
-  function actualizar(animar) {
-    const termino = normalizeText(buscador.value.trim());
-    let cantidadMostradas = 0;
+  input.addEventListener("input", filtrar);
 
-    cards.forEach((card) => {
-      if (coincideEstado(card) && coincideTitulo(card, termino)) {
-        cantidadMostradas++;
-        mostrar(card, animar);
-      } else {
-        ocultar(card, animar);
-      }
-    });
-
-    sincronizarSecciones();
-    sinResultados.classList.toggle("d-none", cantidadMostradas > 0);
+  // Evita que el buscador recargue la página si el usuario aprieta Enter.
+  const formularioBusqueda = input.closest("form");
+  if (formularioBusqueda) {
+    formularioBusqueda.addEventListener("submit", (evento) => evento.preventDefault());
   }
-
-  buscador.addEventListener("input", () => actualizar(true));
-  filtroEstado.addEventListener("change", () => actualizar(true));
-
-  // Evita que Enter recargue la página (ambos formularios tienen un solo campo).
-  qsa(".movies__search, .movies__filters").forEach((formulario) => {
-    formulario.addEventListener("submit", (evento) => evento.preventDefault());
-  });
-
-  contenedor.addEventListener("animationend", (evento) => {
-    const card = evento.target;
-    if (!card.classList.contains("movie-card")) return;
-
-    if (evento.animationName === "movie-card-leave" && card.classList.contains("is-leaving")) {
-      card.classList.remove("is-leaving");
-      card.classList.add("d-none");
-      sincronizarSecciones();
-    } else if (evento.animationName === "movie-card-enter") {
-      card.classList.remove("is-entering");
-    }
-  });
-
-  // El navegador puede restaurar el texto y el select al recargar: se aplica sin animar.
-  actualizar(false);
-})();
+});
