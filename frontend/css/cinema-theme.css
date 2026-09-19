@@ -453,3 +453,101 @@
     transition: none;
   }
 }
+
+/* ===== Pulido (PATCH 20) ===== */
+
+/* Fade-in de carga en las 15 páginas: solo opacidad y solo en <main> (sin transform, para no correr el destino de anclas como
+   sucursales.html#cine-atlas-monteagudo; header y footer no animan). Sin fill-mode ni delay: el estado natural es opaco, así
+   que si esta regla no se aplica no queda nada oculto. */
+@keyframes page-fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+main.page {
+  animation: page-fade-in .35s ease-out;
+}
+
+/* "animation: none": ningún JS espera animationend. */
+@media (prefers-reduced-motion: reduce) {
+  main.page {
+    animation: none;
+  }
+}
+
+/* Scroll-reveal (revelar.js): visible por defecto. El JS solo agrega is-pending a los [data-reveal] que quedan bajo el pliegue
+   y lo saca al entrar en pantalla; con transition (no keyframes) para no competir con las animaciones de otros scripts. */
+[data-reveal] {
+  transition: opacity .4s ease-out, transform .4s ease-out;
+}
+
+[data-reveal].is-pending {
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    transition: none;
+  }
+}
+
+/* Al imprimir no hay scroll: lo que siga pendiente se muestra igual. */
+@media print {
+  [data-reveal].is-pending {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Cards interactivas: borde cobre + sombra (sin movimiento) al pasar el mouse o al tener foco adentro. Solo con puntero real (en táctil :hover queda
+   pegado). No va sobre .card en general (contenedores de formulario y resumen). function-card conserva el borde de estado
+   (border-*-subtle es !important); box-shadow con !important porque .shadow-sm (peliculas.html) también lo es. */
+@media (hover: hover) {
+
+  .movie-card:hover,
+  .movie-card:focus-within,
+  .cinema-card:hover,
+  .cinema-card:focus-within,
+  .branch-card:hover,
+  .branch-card:focus-within,
+  .function-card:not(.is-sold-out):hover,
+  .function-card:not(.is-sold-out):focus-within {
+    box-shadow: 0 .5rem 1.25rem rgba(0, 0, 0, .55) !important;
+  }
+
+  .movie-card:hover,
+  .movie-card:focus-within,
+  .cinema-card:hover,
+  .cinema-card:focus-within,
+  .branch-card:hover,
+  .branch-card:focus-within {
+    border-color: var(--bs-secondary);
+  }
+
+  /* Botones: sombra al pasar el mouse. Con foco de teclado se deja el anillo de Bootstrap (es un box-shadow y esta regla lo pisaría). */
+  .btn:where(:not(:disabled, .disabled, .seat)):hover:not(:focus-visible, :active) {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .4);
+  }
+}
+
+/* Transiciones suaves de borde y sombra en las cards, solo sin reduced-motion. No hay lift (transform) a propósito: mover el elemento
+   bajo el puntero hace que :hover parpadee en el borde inferior y que se pierdan clicks sobre los botones. */
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+
+  .movie-card,
+  .cinema-card,
+  .branch-card,
+  .function-card {
+    transition: box-shadow .3s ease, border-color .3s ease;
+  }
+}
+
+/* Foco de teclado cobre en links del contenido y del footer. Los .btn conservan su anillo de Bootstrap; el navbar y los inputs de
+   formulario no se tocan. */
+.page a:not(.btn):focus-visible,
+.site-footer a:not(.btn):focus-visible {
+  outline: 2px solid var(--bs-link-hover-color);
+  outline-offset: 3px;
+}
