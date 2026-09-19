@@ -319,11 +319,27 @@
   animation: movie-card-enter .3s ease-out both;
 }
 
+/* Feedback "Agregado ✓" de Candy Bar (candybar.js): fade-in/out; min-height evita que la card salte. */
+.candybar__feedback {
+  min-height: 1.5em;
+  opacity: 0;
+  transition: opacity .2s ease-in-out;
+}
+
+.candybar__feedback.is-visible {
+  opacity: 1;
+}
+
 /* Duración casi nula (no "animation: none"): peliculas.js y funciones.js necesitan que se dispare animationend. */
 @media (prefers-reduced-motion: reduce) {
   .movie-card.is-entering,
   .movie-card.is-leaving,
   .function-card.is-entering {
     animation-duration: .01ms;
+  }
+
+  /* Sin fade, pero el mensaje sigue apareciendo y desapareciendo con el mismo temporizador. */
+  .candybar__feedback {
+    transition: none;
   }
 }
