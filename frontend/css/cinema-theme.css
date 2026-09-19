@@ -314,10 +314,16 @@
   }
 }
 
-/* Duración casi nula (no "animation: none"): peliculas.js necesita que se dispare animationend. */
+/* Filtrado de funciones (funciones.js): las cards que vuelven a mostrarse entran con el mismo fade; sin animación de salida. */
+.function-card.is-entering {
+  animation: movie-card-enter .3s ease-out both;
+}
+
+/* Duración casi nula (no "animation: none"): peliculas.js y funciones.js necesitan que se dispare animationend. */
 @media (prefers-reduced-motion: reduce) {
   .movie-card.is-entering,
-  .movie-card.is-leaving {
+  .movie-card.is-leaving,
+  .function-card.is-entering {
     animation-duration: .01ms;
   }
 }
