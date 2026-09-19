@@ -381,3 +381,55 @@
     animation-duration: .01ms;
   }
 }
+
+/* Éxito de la confirmación (confirmacion.js): al mostrar la compra se agrega is-success y el check se dibuja, primero el
+   círculo y después el trazo (stroke-dashoffset). El estado base ya es el check dibujado; --check-largo es la longitud de cada trazo. */
+.confirmation__check {
+  flex: none;
+  width: 3.5rem;
+  height: 3.5rem;
+  color: var(--bs-secondary);
+}
+
+.confirmation__check svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.confirmation__check-circle {
+  --check-largo: 151;
+  stroke-dasharray: 151;
+}
+
+.confirmation__check-mark {
+  --check-largo: 40;
+  stroke-dasharray: 40;
+}
+
+.confirmation__check.is-success .confirmation__check-circle {
+  animation: check-draw .6s ease-out both;
+}
+
+.confirmation__check.is-success .confirmation__check-mark {
+  animation: check-draw .35s ease-out .5s both;
+}
+
+@keyframes check-draw {
+  from {
+    stroke-dashoffset: var(--check-largo);
+  }
+}
+
+/* "animation: none" (a diferencia de los de arriba): confirmacion.js no espera animationend y el check queda ya dibujado. */
+@media (prefers-reduced-motion: reduce) {
+  .confirmation__check.is-success .confirmation__check-circle,
+  .confirmation__check.is-success .confirmation__check-mark {
+    animation: none;
+  }
+}
