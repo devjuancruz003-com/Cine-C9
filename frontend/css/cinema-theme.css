@@ -176,7 +176,6 @@
   font-size: .7rem;
   font-weight: 600;
   line-height: 1;
-  transition: background-color .2s ease, border-color .2s ease, color .2s ease, transform .2s ease;
 }
 
 @media (min-width: 768px) {
@@ -207,74 +206,10 @@
   border-color: var(--bs-secondary);
 }
 
-.seat--occupied:hover,
-.seat--occupied:active,
-.seat--occupied:focus-visible {
-  background-image: repeating-linear-gradient(45deg, var(--bs-secondary-bg), var(--bs-secondary-bg) 4px, var(--bs-border-color) 4px, var(--bs-border-color) 8px);
-  background-color: transparent;
-  border-color: var(--bs-border-color);
-  color: var(--bs-secondary-color);
-  cursor: not-allowed;
-}
-
 .seat--selected {
   background-color: var(--bs-secondary);
   border-color: var(--bs-secondary);
   color: var(--bs-secondary-bg);
-}
-
-/* Escala solo en el mapa: la muestra de la leyenda no debe crecer. */
-.seats__grid .seat--selected {
-  transform: scale(1.08);
-}
-
-/* Mismo color de selección, con más especificidad que el hover de .btn-outline-secondary. */
-.seats__grid .seat--selected,
-.seats__grid .seat--selected:hover,
-.seats__grid .seat--selected:focus-visible {
-  background-color: var(--bs-secondary);
-  border-color: var(--bs-secondary);
-  color: var(--bs-secondary-bg);
-}
-
-.seat--shake {
-  animation: seat-shake .4s ease-in-out;
-}
-
-@keyframes seat-shake {
-  0%, 100% {
-    transform: translateX(0);
-  }
-
-  20% {
-    transform: translateX(-4px);
-  }
-
-  40% {
-    transform: translateX(4px);
-  }
-
-  60% {
-    transform: translateX(-3px);
-  }
-
-  80% {
-    transform: translateX(3px);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .seat {
-    transition: none;
-  }
-
-  .seat--shake {
-    animation: none;
-  }
-
-  .seats__grid .seat--selected {
-    transform: none;
-  }
 }
 
 .seats__summary-card {
