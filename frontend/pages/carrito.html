@@ -81,75 +81,41 @@
         <p class="text-body-secondary mb-0">Estas son las entradas y los productos de Candy Bar que seleccionaste.</p>
       </header>
 
-      <div class="row g-4">
+      <div id="empty-cart" class="card p-4 p-md-5 text-center d-none" role="status">
+        <h2 class="h4 mb-2">Tu carrito está vacío</h2>
+        <p class="text-body-secondary mb-4">Todavía no agregaste entradas ni productos de Candy Bar.</p>
+        <div>
+          <a class="btn btn-brand" href="peliculas.html">Ver cartelera</a>
+        </div>
+      </div>
+
+      <div id="cart-content" class="row g-4 d-none">
 
         <div class="col-12 col-lg-8">
 
-          <section class="card p-3 p-md-4 mb-4" aria-labelledby="tickets-summary-title">
-            <header>
-              <h2 id="tickets-summary-title" class="h5 mb-3">Entradas</h2>
-            </header>
+          <div id="cart-tickets" class="cart-collapse d-none">
+            <div class="cart-collapse__inner">
+              <section class="card p-3 p-md-4 mb-4" aria-labelledby="tickets-summary-title">
+                <header>
+                  <h2 id="tickets-summary-title" class="h5 mb-0">Entradas</h2>
+                </header>
 
-            <h3 class="h6 mb-3">Spider-Man: Un nuevo día</h3>
-
-            <dl class="row mb-3">
-              <div class="col-6 col-sm-4 mb-3">
-                <dt class="text-body-secondary small mb-1">Sucursal</dt>
-                <dd class="mb-0">Sunstar Cinemas</dd>
-              </div>
-              <div class="col-6 col-sm-4 mb-3">
-                <dt class="text-body-secondary small mb-1">Fecha</dt>
-                <dd class="mb-0">1 de septiembre de 2026</dd>
-              </div>
-              <div class="col-6 col-sm-4 mb-3">
-                <dt class="text-body-secondary small mb-1">Horario</dt>
-                <dd class="mb-0">19:00</dd>
-              </div>
-              <div class="col-6 col-sm-4 mb-3">
-                <dt class="text-body-secondary small mb-1">Sala</dt>
-                <dd class="mb-0">Sala 1</dd>
-              </div>
-              <div class="col-6 col-sm-4 mb-3">
-                <dt class="text-body-secondary small mb-1">Formato</dt>
-                <dd class="mb-0">3D</dd>
-              </div>
-              <div class="col-6 col-sm-4 mb-3">
-                <dt class="text-body-secondary small mb-1">Idioma</dt>
-                <dd class="mb-0">Castellano</dd>
-              </div>
-              <div class="col-12">
-                <dt class="text-body-secondary small mb-1">Butacas seleccionadas</dt>
-                <dd class="mb-0 d-flex flex-wrap gap-2">
-                  <span class="badge text-bg-secondary">C3</span>
-                  <span class="badge text-bg-secondary">C6</span>
-                </dd>
-              </div>
-            </dl>
-
-            <div class="d-flex justify-content-between align-items-center border-top pt-3">
-              <span class="text-body-secondary">2 entradas &times; $8.500</span>
-              <span class="fs-5 fw-semibold">$17.000</span>
+                <ul id="cart-tickets-list" class="list-unstyled mb-0"></ul>
+              </section>
             </div>
-          </section>
+          </div>
 
-          <section class="card p-3 p-md-4" aria-labelledby="candybar-summary-title">
-            <header>
-              <h2 id="candybar-summary-title" class="h5 mb-3">Candy Bar</h2>
-            </header>
+          <div id="cart-candybar" class="cart-collapse d-none">
+            <div class="cart-collapse__inner">
+              <section class="card p-3 p-md-4" aria-labelledby="candybar-summary-title">
+                <header>
+                  <h2 id="candybar-summary-title" class="h5 mb-0">Candy Bar</h2>
+                </header>
 
-            <div class="d-flex justify-content-between align-items-start">
-              <div>
-                <h3 class="h6 mb-1">Combo Clásico</h3>
-                <p class="text-body-secondary small mb-0">Pochoclos grande + gaseosa mediana</p>
-              </div>
-              <span class="text-body-secondary">1 &times; $6.000</span>
+                <ul id="cart-candybar-list" class="list-unstyled mb-0"></ul>
+              </section>
             </div>
-
-            <div class="d-flex justify-content-between align-items-center border-top pt-3 mt-3">
-              <span class="text-body-secondary">Subtotal Candy Bar</span>
-              <span class="fs-5 fw-semibold">$6.000</span>
-            </div>
-          </section>
+          </div>
 
         </div>
 
@@ -161,17 +127,17 @@
               </header>
 
               <dl class="mb-4">
-                <div class="d-flex justify-content-between align-items-center mb-2">
+                <div id="cart-row-tickets" class="d-flex justify-content-between align-items-center mb-2 d-none">
                   <dt class="text-body-secondary fw-normal">Entradas</dt>
-                  <dd class="mb-0">$17.000</dd>
+                  <dd id="cart-subtotal-tickets" class="mb-0"></dd>
                 </div>
-                <div class="d-flex justify-content-between align-items-center mb-2">
+                <div id="cart-row-candybar" class="d-flex justify-content-between align-items-center mb-2 d-none">
                   <dt class="text-body-secondary fw-normal">Candy Bar</dt>
-                  <dd class="mb-0">$6.000</dd>
+                  <dd id="cart-subtotal-candybar" class="mb-0"></dd>
                 </div>
                 <div class="d-flex justify-content-between align-items-center border-top pt-2">
                   <dt class="text-body-secondary fw-normal">Total</dt>
-                  <dd class="mb-0 fs-4 fw-semibold">$23.000</dd>
+                  <dd id="cart-total" class="mb-0 fs-4 fw-semibold" aria-live="polite"></dd>
                 </div>
               </dl>
 
@@ -181,6 +147,74 @@
         </div>
 
       </div>
+
+      <template id="tpl-cart-entrada">
+        <li class="cart-collapse" data-cart-line>
+          <div class="cart-collapse__inner">
+            <div class="pt-3">
+              <h3 class="h6 mb-3" data-field="pelicula"></h3>
+
+              <dl class="row mb-3">
+                <div class="col-6 col-sm-4 mb-3">
+                  <dt class="text-body-secondary small mb-1">Sucursal</dt>
+                  <dd class="mb-0" data-field="sucursal"></dd>
+                </div>
+                <div class="col-6 col-sm-4 mb-3">
+                  <dt class="text-body-secondary small mb-1">Fecha</dt>
+                  <dd class="mb-0" data-field="fecha"></dd>
+                </div>
+                <div class="col-6 col-sm-4 mb-3">
+                  <dt class="text-body-secondary small mb-1">Horario</dt>
+                  <dd class="mb-0" data-field="horario"></dd>
+                </div>
+                <div class="col-6 col-sm-4 mb-3">
+                  <dt class="text-body-secondary small mb-1">Sala</dt>
+                  <dd class="mb-0" data-field="sala"></dd>
+                </div>
+                <div class="col-6 col-sm-4 mb-3">
+                  <dt class="text-body-secondary small mb-1">Formato</dt>
+                  <dd class="mb-0" data-field="formato"></dd>
+                </div>
+                <div class="col-6 col-sm-4 mb-3">
+                  <dt class="text-body-secondary small mb-1">Idioma</dt>
+                  <dd class="mb-0" data-field="idioma"></dd>
+                </div>
+                <div class="col-12">
+                  <dt class="text-body-secondary small mb-1">Butacas seleccionadas</dt>
+                  <dd class="mb-0 d-flex flex-wrap gap-2" data-field="butacas"></dd>
+                </div>
+              </dl>
+
+              <div class="d-flex justify-content-between align-items-center border-top pt-3">
+                <span class="text-body-secondary" data-field="detalle"></span>
+                <span class="fs-5 fw-semibold" data-field="subtotal"></span>
+              </div>
+
+              <div class="d-flex justify-content-end mt-3">
+                <button class="btn btn-outline-light btn-sm" type="button" data-cart-remove>Eliminar</button>
+              </div>
+            </div>
+          </div>
+        </li>
+      </template>
+
+      <template id="tpl-cart-candybar">
+        <li class="cart-collapse" data-cart-line>
+          <div class="cart-collapse__inner">
+            <div class="pt-3">
+              <div class="d-flex justify-content-between align-items-start gap-3">
+                <h3 class="h6 mb-0" data-field="nombre"></h3>
+                <span class="text-body-secondary text-nowrap" data-field="detalle"></span>
+              </div>
+
+              <div class="d-flex justify-content-between align-items-center border-top pt-3 mt-3">
+                <span class="fs-5 fw-semibold" data-field="subtotal"></span>
+                <button class="btn btn-outline-light btn-sm" type="button" data-cart-remove>Eliminar</button>
+              </div>
+            </div>
+          </div>
+        </li>
+      </template>
     </section>
   </main>
 
@@ -239,6 +273,10 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"></script>
+
+  <script src="../js/utils.js"></script>
+  <script src="../js/carrito.js"></script>
+  <script src="../js/carrito-vista.js"></script>
 </body>
 
 </html>
